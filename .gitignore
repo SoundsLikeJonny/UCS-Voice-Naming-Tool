@@ -106,7 +106,6 @@ celerybeat.pid
 #.venv
 #UCS Voice Naming Tool/env/
 #venv/
-#UCS Voice Naming Tool/env/
 #env.bak/
 #venv.bak/
 
