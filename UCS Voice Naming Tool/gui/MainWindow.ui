@@ -936,9 +936,14 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_Mics">
+      <widget class="QWidget" name="tab_MicsList">
        <attribute name="title">
-        <string>Mics</string>
+        <string>Mics List</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_Settings">
+       <attribute name="title">
+        <string>Settings</string>
        </attribute>
       </widget>
      </widget>
