@@ -6,4 +6,4 @@ https://docs.google.com/spreadsheets/d/1b2UhKpcOAE-jd1edOsxCJALqttyL761h/edit#gi
 
 # This repository is currently in development
 Check out the [Dev Logs](https://github.com/SoundsLikeJonny/UCS-Voice-Naming-Tool/wiki/Dev-Logs) page to hear about current progress.
-Find me on [LindedIn](https://www.linkedin.com/in/jonevans-gameaudio/) and [Twitter](https://twitter.com/SoundsLikeJonny)
+Or you can find me on [LindedIn](https://www.linkedin.com/in/jonevans-gameaudio/) and [Twitter](https://twitter.com/SoundsLikeJonny)
