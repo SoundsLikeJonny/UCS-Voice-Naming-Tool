@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>539</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -46,22 +46,6 @@
         <string>Voice</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_9">
-        <item row="1" column="0">
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>152</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="0" column="0">
          <widget class="QWidget" name="widget_2" native="true">
           <layout class="QGridLayout" name="gridLayout_5">
@@ -128,7 +112,7 @@
                       <enum>Qt::ClickFocus</enum>
                      </property>
                      <property name="frame">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="placeholderText">
                       <string>e.g. JonEvans</string>
@@ -156,7 +140,7 @@
                       <enum>Qt::ClickFocus</enum>
                      </property>
                      <property name="frame">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="placeholderText">
                       <string>e.g. HomeSFXLib</string>
@@ -213,7 +197,7 @@
                       <enum>Qt::ClickFocus</enum>
                      </property>
                      <property name="frame">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="placeholderText">
                       <string>e.g. Garage Trinkets</string>
@@ -253,7 +237,7 @@
                       <enum>Qt::ClickFocus</enum>
                      </property>
                      <property name="frame">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="placeholderText">
                       <string>e.g. Wrestle Car Mania</string>
@@ -296,7 +280,7 @@
                       <string/>
                      </property>
                      <property name="frame">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="placeholderText">
                       <string>e.g. $num</string>
@@ -316,17 +300,35 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
+               <widget class="QGroupBox" name="groupBox">
+                <property name="minimumSize">
                  <size>
-                  <width>20</width>
-                  <height>23</height>
+                  <width>0</width>
+                  <height>52</height>
                  </size>
                 </property>
-               </spacer>
+                <property name="title">
+                 <string>Custom FXName Template</string>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_10">
+                 <item row="0" column="0">
+                  <widget class="QLineEdit" name="lineEdit_4">
+                   <property name="text">
+                    <string>$location $objects $actions $desc</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -368,10 +370,10 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -440,19 +442,19 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -514,10 +516,10 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -586,19 +588,19 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -660,10 +662,10 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -732,19 +734,19 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="255">
-                      <red>150</red>
-                      <green>170</green>
-                      <blue>195</blue>
+                     <color alpha="95">
+                      <red>160</red>
+                      <green>180</green>
+                      <blue>190</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -803,7 +805,7 @@
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(150, 170, 195);</string>
+                 <string notr="true">background-color: rgb(160, 180, 190, 95);</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3">
                  <item row="0" column="0">
@@ -934,11 +936,370 @@
           </layout>
          </widget>
         </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>152</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="bottomMargin">
+           <number>50</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="bottomMargin">
+             <number>30</number>
+            </property>
+            <item>
+             <widget class="QGroupBox" name="groupBox_OnlyAnalyseEndsOfFiles">
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>170</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Only Analyse Ends Of Files</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>Start: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBox_StartOnlyAnalyseEndsOfFiles">
+                   <property name="maximum">
+                    <number>120</number>
+                   </property>
+                   <property name="value">
+                    <number>30</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>sec.</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>End: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBox_EndOnlyAnalyseEndsOfFiles">
+                   <property name="maximum">
+                    <number>120</number>
+                   </property>
+                   <property name="value">
+                    <number>30</number>
+                   </property>
+                   <property name="displayIntegerBase">
+                    <number>10</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>sec.</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_OnlyAnalyseEndsOfFiles_2">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>82</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>190</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Only Read Between Markers</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>Start Phrase:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit">
+                   <property name="text">
+                    <string>Start Analysis</string>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>End Phrase:  </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>End Analysis</string>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_OnlyAnalyseEndsOfFiles_3">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>82</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>170</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Use Take Markers</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>Phrase: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_3">
+                   <property name="text">
+                    <string>Take $num</string>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_3">
+                 <property name="text">
+                  <string>Create unique files at take</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_2">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Conflict Resolution</string>
+       </attribute>
       </widget>
       <widget class="QWidget" name="tab_MicsList">
        <attribute name="title">
         <string>Mics List</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Wild Cards</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="tab_Settings">
