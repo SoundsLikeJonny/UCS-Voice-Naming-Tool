@@ -1,14 +1,15 @@
-
 #
 import sys
 
-from src.ui import UIMainWindow
+from src.ui.UIMainWindow import MainWindow
 from PyQt5.QtWidgets import *
+from PyQt5.Qt import *
 
-obj = UIMainWindow.MainWindow()
+app = QApplication(sys.argv)
+
+flags = Qt.WindowFlags()
+obj = MainWindow()
 obj.show()
-print('Hello World!')
 
 
-app = QApplication([])
 sys.exit(app.exec_())
