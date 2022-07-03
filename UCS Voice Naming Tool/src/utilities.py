@@ -1,4 +1,5 @@
 #!/env/Scripts/python.exe
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -16,32 +17,38 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
+
+import os
+
 """
-Author: Jon Evans
-Last Modified: July 3, 2022
+#######################################
+################# UI ##################
+#######################################
 """
 
-# Errors shown are resolved when running
-from PyQt5.uic import loadUi
-from src import utilities
-from PyQt5.QtWidgets import *
 
-
-class MainWindow(QMainWindow):
+def get_project_ui_file(ui_file_name: str) -> any:
     """
-    Core functionality of the software. Most used by end user.
+    Get the full path of the relative ui file
+    :param ui_file_name: The path of the ui file relative to the src directory
+    :return: Full path
     """
-    def __init__(self, *args, **kwargs):
-        super(MainWindow, self).__init__(*args, **kwargs)
-        self.init_all_ui()
+    if type(ui_file_name) == str:
+        file = os.path.join(os.getcwd(), Defaults.GUI_DOC_PATH, ui_file_name)
+        if os.path.exists(file):
+            return file
+    return None
 
-    def init_all_ui(self) -> None:
-        """
-        Initialize all UI elements, calling individual ui init functions
-        :return: None
-        """
-        ui_path = utilities.get_project_ui_file('MainWindow.ui')
 
-        if ui_path is not None:
-            loadUi(ui_path, self)
+"""
+#######################################
+########## DEFAULT VALUES #############
+#######################################
+"""
+
+
+class Defaults:
+    """
+    Default values
+    """
+    GUI_DOC_PATH = 'src\\ui\\gui\\'
