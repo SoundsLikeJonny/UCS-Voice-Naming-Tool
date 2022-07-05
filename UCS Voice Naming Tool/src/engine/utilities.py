@@ -1,3 +1,143 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f79033a2c3cf4fc556fefcb928df83f4769fb04f4fa07339409790d326766b0
-size 3435
+#!/env/Scripts/python.exe
+
+#  UCS Voice Naming Tool. A tool that uses voice to name audio
+#  recordings according to the Universal Category System.
+#
+#  Copyright (C) 2022  Jon Evans
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+"""
+Author: Jon Evans
+Last Modified: July 4, 2022
+"""
+
+import os
+
+"""
+#######################################
+############# File Path ###############
+#######################################
+"""
+
+
+def get_file(file_name: str) -> any:
+    """
+    Get the full path of the file
+    :param file_name: The path of the file relative to the src directory
+    :return: Full path
+    """
+    if type(file_name) == str:
+        current_dir = os.getcwd()
+        file = current_dir + file_name
+        if os.path.exists(file):
+            return file
+    return None
+
+
+def get_resource(resource_path: str) -> any:
+    """
+    Gets the resource file from the resources' folder
+    :param resource_path:
+    :return:
+    """
+    return get_file(Defaults.RESOURCES_PATH + resource_path)
+
+
+"""
+#######################################
+################# UI ##################
+#######################################
+"""
+
+
+def get_project_ui_file(ui_file_name: str) -> any:
+    """
+    Get the full path of the relative ui file
+    :param ui_file_name: The path of the ui file relative to the src directory
+    :return: Full path
+    """
+    if type(ui_file_name) == str:
+        file = os.path.join(os.getcwd(), Defaults.GUI_DOC_PATH, ui_file_name)
+        if os.path.exists(file):
+            return file
+    return None
+
+
+"""
+#######################################
+############ VALIDATION ###############
+#######################################
+"""
+
+
+def is_type(value: any, _type: any) -> bool:
+    """
+    Return True if the value is a string
+    :param _type: Builtin type to check
+    :param value: Value to check
+    :rtype: bool
+    """
+    return type(value) == _type
+
+
+def is_str(value: str) -> bool:
+    """
+    Return True if the value is a string
+    :param value: String to check
+    :rtype: bool
+    """
+    return is_type(value, str)
+
+
+def is_int(value: int) -> bool:
+    """
+    Return True if the value is an integer
+    :param value: Int to check
+    :rtype: bool
+    """
+    return is_type(value, int)
+
+
+def is_list(value: list) -> bool:
+    """
+    Return True if the value is a list
+    :param value: list to check
+    :rtype: bool
+    """
+    return is_type(value, list)
+
+
+def is_dict(value: dict) -> bool:
+    """
+    Return True if the value is a dict
+    :param value: dict to check
+    :rtype: bool
+    """
+    return is_type(value, dict)
+
+
+"""
+#######################################
+########## DEFAULT VALUES #############
+#######################################
+"""
+
+
+class Defaults:
+    """
+    Default values
+    """
+    GUI_DOC_PATH = 'src\\ui\\gui\\'
+    RESOURCES_PATH = '\\resources'

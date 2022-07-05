@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e802632d35c28d06dce49fbd34e836bf32cb620db181b545f15724251206d16
-size 1062
+#  UCS Voice Naming Tool. A tool that uses voice to name audio
+#  recordings according to the Universal Category System.
+#
+#  Copyright (C) 2022  Jon Evans
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+import nose2
+
+
+class Test(nose2):
+    def test_set_theme(self):
+        assert False
+
+    def test_set_default_theme(self):
+        assert False
+
+    def test_defaults(self):
+        assert False
+
+    def test_runtime_stylesheets(self):
+        assert False
