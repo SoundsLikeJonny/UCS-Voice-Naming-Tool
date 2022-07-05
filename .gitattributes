@@ -1,4 +1,4 @@
-*.gitignore filter=lfs diff=lfs merge=lfs -text
+# *.gitignore filter=lfs diff=lfs merge=lfs -text
 /LICENSE filter=lfs diff=lfs merge=lfs -text
 *.md filter=lfs diff=lfs merge=lfs -text
 /UCS Voice Naming Tool/env/Lib/site-packages/Jinja2-3.1.2.dist-info/INSTALLER filter=lfs diff=lfs merge=lfs -text
@@ -20,19 +20,19 @@
 /UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
 /UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/REQUESTED filter=lfs diff=lfs merge=lfs -text
 /UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
-*.pyi filter=lfs diff=lfs merge=lfs -text
-*.dll filter=lfs diff=lfs merge=lfs -text
-*.exe filter=lfs diff=lfs merge=lfs -text
-*.py filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.pyproject filter=lfs diff=lfs merge=lfs -text
-*.ui filter=lfs diff=lfs merge=lfs -text
-*.qml filter=lfs diff=lfs merge=lfs -text
-*.csv filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
-*.qrc filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.theme filter=lfs diff=lfs merge=lfs -text
+# *.pyi filter=lfs diff=lfs merge=lfs -text
+# *.dll filter=lfs diff=lfs merge=lfs -text
+# *.exe filter=lfs diff=lfs merge=lfs -text
+# # *.py filter=lfs diff=lfs merge=lfs -text
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.pyproject filter=lfs diff=lfs merge=lfs -text
+# # *.ui filter=lfs diff=lfs merge=lfs -text
+# *.qml filter=lfs diff=lfs merge=lfs -text
+# *.csv filter=lfs diff=lfs merge=lfs -text
+# *.svg filter=lfs diff=lfs merge=lfs -text
+# *.qrc filter=lfs diff=lfs merge=lfs -text
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+# *.theme filter=lfs diff=lfs merge=lfs -text
 /UCS Voice Naming Tool/env/Lib/site-packages/PySide6/examples/quickcontrols2/gallery/qmldir filter=lfs diff=lfs merge=lfs -text
 *.conf filter=lfs diff=lfs merge=lfs -text
 *.h filter=lfs diff=lfs merge=lfs -text
