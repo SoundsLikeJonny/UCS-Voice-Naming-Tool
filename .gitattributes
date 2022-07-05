@@ -1,0 +1,245 @@
+*.gitignore filter=lfs diff=lfs merge=lfs -text
+/LICENSE filter=lfs diff=lfs merge=lfs -text
+*.md filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/Jinja2-3.1.2.dist-info/INSTALLER filter=lfs diff=lfs merge=lfs -text
+*.rst filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/Jinja2-3.1.2.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/Jinja2-3.1.2.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/Jinja2-3.1.2.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
+*.txt filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/MarkupSafe-2.1.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/MarkupSafe-2.1.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/MarkupSafe-2.1.1.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
+*.COMMERCIAL filter=lfs diff=lfs merge=lfs -text
+*.FDL filter=lfs diff=lfs merge=lfs -text
+*.GPL2 filter=lfs diff=lfs merge=lfs -text
+*.GPLv3 filter=lfs diff=lfs merge=lfs -text
+*.GPLv3-EXCEPT filter=lfs diff=lfs merge=lfs -text
+*.LGPLv3 filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/REQUESTED filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6-6.3.1.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
+*.pyi filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.py filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.pyproject filter=lfs diff=lfs merge=lfs -text
+*.ui filter=lfs diff=lfs merge=lfs -text
+*.qml filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.qrc filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.theme filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/examples/quickcontrols2/gallery/qmldir filter=lfs diff=lfs merge=lfs -text
+*.conf filter=lfs diff=lfs merge=lfs -text
+*.h filter=lfs diff=lfs merge=lfs -text
+*.xml filter=lfs diff=lfs merge=lfs -text
+*.cpp filter=lfs diff=lfs merge=lfs -text
+*.pri filter=lfs diff=lfs merge=lfs -text
+*.pro filter=lfs diff=lfs merge=lfs -text
+*.html filter=lfs diff=lfs merge=lfs -text
+*.css filter=lfs diff=lfs merge=lfs -text
+*.js filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
+*.ts filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/examples/widgets/richtext/syntaxhighlighter/examples/example filter=lfs diff=lfs merge=lfs -text
+*.xbel filter=lfs diff=lfs merge=lfs -text
+*.typed filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+*.qmltypes filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/animation/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/folderlistmodel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/platform/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/qmlmodels/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/settings/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/sharedimage/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt/labs/wavefrontmesh/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Animation/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Core/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Extras/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Input/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Logic/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/Qt3D/Render/qmldir filter=lfs diff=lfs merge=lfs -text
+*.metainfo filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtCharts/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtCore/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtDataVisualization/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtMultimedia/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtPositioning/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQml/Models/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQml/StateMachine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQml/WorkerScript/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQml/XmlListModel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQml/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Basic/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Basic/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Fusion/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Fusion/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Imagine/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Imagine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Material/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Material/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Universal/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Universal/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/Windows/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/impl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Controls/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Dialogs/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Dialogs/quickimpl/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Layouts/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/LocalStorage/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/NativeStyle/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Particles/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Pdf/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Scene2D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Scene3D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Shapes/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Templates/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Timeline/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/VirtualKeyboard/Settings/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/VirtualKeyboard/Styles/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/VirtualKeyboard/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/Window/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick/tooling/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/AssetUtils/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/Effects/qmldir filter=lfs diff=lfs merge=lfs -text
+*.mesh filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/Helpers/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/ParticleEffects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/Particles3D/qmldir filter=lfs diff=lfs merge=lfs -text
+*.frag filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtQuick3D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtRemoteObjects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtScxml/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtSensors/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtTest/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtWebChannel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtWebEngine/ControlsDelegates/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtWebEngine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6/qml/QtWebSockets/qmldir filter=lfs diff=lfs merge=lfs -text
+*.dat filter=lfs diff=lfs merge=lfs -text
+*.pak filter=lfs diff=lfs merge=lfs -text
+*.qm filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6_Addons-6.3.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6_Addons-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6_Essentials-6.3.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/PySide6_Essentials-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.c filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/pip-22.0.4.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/pip-22.0.4.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+*.pem filter=lfs diff=lfs merge=lfs -text
+*.cfg filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/qt_material-2.12.dist-info/LICENSE filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/qt_material-2.12.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/qt_material-2.12.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.template filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/setuptools-58.1.0.dist-info/LICENSE filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/setuptools-58.1.0.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/setuptools-58.1.0.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/setuptools-58.1.0.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
+*.tmpl filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/shiboken2-5.15.2.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/shiboken2-5.15.2.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/shiboken2-5.15.2.1.dist-info/WHEEL filter=lfs diff=lfs merge=lfs -text
+*.buildinfo filter=lfs diff=lfs merge=lfs -text
+*.doctree filter=lfs diff=lfs merge=lfs -text
+*.pickle filter=lfs diff=lfs merge=lfs -text
+*.qch filter=lfs diff=lfs merge=lfs -text
+*.qhcp filter=lfs diff=lfs merge=lfs -text
+*.qhp filter=lfs diff=lfs merge=lfs -text
+*.bak filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/shiboken6-6.3.1.dist-info/METADATA filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/shiboken6-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~-side6_essentials-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/WebSockets/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/animation/qmldir filter=lfs diff=lfs merge=lfs -text
+*.qmlc filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/calendar/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/folderlistmodel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/location/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/lottieqt/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/platform/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/qmlmodels/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/settings/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/sharedimage/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/labs/wavefrontmesh/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt/test/qtestroot/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Animation/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Core/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Extras/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Input/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Logic/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/Qt3D/Render/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtBluetooth/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtCharts/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtDataVisualization/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtGamepad/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtGraphicalEffects/private/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtGraphicalEffects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtLocation/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtMultimedia/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtNfc/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtPositioning/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtPurchasing/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQml/Models.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQml/RemoteObjects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQml/StateMachine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQml/WorkerScript.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQml/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls.2/Fusion/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls.2/Imagine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls.2/Material/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls.2/Universal/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls.2/qmldir filter=lfs diff=lfs merge=lfs -text
+*.jsc filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls/Private/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls/Styles/Desktop/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls/Styles/Flat/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls/Styles/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Controls/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Dialogs/Private/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Dialogs/qml/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Dialogs/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Extras/Private/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Extras/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Layouts/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/LocalStorage/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Particles.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Pdf/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/PrivateWidgets/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Scene2D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Scene3D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Shapes/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Templates.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Timeline/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/VirtualKeyboard/Settings/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/VirtualKeyboard/Styles/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/VirtualKeyboard/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/Window.2/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick/XmlListModel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick3D/Effects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick3D/Helpers/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick3D/Materials/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtQuick3D/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtRemoteObjects/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtScxml/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtSensors/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtTest/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebChannel/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebEngine/Controls1Delegates/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebEngine/Controls2Delegates/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebEngine/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebSockets/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWebView/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside2/qml/QtWinExtras/qmldir filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Lib/site-packages/~yside6_essentials-6.3.1.dist-info/RECORD filter=lfs diff=lfs merge=lfs -text
+*.ps1 filter=lfs diff=lfs merge=lfs -text
+/UCS Voice Naming Tool/env/Scripts/activate filter=lfs diff=lfs merge=lfs -text
+*.bat filter=lfs diff=lfs merge=lfs -text

@@ -1,5 +1,3 @@
-# UCS Voice Naming Tool
-A tool to name audio recordings by analyzing the slate at the start of a file, and labeling the file metadata according to the Universal Category System.
-
-UCS V8.1
-https://docs.google.com/spreadsheets/d/1b2UhKpcOAE-jd1edOsxCJALqttyL761h/edit#gid=1490464926
+version https://git-lfs.github.com/spec/v1
+oid sha256:de52fbec5be48c132b0ddb9e3e9a88f26600b228c815d9e786293a04d92e8457
+size 281
