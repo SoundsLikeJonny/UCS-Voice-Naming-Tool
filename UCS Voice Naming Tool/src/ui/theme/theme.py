@@ -1,3 +1,10 @@
+#!/env/Scripts/python.exe
+
+"""
+Author: Jon Evans
+Last Modified: July 5, 2022
+"""
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -14,21 +21,13 @@
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-"""
-Helper functions to apply themes to the Qt UI
-
-Author: Jon Evans
-Last Modified: July 4, 2022
-"""
-
-# Errors shown are resolved when running from main.py
+from __future__ import annotations
 from src.engine import utilities
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
-# from PySide6.QtUiTools import QUiLoader
-from qt_material import apply_stylesheet, QtStyleTools
+from qt_material import apply_stylesheet, QtStyleTools, get_theme, build_stylesheet
 
 
 def set_theme(app: QApplication, theme: str, extra=None):
@@ -61,7 +60,8 @@ class Defaults:
         'density_scale': '-2',
     }
 
-
+# Does not work with PyQt5
+#
 # class RuntimeStylesheets(QMainWindow, QtStyleTools):
 #     """
 #     Used to create a custom UI style .xml

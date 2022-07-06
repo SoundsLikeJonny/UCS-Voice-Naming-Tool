@@ -23,18 +23,6 @@ Last Modified: July 5, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-# From venv
-import sys
-from PyQt5.QtWidgets import QApplication
-
-# From project
-from src.ui.UIMainWindow import MainWindow
-from src.ui.theme import theme
-
-app = QApplication(sys.argv)
-theme.set_default_theme(app)
-
-obj = MainWindow()
-obj.show()
-
-sys.exit(app.exec_())
+"""
+Intentionally blank. Used to resolve unittest error "ImportError: Start directory is not importable"
+"""

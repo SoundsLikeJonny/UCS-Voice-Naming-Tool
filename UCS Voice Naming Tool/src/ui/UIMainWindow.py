@@ -1,4 +1,10 @@
 #!/env/Scripts/python.exe
+
+"""
+Author: Jon Evans
+Last Modified: July 5, 2022
+"""
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -15,13 +21,7 @@
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-
-"""
-Author: Jon Evans
-Last Modified: July 4, 2022
-"""
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 # Errors shown are resolved when running from main.py
 from PyQt5.uic import loadUi
@@ -74,25 +74,25 @@ class MainWindow(QMainWindow):
         Used to only initialize UI elements in the Conflict Resolution tab
         :return: None
         """
-        pass
+        return True
 
     def init_ui_mic_list_tab(self) -> None:
         """
         Used to only initialize UI elements in the Mic List tab
         :return: None
         """
-        pass
+        return True
 
     def init_ui_wildcard_tab(self) -> None:
         """
         Used to only initialize UI elements in the Wild Cards tab
         :return: None
         """
-        pass
+        return True
 
     def init_ui_settings_tab(self) -> None:
         """
         Used to only initialize UI elements in the Settings tab
         :return: None
         """
-        pass
+        return True

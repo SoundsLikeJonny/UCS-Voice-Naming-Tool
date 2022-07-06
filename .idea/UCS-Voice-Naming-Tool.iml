@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b53966bd87cc07df7507559854e8d87a7c4cdc452051fe5b7ddc42d135947b75
-size 937
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/src/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/UCS-Voice-Naming-Tool" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.10 (UCS-Voice-Naming-Tool)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

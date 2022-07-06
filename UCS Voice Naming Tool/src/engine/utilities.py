@@ -1,5 +1,10 @@
 #!/env/Scripts/python.exe
 
+"""
+Author: Jon Evans
+Last Modified: July 5, 2022
+"""
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -16,13 +21,9 @@
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-"""
-Author: Jon Evans
-Last Modified: July 4, 2022
-"""
-
+from __future__ import annotations
 import os
 
 """
@@ -32,7 +33,7 @@ import os
 """
 
 
-def get_file(file_name: str) -> any:
+def get_file(file_name: str) -> str | None:
     """
     Get the full path of the file
     :param file_name: The path of the file relative to the src directory
@@ -41,18 +42,19 @@ def get_file(file_name: str) -> any:
     if type(file_name) == str:
         current_dir = os.getcwd()
         file = current_dir + file_name
-        if os.path.exists(file):
+        if os.path.isfile(file) and type(file) == str:
             return file
     return None
 
 
-def get_resource(resource_path: str) -> any:
+def get_resource(resource_path: str) -> str | None:
     """
     Gets the resource file from the resources' folder
     :param resource_path:
     :return:
     """
-    return get_file(Defaults.RESOURCES_PATH + resource_path)
+    if type(resource_path) == str:
+        return get_file(Defaults.RESOURCES_PATH + resource_path)
 
 
 """
@@ -62,7 +64,7 @@ def get_resource(resource_path: str) -> any:
 """
 
 
-def get_project_ui_file(ui_file_name: str) -> any:
+def get_project_ui_file(ui_file_name: str) -> str | None:
     """
     Get the full path of the relative ui file
     :param ui_file_name: The path of the ui file relative to the src directory
@@ -70,7 +72,7 @@ def get_project_ui_file(ui_file_name: str) -> any:
     """
     if type(ui_file_name) == str:
         file = os.path.join(os.getcwd(), Defaults.GUI_DOC_PATH, ui_file_name)
-        if os.path.exists(file):
+        if os.path.isfile(file):
             return file
     return None
 

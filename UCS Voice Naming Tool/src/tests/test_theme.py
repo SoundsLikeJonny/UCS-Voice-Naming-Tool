@@ -1,3 +1,10 @@
+#!/env/Scripts/python.exe
+
+"""
+Author: Jon Evans
+Last Modified: July 5, 2022
+"""
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -14,20 +21,36 @@
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-import nose2
+import unittest
+import sys
+from src.ui.theme import theme
+from qt_material import build_stylesheet
+from PyQt5.QtWidgets import QApplication
 
 
-class Test(nose2):
-    def test_set_theme(self):
-        assert False
+class Test(unittest.TestCase):
 
-    def test_set_default_theme(self):
-        assert False
+    def test_set_theme(self) -> None:
+        app = QApplication(sys.argv)
+        # Test same
+        theme.set_theme(app, 'dark_teal.xml')
+        stylesheet = build_stylesheet('dark_teal.xml')
+        self.assertEqual(app.styleSheet(), stylesheet)
+        # Test different
+        theme.set_theme(app, 'dark_teal.xml')
+        stylesheet = build_stylesheet('dark_blue.xml')
+        self.assertNotEqual(app.styleSheet(), stylesheet)
+        app.exit()
 
-    def test_defaults(self):
-        assert False
+    def test_set_default_theme(self) -> None:
+        app = QApplication(sys.argv)
+        theme.set_theme(app, theme.Defaults.DEFAULT_THEME)
+        stylesheet = build_stylesheet(theme.Defaults.DEFAULT_THEME)
+        self.assertEqual(app.styleSheet(), stylesheet)
+        theme.set_theme(app, 'dark_teal.xml')
+        stylesheet = build_stylesheet('dark_blue.xml')
+        self.assertNotEqual(app.styleSheet(), stylesheet)
+        app.exit()
 
-    def test_runtime_stylesheets(self):
-        assert False
