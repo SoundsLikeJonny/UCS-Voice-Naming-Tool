@@ -24,8 +24,21 @@ Last Modified: July 6, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from PyQt5 import uic
-from PyQt5.Qt import QMainWindow
-from PyQt5.QtGui import QIcon
+from PyQt5.Qt import (
+    QMainWindow
+)
+from PyQt5.QtGui import (
+    QIcon,
+    QDragEnterEvent,
+    QDrag,
+    QMouseEvent,
+    QDropEvent,
+
+)
+from PyQt5.QtCore import (
+    Qt,
+    QMimeData
+)
 
 from src.engine import utilities
 
@@ -66,6 +79,7 @@ class MainWindow(QMainWindow):
         self.groupBox_UserCat.setChecked(False)
         self.groupBox_VendorCat.setChecked(False)
         self.groupBox_UserData.setChecked(False)
+        # self.label_DragDrop.set
 
     def init_ui_conflict_tab(self) -> None:
         """
@@ -102,3 +116,33 @@ class MainWindow(QMainWindow):
         # Remove this when more in function. Then resolve in tests
         # noinspection PyTypeChecker
         return True
+
+    # def dragEnterEvent(self, data: QDragEnterEvent) -> None:
+    #     """
+    #     Accept incoming audio files
+    #     :param data:
+    #     """
+    #     print(data.type())
+    #     data.accept()
+
+    # def mouseMoveEvent(self, data: QMouseEvent) -> None:
+    #     """
+    #
+    #     :param data:
+    #     """
+    #     data.accept()
+    #     print(data.type())
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
+            print(event.type())
+            drag = QDrag(self)
+            # mimeData = QMimeData()
+            # mimeData.setText(self.label_DragDrop.toPlainText())
+            # drag.setMimeData(mimeData)
+
+            # Qt.DropAction.dropAction = drag.exec()
+
+    # def dropEvent(self, data: QDropEvent) -> None:
+    #     print(data.type())
+    #     data.accept()

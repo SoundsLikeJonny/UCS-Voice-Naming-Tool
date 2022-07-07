@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1006</width>
-    <height>740</height>
+    <height>702</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -438,43 +438,6 @@
         <item row="0" column="0">
          <widget class="QWidget" name="widget_2" native="true">
           <layout class="QGridLayout" name="gridLayout_5">
-           <item row="2" column="1">
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Minimum</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>9</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBox">
-               <property name="text">
-                <string>Skip File Selection Prompt</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBox_2">
-               <property name="text">
-                <string>Skip File Confirmation Prompt</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
            <item row="1" column="1">
             <widget class="QWidget" name="widget" native="true">
              <property name="minimumSize">
@@ -490,8 +453,79 @@
               </size>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
+              <item row="2" column="1">
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetNoConstraint</enum>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>Silence Threshold:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                    <property name="minimum">
+                     <double>-70.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>-10.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>-24.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_15">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox">
+                    <property name="text">
+                     <string>Skip File Selection</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_2">
+                    <property name="text">
+                     <string>Skip Naming Review</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
               <item row="0" column="1">
                <widget class="QWidget" name="widget_DragDrop" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="palette">
                  <palette>
                   <active>
@@ -935,7 +969,7 @@
                  </palette>
                 </property>
                 <property name="acceptDrops">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="autoFillBackground">
                  <bool>false</bool>
@@ -973,8 +1007,34 @@
                 </layout>
                </widget>
               </item>
+              <item row="1" column="1">
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </widget>
+           </item>
+           <item row="1" column="3">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="1" column="2">
             <widget class="QWidget" name="widget" native="true">
@@ -1668,19 +1728,6 @@
              </property>
             </spacer>
            </item>
-           <item row="1" column="3">
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
           </layout>
          </widget>
         </item>
@@ -1892,8 +1939,6 @@
   <tabstop>groupBox_UserCat</tabstop>
   <tabstop>groupBox_VendorCat</tabstop>
   <tabstop>groupBox_UserData</tabstop>
-  <tabstop>checkBox</tabstop>
-  <tabstop>checkBox_2</tabstop>
   <tabstop>groupBox_OnlyAnalyseEndsOfFiles</tabstop>
   <tabstop>spinBox_StartOnlyAnalyseEndsOfFiles</tabstop>
   <tabstop>spinBox_EndOnlyAnalyseEndsOfFiles</tabstop>
