@@ -23,37 +23,39 @@ Last Modified: July 6, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+
 import sys
-import unittest
+from unittest import TestCase
 
 from PyQt5.QtWidgets import QApplication
-from qt_material import build_stylesheet
 
 from src.ui.theme import theme
+from src.ui.ui_main_window import MainWindow
 
 
-class Test(unittest.TestCase):
+class TestMainWindow(TestCase):
 
     def setUp(self) -> None:
         self.app = QApplication(sys.argv)
+        theme.set_default_theme(self.app)
+        self.obj = MainWindow()
 
     def tearDown(self) -> None:
         self.app.exit()
 
-    def test_set_theme(self) -> None:
-        # Test same
-        theme.set_theme(self.app, 'dark_teal.xml')
-        stylesheet = build_stylesheet('dark_teal.xml')
-        self.assertEqual(self.app.styleSheet(), stylesheet)
-        # Test different
-        theme.set_theme(self.app, 'dark_teal.xml')
-        stylesheet = build_stylesheet('dark_blue.xml')
-        self.assertNotEqual(self.app.styleSheet(), stylesheet)
+    def test_init_ui_voice_tab(self) -> None:
+        self.assertFalse(self.obj.groupBox_UserCat.isChecked(), False)
+        self.assertFalse(self.obj.groupBox_VendorCat.isChecked(), False)
+        self.assertFalse(self.obj.groupBox_UserData.isChecked(), False)
 
-    def test_set_default_theme(self) -> None:
-        theme.set_theme(self.app, theme.Defaults.DEFAULT_THEME)
-        stylesheet = build_stylesheet(theme.Defaults.DEFAULT_THEME)
-        self.assertEqual(self.app.styleSheet(), stylesheet)
-        theme.set_theme(self.app, 'dark_teal.xml')
-        stylesheet = build_stylesheet('dark_blue.xml')
-        self.assertNotEqual(self.app.styleSheet(), stylesheet)
+    def test_init_ui_conflict_tab(self) -> None:
+        self.assertTrue(self.obj.init_ui_conflict_tab(), True)
+
+    def test_init_ui_mic_list_tab(self) -> None:
+        self.assertTrue(self.obj.init_ui_mic_list_tab(), True)
+
+    def test_init_ui_wildcard_tab(self) -> None:
+        self.assertTrue(self.obj.init_ui_wildcard_tab(), True)
+
+    def test_init_ui_settings_tab(self) -> None:
+        self.assertTrue(self.obj.init_ui_settings_tab(), True)

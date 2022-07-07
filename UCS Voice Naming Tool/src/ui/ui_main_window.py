@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 5, 2022
+Last Modified: July 6, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -21,15 +21,13 @@ Last Modified: July 5, 2022
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# Errors shown are resolved when running from main.py
-from PyQt5.uic import loadUi
+from PyQt5 import uic
+from PyQt5.Qt import QMainWindow
+from PyQt5.QtGui import QIcon
+
 from src.engine import utilities
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.Qt import *
-from PyQt5.QtGui import *
 
 
 class MainWindow(QMainWindow):
@@ -37,7 +35,7 @@ class MainWindow(QMainWindow):
     Core functionality of the software. Most used by end user.
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
         self.init_all_ui()
 
@@ -49,7 +47,7 @@ class MainWindow(QMainWindow):
         ui_path = utilities.get_project_ui_file('MainWindow.ui')
 
         if ui_path is not None:
-            loadUi(ui_path, self)
+            uic.loadUi(ui_path, self)
 
         icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
         self.setWindowIcon(QIcon(icon_path))
@@ -74,6 +72,8 @@ class MainWindow(QMainWindow):
         Used to only initialize UI elements in the Conflict Resolution tab
         :return: None
         """
+        # Remove this when more in function. Then resolve in tests
+        # noinspection PyTypeChecker
         return True
 
     def init_ui_mic_list_tab(self) -> None:
@@ -81,6 +81,8 @@ class MainWindow(QMainWindow):
         Used to only initialize UI elements in the Mic List tab
         :return: None
         """
+        # Remove this when more in function. Then resolve in tests
+        # noinspection PyTypeChecker
         return True
 
     def init_ui_wildcard_tab(self) -> None:
@@ -88,6 +90,8 @@ class MainWindow(QMainWindow):
         Used to only initialize UI elements in the Wild Cards tab
         :return: None
         """
+        # Remove this when more in function. Then resolve in tests
+        # noinspection PyTypeChecker
         return True
 
     def init_ui_settings_tab(self) -> None:
@@ -95,4 +99,6 @@ class MainWindow(QMainWindow):
         Used to only initialize UI elements in the Settings tab
         :return: None
         """
+        # Remove this when more in function. Then resolve in tests
+        # noinspection PyTypeChecker
         return True

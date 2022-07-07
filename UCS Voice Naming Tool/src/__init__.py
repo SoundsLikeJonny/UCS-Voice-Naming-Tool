@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 5, 2022
+Last Modified: July 6, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -21,8 +21,8 @@ Last Modified: July 5, 2022
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 """
-Intentionally blank. Used to resolve unittest error "ImportError: Start directory is not importable"
+Intentionally blank. Used to resolve unittest importing
 """
