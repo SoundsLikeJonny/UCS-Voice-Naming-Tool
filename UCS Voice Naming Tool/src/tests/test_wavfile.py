@@ -26,12 +26,20 @@ Last Modified: July 10, 2022
 
 import unittest
 
-from src.engine.audio.wavfile import Wav
 
 class Test(unittest.TestCase):
 
     def setUp(self) -> None:
-        pass
+        self.fail()
 
     def tearDown(self) -> None:
-        pass
+        self.fail()
+
+    def test_get_audio_data(self):
+        self.fail()
+
+    def test_load_audio_data(self):
+        self.fail()
+
+    def test_is_file_valid(self):
+        self.fail()

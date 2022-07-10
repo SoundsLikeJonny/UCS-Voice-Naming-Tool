@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1006</width>
-    <height>702</height>
+    <height>701</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -518,8 +518,21 @@
                 </item>
                </layout>
               </item>
+              <item row="1" column="1">
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item row="0" column="1">
-               <widget class="QWidget" name="widget_DragDrop" native="true">
+               <widget class="QFrame" name="frame_DragDrop">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -540,7 +553,7 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -612,7 +625,7 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -621,7 +634,7 @@
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -686,7 +699,7 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -758,7 +771,7 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -767,7 +780,7 @@
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -832,7 +845,7 @@
                    </colorrole>
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -904,7 +917,7 @@
                    </colorrole>
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -913,7 +926,7 @@
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
-                     <color alpha="95">
+                     <color alpha="255">
                       <red>160</red>
                       <green>180</green>
                       <blue>190</blue>
@@ -975,50 +988,10 @@
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(160, 180, 190, 95);</string>
+                 <string notr="true">background-color: rgb(160, 180, 190);</string>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_3">
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_DragDrop">
-                   <property name="acceptDrops">
-                    <bool>true</bool>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <property name="lineWidth">
-                    <number>1</number>
-                   </property>
-                   <property name="midLineWidth">
-                    <number>7</number>
-                   </property>
-                   <property name="text">
-                    <string>Drop Files Here
-(.wav only for now)</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <layout class="QGridLayout" name="gridLayout_3"/>
                </widget>
-              </item>
-              <item row="1" column="1">
-               <spacer name="verticalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
              </layout>
             </widget>

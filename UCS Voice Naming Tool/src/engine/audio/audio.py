@@ -28,10 +28,9 @@ import pydub
 
 
 class Audio(pyaudio, pydub):
-    
+    """
+    Extends pyaudio and pydub for audio manipulation
+    """
 
     def __init__(self, **kwargs):
-        super().__init__(self,**kwargs)
-        
-
-        
+        super().__init__(self, **kwargs)
