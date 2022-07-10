@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./UCS Voice Naming Tool",
+        "/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/",
         "-p",
         "test_*.py"
     ],

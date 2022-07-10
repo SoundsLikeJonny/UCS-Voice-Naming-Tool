@@ -134,6 +134,7 @@ class MainWindow(QMainWindow):
     #     print(data.type())
 
     def mousePressEvent(self, event):
+        print(str(type(event)))
         if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
             print(event.type())
             drag = QDrag(self)
