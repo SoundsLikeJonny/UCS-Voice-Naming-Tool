@@ -27,18 +27,13 @@ from PyQt5 import uic
 from PyQt5.Qt import (
     QMainWindow
 )
+from PyQt5.QtCore import (
+    Qt
+)
 from PyQt5.QtGui import (
     QIcon,
-    QDragEnterEvent,
     QDrag,
-    QMouseEvent,
-    QDropEvent,
-
-)
-from PyQt5.QtCore import (
-    Qt,
-    QMimeData
-)
+    QPixmap, )
 
 from src.engine import utilities
 
@@ -64,6 +59,9 @@ class MainWindow(QMainWindow):
 
         icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
         self.setWindowIcon(QIcon(icon_path))
+
+        self.setMouseTracking(True)
+        self.setAcceptDrops(True)
 
         self.init_ui_voice_tab()
         self.init_ui_conflict_tab()
@@ -117,24 +115,34 @@ class MainWindow(QMainWindow):
         # noinspection PyTypeChecker
         return True
 
-    # def dragEnterEvent(self, data: QDragEnterEvent) -> None:
-    #     """
-    #     Accept incoming audio files
-    #     :param data:
-    #     """
-    #     print(data.type())
-    #     data.accept()
+    def dragEnterEvent(self, event):
+        if self.frame_DragDrop.underMouse():
+            self.frame_DragDrop.setStyleSheet("color: rgb(255, 255, 0);")
+            if event.mimeData().hasUrls():
+                event.accept()
+            print("drag")
+        else:
+            print("nodrag")
+            self.frame_DragDrop.setStyleSheet("color: rgb(0, 0, 0);")
+            event.ignore()
 
-    # def mouseMoveEvent(self, data: QMouseEvent) -> None:
-    #     """
-    #
-    #     :param data:
-    #     """
-    #     data.accept()
-    #     print(data.type())
+    def dropEvent(self, event):
+
+        files = [u.toLocalFile() for u in event.mimeData().urls()]
+        for f in files:
+            print(f)
+        #
+        # def eventFilter(self, source, event):
+        #
+        #     if self.frame_DragDrop.underMouse():
+        #         self.frame_DragDrop.setStyleSheet("color: rgb(255, 255, 0);")
+        #         print("Mouse")
+        #
+        #     else:
+        #         self.frame_DragDrop.setStyleSheet("")
+        #         print("setStyleSheet("")")
 
     def mousePressEvent(self, event):
-        print(str(type(event)))
         if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
             print(event.type())
             drag = QDrag(self)
@@ -142,8 +150,8 @@ class MainWindow(QMainWindow):
             # mimeData.setText(self.label_DragDrop.toPlainText())
             # drag.setMimeData(mimeData)
 
-            # Qt.DropAction.dropAction = drag.exec()
+        pixmap = QPixmap(self.size())
+        self.render(pixmap)
+        drag.setPixmap(pixmap)
 
-    # def dropEvent(self, data: QDropEvent) -> None:
-    #     print(data.type())
-    #     data.accept()
+        drag.exec_(Qt.MoveAction)

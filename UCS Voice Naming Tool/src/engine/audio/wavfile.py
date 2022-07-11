@@ -23,37 +23,47 @@ Last Modified: July 10, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import wave
-import os, pathlib
-from src.engine.audio import Audio
+import os
+import pathlib
+
+from src.engine.audio.audio import Audio
 from src.engine.utilities import is_str
 
 
 class Wav(Audio):
 
-    def __init__(self,file_path: str = '', **kwargs):
-        super().__init__(self,**kwargs)
+    def __init__(self, file_path: str = '', **kwargs):
+        super().__init__(**kwargs)
         if not self.is_file_valid(file_path):
             self = None
-            return self
         self.file_path = file_path
 
-
     def is_file_valid(self, file: str) -> bool:
+        """
+        Validate the .wav file
+        :param file:
+        :return:
+        """
         if not is_str(file) \
-            or not os.path.isfile(file) \
-            or pathlib.Path(file).suffix != '.wav':
+                or not os.path.isfile(file) \
+                or pathlib.Path(file).suffix != '.wav':
             return False
         return True
 
     def load_audio_data(self, file_path: str):
+        """
+
+        :param file_path:
+        """
         # TODO: load audio data
         pass
 
     def get_audio_data(self, file_path: str):
+        """
+
+        :param file_path:
+        """
         # TODO: return audio data
         pass
 
-
     # TODO: write a function to get audio chunks
-    
