@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 6, 2022
+Last Modified: July 11, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -22,20 +22,18 @@ Last Modified: July 6, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
+import PyQt5
 from PyQt5 import uic
 from PyQt5.Qt import (
     QMainWindow
 )
-from PyQt5.QtCore import (
-    Qt
-)
 from PyQt5.QtGui import (
     QIcon,
-    QDrag,
-    QPixmap, )
+)
+from PyQt5.QtWidgets import QDialog
 
 from src.engine import utilities
+from src.ui.ui_file_confirmation_window import FileConfirmation
 
 
 class MainWindow(QMainWindow):
@@ -45,6 +43,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+        self.file_confirmation_window = None
         self.init_all_ui()
 
     def init_all_ui(self) -> None:
@@ -62,6 +61,8 @@ class MainWindow(QMainWindow):
 
         self.setMouseTracking(True)
         self.setAcceptDrops(True)
+
+        self.file_confirmation_window = None
 
         self.init_ui_voice_tab()
         self.init_ui_conflict_tab()
@@ -115,22 +116,65 @@ class MainWindow(QMainWindow):
         # noinspection PyTypeChecker
         return True
 
-    def dragEnterEvent(self, event):
-        if self.frame_DragDrop.underMouse():
-            self.frame_DragDrop.setStyleSheet("color: rgb(255, 255, 0);")
-            if event.mimeData().hasUrls():
-                event.accept()
-            print("drag")
+    def dropEvent(self, event: PyQt5.QtGui.QDropEvent) -> None:
+        """
+        Override QT drop event
+        :param event:
+        """
+        files = [u.toLocalFile() for u in event.mimeData().urls()]
+        if not self.checkBox_SkipFileSelection.checkState():
+            self.open_file_confirmation_window(files)
         else:
-            print("nodrag")
-            self.frame_DragDrop.setStyleSheet("color: rgb(0, 0, 0);")
+            self.analyze_stt(files)
+
+    def open_file_confirmation_window(self, file_list: list):
+        """
+        Create FileConfirmation window with items from file_list
+        :param file_list:
+        """
+        if self.file_confirmation_window is None:
+            self.file_confirmation_window = FileConfirmation(parent=self)
+            self.file_confirmation_window.show()
+            self.file_confirmation_window.set_wav_list(file_list)
+            self.file_confirmation_window.buttonBox.rejected.connect(self.reset_file_confirmation_window)
+            self.file_confirmation_window.destroyed.connect(self.reset_file_confirmation_window)
+            self.file_confirmation_window.buttonBox.accepted.connect(self.file_confirmation_window_analyze_stt)
+
+    def dragEnterEvent(self, event: PyQt5.QtGui.QDragEnterEvent) -> None:
+        """
+        Set drag and drop to only handle urls
+        :param event:
+        """
+        if event.mimeData().hasUrls():
+            event.accept()
+        else:
             event.ignore()
 
-    def dropEvent(self, event):
+    def reset_file_confirmation_window(self):
+        """
+        Reset window object back to None. Used to ensure that only one FileConfirmation window is made
+        """
+        self.file_confirmation_window = None
 
-        files = [u.toLocalFile() for u in event.mimeData().urls()]
-        for f in files:
-            print(f)
+    def file_confirmation_window_analyze_stt(self):
+        """
+        If the window exists, get the files to analyse
+        """
+        if self.file_confirmation_window is not None:
+            files = self.file_confirmation_window.selected_wav_items
+            self.analyze_stt(files)
+
+    def analyze_stt(self, files=None):
+        """
+        Hand off to STT engine to handle processing of speech
+        :param files:
+        """
+        if not utilities.is_type(self.file_confirmation_window, QDialog):
+            self.reset_file_confirmation_window()
+
+        if files:
+            print("printing files")
+
         #
         # def eventFilter(self, source, event):
         #
@@ -142,16 +186,16 @@ class MainWindow(QMainWindow):
         #         self.frame_DragDrop.setStyleSheet("")
         #         print("setStyleSheet("")")
 
-    def mousePressEvent(self, event):
-        if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
-            print(event.type())
-            drag = QDrag(self)
-            # mimeData = QMimeData()
-            # mimeData.setText(self.label_DragDrop.toPlainText())
-            # drag.setMimeData(mimeData)
+        # def mousePressEvent(self, event):
+        #     if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
+        #         print(event.type())
+        #         drag = QDrag(self)
+        #         # mimeData = QMimeData()
+        #         # mimeData.setText(self.label_DragDrop.toPlainText())
+        #         # drag.setMimeData(mimeData)
 
-        pixmap = QPixmap(self.size())
-        self.render(pixmap)
-        drag.setPixmap(pixmap)
-
-        drag.exec_(Qt.MoveAction)
+        # pixmap = QPixmap(self.size())
+        # self.render(pixmap)
+        # drag.setPixmap(pixmap)
+        #
+        # drag.exec_(Qt.MoveAction)

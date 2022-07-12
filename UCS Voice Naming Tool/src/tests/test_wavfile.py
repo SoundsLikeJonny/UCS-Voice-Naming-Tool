@@ -24,22 +24,25 @@ Last Modified: July 10, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
+import os
 import unittest
 
 
-class Test(unittest.TestCase):
+class TestWav(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.fail()
+        self.path = os.getcwd() + '\\src\\tests\\test_wav_files\\'
+        self.filenames = os.listdir(self.path)
+        self.audio_files = [self.path + filename for filename in self.filenames]
 
     def tearDown(self) -> None:
-        self.fail()
+        pass
 
-    def test_get_audio_data(self):
-        self.fail()
+    # def test_get_audio_data(self):
+    #     print(self.audio_files)
 
-    def test_load_audio_data(self):
-        self.fail()
-
-    def test_is_file_valid(self):
-        self.fail()
+    # def test_load_audio_data(self):
+    #     self.fail()
+    #
+    # def test_is_file_valid(self):
+    #     self.fail()
