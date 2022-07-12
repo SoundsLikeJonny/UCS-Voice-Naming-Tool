@@ -23,14 +23,14 @@ Last Modified: July 10, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import pyaudio
-import pydub
+from pyaudio import PyAudio
+from pydub import AudioSegment
 
 
-class Audio(pyaudio, pydub):
+class Audio(PyAudio, AudioSegment):
     """
     Extends pyaudio and pydub for audio manipulation
     """
 
     def __init__(self, **kwargs):
-        super().__init__(self, **kwargs)
+        super(Audio, self).__init__(self, **kwargs)

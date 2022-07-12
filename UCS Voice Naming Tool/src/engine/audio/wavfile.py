@@ -30,25 +30,29 @@ from src.engine.audio.audio import Audio
 from src.engine.utilities import is_str
 
 
+def is_file_valid(file: str) -> bool:
+    """
+    Validate the .wav file
+    :param file:
+    :return:
+    """
+    if not is_str(file) \
+            or not os.path.isfile(file) \
+            or pathlib.Path(file).suffix != '.wav':
+        return False
+    return True
+
+
 class Wav(Audio):
+    """
+    .
+    """
 
     def __init__(self, file_path: str = '', **kwargs):
         super().__init__(**kwargs)
-        if not self.is_file_valid(file_path):
-            self = None
+        # if not is_file_valid(file_path):
+        # self = None
         self.file_path = file_path
-
-    def is_file_valid(self, file: str) -> bool:
-        """
-        Validate the .wav file
-        :param file:
-        :return:
-        """
-        if not is_str(file) \
-                or not os.path.isfile(file) \
-                or pathlib.Path(file).suffix != '.wav':
-            return False
-        return True
 
     def load_audio_data(self, file_path: str):
         """

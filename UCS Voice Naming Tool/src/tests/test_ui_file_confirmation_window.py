@@ -1,10 +1,3 @@
-#!/env/Scripts/python.exe
-
-"""
-Author: Jon Evans
-Last Modified: July 6, 2022
-"""
-
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -23,17 +16,6 @@ Last Modified: July 6, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
-import sys
-
-from PyQt5.QtWidgets import QApplication
-
-from src.ui.ui_main_window import MainWindow
-
-app = QApplication(sys.argv)
-# theme.set_default_theme(app)
-
-obj = MainWindow()
-obj.show()
-
-sys.exit(app.exec_())
+# class TestFileConfirmation(TestCase):
+#     def test_set_wav_list(self):
+#         self.fail()

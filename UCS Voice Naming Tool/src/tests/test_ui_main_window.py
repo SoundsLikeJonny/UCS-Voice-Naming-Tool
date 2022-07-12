@@ -59,3 +59,16 @@ class TestMainWindow(TestCase):
 
     def test_init_ui_settings_tab(self) -> None:
         self.assertTrue(self.obj.init_ui_settings_tab(), True)
+
+    def test_qt_exists(self):
+        pass
+        # self.assert_(self.frame_DragDrop is not None)
+
+    # def test_open_file_confirmation_window(self):
+    #     self.fail()
+    #
+    # def test_reset_file_confirmation_window(self):
+    #     self.fail()
+    #
+    # def test_file_confirmation_window_analyze_stt(self):
+    #     self.fail()
