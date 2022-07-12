@@ -127,5 +127,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 #/UCS Voice Naming Tool/env/
-File UCS Voice Naming Tool/env/Lib/site-packages/~-side2/
-File UCS Voice Naming Tool/env/Lib/site-packages/PySide6/
+# File UCS Voice Naming Tool/env/Lib/site-packages/~-side2/
+# File UCS Voice Naming Tool/env/Lib/site-packages/PySide6/
