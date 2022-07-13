@@ -22,15 +22,17 @@ Last Modified: July 6, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
+import os
 import sys
 from unittest import TestCase
 
+from PyQt5 import QtCore
+from PyQt5.QtGui import QDropEvent
 from PyQt5.QtWidgets import QApplication
 
 from src.ui.theme import theme
 from src.ui.ui_main_window import MainWindow
+from src.ui.ui_file_confirmation_window import FileConfirmation
 
 
 class TestMainWindow(TestCase):
@@ -39,9 +41,14 @@ class TestMainWindow(TestCase):
         self.app = QApplication(sys.argv)
         theme.set_default_theme(self.app)
         self.obj = MainWindow()
+        self.file_confirm_good = self.obj.open_file_confirmation_window(Defaults.test_file_list)
+        self.file_confirm_bad = self.obj.open_file_confirmation_window(Defaults.bad_test_file_list)
 
     def tearDown(self) -> None:
         self.app.exit()
+
+    def test_exists_qt_widgets(self):
+        self.assertTrue(self.obj.exists_qt_widgets())
 
     def test_init_ui_voice_tab(self) -> None:
         self.assertFalse(self.obj.groupBox_UserCat.isChecked(), False)
@@ -60,15 +67,42 @@ class TestMainWindow(TestCase):
     def test_init_ui_settings_tab(self) -> None:
         self.assertTrue(self.obj.init_ui_settings_tab(), True)
 
-    def test_qt_exists(self):
-        pass
-        # self.assert_(self.frame_DragDrop is not None)
+    def test_open_file_confirmation_window(self):
+        self.assertIsInstance(self.obj.file_confirmation_window, FileConfirmation)
 
-    # def test_open_file_confirmation_window(self):
-    #     self.fail()
-    #
-    # def test_reset_file_confirmation_window(self):
-    #     self.fail()
-    #
-    # def test_file_confirmation_window_analyze_stt(self):
-    #     self.fail()
+    def test_reset_file_confirmation_window(self):
+        self.obj.reset_file_confirmation_window()
+        self.assertIsNone(self.obj.file_confirmation_window)
+
+    def test_file_confirmation_window_analyze_stt(self):
+        self.obj.file_confirmation_window = self.file_confirm_good
+        self.obj.file_confirmation_window_analyze_stt()
+        self.assertIsNone(self.obj.file_confirmation_window)
+
+    def test_handle_drop_event_files(self):
+        self.obj.handle_drop_event_files(Defaults.test_file_list)
+        self.assertIsInstance(self.obj.file_confirmation_window, FileConfirmation)
+
+    def test_analyze_stt(self):
+        self.assertFalse(self.obj.analyze_stt())
+        self.assertTrue(self.obj.analyze_stt(files=[]))
+        self.assertTrue(self.obj.analyze_stt(files=Defaults.test_file_list))
+        self.assertTrue(self.obj.analyze_stt(files=Defaults.bad_test_file_list))
+
+
+class Defaults:
+    test_file_list = [
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_01.wav",
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_02.wav",
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_03.wav",
+    ]
+    bad_test_file_list = [
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_01.mp3",
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_02",
+        f"{os.getcwd()}\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_03.av",
+    ]
+    voice_results = [
+        '',
+        '',
+        ''
+    ]

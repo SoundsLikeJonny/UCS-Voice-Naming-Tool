@@ -26,6 +26,7 @@ Last Modified: July 10, 2022
 
 import os
 import unittest
+from src.engine.audio.wavfile import Wav, is_file_valid
 
 
 class TestWav(unittest.TestCase):
@@ -34,15 +35,20 @@ class TestWav(unittest.TestCase):
         self.path = os.getcwd() + '\\src\\tests\\test_wav_files\\'
         self.filenames = os.listdir(self.path)
         self.audio_files = [self.path + filename for filename in self.filenames]
+        self.wav_obj = Wav(file_path=self.audio_files[1])
 
     def tearDown(self) -> None:
         pass
 
-    # def test_get_audio_data(self):
-    #     print(self.audio_files)
+    def test_get_audio_info(self):
+        self.assertNotEqual(self.wav_obj.get_audio_info(), {})
 
-    # def test_load_audio_data(self):
-    #     self.fail()
-    #
-    # def test_is_file_valid(self):
-    #     self.fail()
+    def test_load_audio_data(self):
+        pass
+        # self.fail()
+
+    def test_is_file_valid(self):
+        self.assertTrue(self.audio_files[0])
+        self.assertFalse('')
+        self.assertFalse(None)
+        self.assertFalse(0)

@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 11, 2022
+Last Modified: July 12, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -37,6 +37,7 @@ from PyQt5.QtWidgets import QListWidgetItem
 
 from src.engine import utilities
 from src.engine.audio import wavfile
+from src.engine.audio.audio import Audio
 
 
 class FileConfirmation(QDialog):
@@ -64,6 +65,12 @@ class FileConfirmation(QDialog):
         self.setWindowFlag(Qt.WindowCloseButtonHint, False)
         self.setWindowFlag(Qt.WindowContextHelpButtonHint, False)
 
+    def exists_qt_widgets(self) -> None:
+        """
+        Not used. Definition is used for testing
+        :return:
+        """
+
     def set_wav_list(self, file_list: list) -> None:
         """
         Fill the QListWidget with items from file_list
@@ -83,18 +90,26 @@ class FileConfirmation(QDialog):
         """
         Add selected files to class variable. Then accept from super
         """
+        self.store_list_widget_wav_file_paths()
+        super().accept()
+
+    def store_list_widget_wav_file_paths(self):
+        """
+        Store all .wav file paths to self.selected_wav_items as a list
+        """
         self.selected_wav_items = []
+        print(self.listWidget_WavFileSelect.count())
         for index in range(self.listWidget_WavFileSelect.count()):
             item = self.listWidget_WavFileSelect.item(index)
             if item.checkState() == Qt.Checked:
                 self.selected_wav_items.append(item.text())
-        super().accept()
+        print(self.selected_wav_items)
 
-    def get_wave_file_info(self):
+    def get_selected_wave_file_info(self):
         """
         .
         """
-        pass
+        print(self.listWidget_WavFileSelect.selectedItems())
 
     def reject(self) -> None:
         """
