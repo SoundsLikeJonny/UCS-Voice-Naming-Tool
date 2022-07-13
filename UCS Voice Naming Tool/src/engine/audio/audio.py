@@ -26,9 +26,7 @@ Last Modified: July 10, 2022
 import os
 import pathlib
 
-import soundfile
 from pyaudio import PyAudio
-from pydub import AudioSegment
 
 from src.engine.utilities import is_str
 
@@ -54,6 +52,6 @@ class Audio:
     def __init__(self, file_path=None, **kwargs):
         if file_path and is_file_valid(file_path):
             self.py_audio = PyAudio()
-            self.data, self.samplerate = soundfile.read(file_path)
-            self.audio_segment = AudioSegment().from_wav(file_path)
+            # self.data, self.samplerate = soundfile.read(file_path)
+            # self.audio_segment = AudioSegment().from_wav(file_path)
             self.file_path = file_path
