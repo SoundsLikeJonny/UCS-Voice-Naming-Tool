@@ -26,21 +26,9 @@ Last Modified: July 10, 2022
 import os
 import pathlib
 
-from src.engine.audio.audio import Audio
-from src.engine.utilities import is_str
+import wave, soundfile
 
-
-def is_file_valid(file: str) -> bool:
-    """
-    Validate the .wav file
-    :param file:
-    :return:
-    """
-    if not is_str(file) \
-            or not os.path.isfile(file) \
-            or pathlib.Path(file).suffix != '.wav':
-        return False
-    return True
+from src.engine.audio.audio import Audio, PyAudio, AudioSegment, is_file_valid
 
 
 class Wav(Audio):
@@ -48,24 +36,40 @@ class Wav(Audio):
     .
     """
 
-    def __init__(self, file_path: str = '', **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, file_path: str = None, **kwargs):
+        super().__init__(file_path=file_path, **kwargs)
         # if not is_file_valid(file_path):
         # self = None
-        self.file_path = file_path
+        self.file_path = None
+        
+        if is_file_valid(file_path):
+            self.file_path = file_path
 
-    def load_audio_data(self, file_path: str):
+    def get_audio_info(self) -> dict:
+        """
+        Return wave info on file
+        """
+        # TODO: find a way to load without errors. FFmpeg needs installation, can't read RIF
+
+        if self.file_path:
+            wave_file = wave.open(self.file_path, 'rb')
+            data = {
+                'sample_width': wave_file.getsampwidth(),
+                'channels': wave_file.getnchannels(),
+                'framerate': wave_file.getframerate(),
+                'comp_name': wave_file.getcompname(),
+                'comp_type': wave_file.getcomptype(),
+                'fp': wave_file.getfp(),
+                'markers': wave_file.getmarkers(),
+                'n_frames': wave_file.getnframes()
+            }
+
+            return data
+        return {}
+
+    def get_audio_data(self):
         """
 
-        :param file_path:
-        """
-        # TODO: load audio data
-        pass
-
-    def get_audio_data(self, file_path: str):
-        """
-
-        :param file_path:
         """
         # TODO: return audio data
         pass

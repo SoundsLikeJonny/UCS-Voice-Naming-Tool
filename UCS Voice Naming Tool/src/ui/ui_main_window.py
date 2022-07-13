@@ -70,6 +70,16 @@ class MainWindow(QMainWindow):
         self.init_ui_wildcard_tab()
         self.init_ui_settings_tab()
 
+    def exists_qt_widgets(self) -> bool:
+        """
+        Not used. Definition is used for testing
+        :return:
+        """
+        self.groupBox_UserCat
+        self.groupBox_VendorCat
+        self.groupBox_UserData
+        return True
+
     def init_ui_voice_tab(self) -> None:
         """
         Used to only initialize UI elements in the Voice tab
@@ -122,6 +132,13 @@ class MainWindow(QMainWindow):
         :param event:
         """
         files = [u.toLocalFile() for u in event.mimeData().urls()]
+        self.handle_drop_event_files(files)
+
+    def handle_drop_event_files(self, files: list):
+        """
+        Passes the files to the appropriate function
+        :param files:
+        """
         if not self.checkBox_SkipFileSelection.checkState():
             self.open_file_confirmation_window(files)
         else:
@@ -164,7 +181,7 @@ class MainWindow(QMainWindow):
             files = self.file_confirmation_window.selected_wav_items
             self.analyze_stt(files)
 
-    def analyze_stt(self, files=None):
+    def analyze_stt(self, files=None) -> bool:
         """
         Hand off to STT engine to handle processing of speech
         :param files:
@@ -172,8 +189,9 @@ class MainWindow(QMainWindow):
         if not utilities.is_type(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
 
-        if files:
-            print("printing files")
+        if utilities.is_list(files):
+            return True
+        return False
 
         #
         # def eventFilter(self, source, event):
