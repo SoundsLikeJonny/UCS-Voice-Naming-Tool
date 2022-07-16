@@ -26,9 +26,9 @@ Last Modified: July 10, 2022
 import os
 import pathlib
 
-import wave, soundfile
+import wave
 
-from src.engine.audio.audio import Audio, PyAudio, AudioSegment, is_file_valid
+from src.engine.audio.audio import Audio, PyAudio, is_file_valid
 
 
 class Wav(Audio):
@@ -51,7 +51,7 @@ class Wav(Audio):
         """
         # TODO: find a way to load without errors. FFmpeg needs installation, can't read RIF
 
-        if self.file_path:
+        if self.file_path is not None:
             wave_file = wave.open(self.file_path, 'rb')
             data = {
                 'sample_width': wave_file.getsampwidth(),
@@ -63,7 +63,7 @@ class Wav(Audio):
                 'markers': wave_file.getmarkers(),
                 'n_frames': wave_file.getnframes()
             }
-
+            
             return data
         return {}
 
