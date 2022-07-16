@@ -23,12 +23,12 @@ Last Modified: July 10, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import os
-import pathlib
 
 import wave
 
-from src.engine.audio.audio import Audio, PyAudio, is_file_valid
+from src.engine.audio.audio import Audio, is_file_valid
+
+import soundfile
 
 
 class Wav(Audio):
@@ -45,6 +45,8 @@ class Wav(Audio):
         if is_file_valid(file_path):
             self.file_path = file_path
 
+        self.data = self.get_audio_info()
+
     def get_audio_info(self) -> dict:
         """
         Return wave info on file
@@ -53,18 +55,19 @@ class Wav(Audio):
 
         if self.file_path is not None:
             wave_file = wave.open(self.file_path, 'rb')
+            wave_file_sf = soundfile.SoundFile(self.file_path)
             data = {
                 'sample_width': wave_file.getsampwidth(),
                 'channels': wave_file.getnchannels(),
-                'framerate': wave_file.getframerate(),
+                'sample_rate': wave_file.getframerate(),
                 'comp_name': wave_file.getcompname(),
                 'comp_type': wave_file.getcomptype(),
                 'fp': wave_file.getfp(),
-                'markers': wave_file.getmarkers(),
+                'bit_depth' : wave_file_sf.subtype,
+                # 'markers': wave_file.getmarkers(),
                 'n_frames': wave_file.getnframes(),
                 # 'bit_depth' : wave_file.
             }
-            
             return data
         return {}
 
