@@ -7,5 +7,12 @@
         "test_*.py"
     ],
     "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "python.defaultInterpreterPath": "/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/env/Scripts/ python",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": ["/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src"],
+    "python.linting.cwd": "/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool",
+
+"python.linting.pylintEnabled": true,
+"python.linting.enabled": true
 }

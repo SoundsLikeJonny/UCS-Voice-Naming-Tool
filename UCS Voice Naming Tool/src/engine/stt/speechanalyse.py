@@ -23,14 +23,11 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from src.engine.stt.speechread import SpeechRead
 
-import unittest
-
-
-class Test(unittest.TestCase):
-
-    def setUp(self) -> None:
-        pass
-
-    def tearDown(self) -> None:
-        pass
+class SpeechAnalyse(SpeechRead):
+    """
+    
+    """
+    def __init__(self) -> None:
+        super().__init__()

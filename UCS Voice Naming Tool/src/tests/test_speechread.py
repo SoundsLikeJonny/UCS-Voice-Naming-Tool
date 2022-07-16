@@ -23,14 +23,21 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 import unittest
 
+from src.engine.stt.speechread import SpeechRead
+from src.tests.test_testdata import Defaults
 
-class Test(unittest.TestCase):
+
+class TestSpeechRead(unittest.TestCase):
 
     def setUp(self) -> None:
-        pass
+        self.obj_good = SpeechRead(file_path=Defaults.VALID_WAV_SPEECH_UNIX)
+        
 
     def tearDown(self) -> None:
         pass
+
+    def test_store_speech_from_file(self) -> None:
+        self.obj_good.store_speech_from_file()
+        print(self.obj_good.speech_transcription_from_file)

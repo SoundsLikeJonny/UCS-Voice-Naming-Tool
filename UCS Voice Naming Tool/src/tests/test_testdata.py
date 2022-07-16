@@ -23,14 +23,8 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+class Defaults:
+    WAV_FILEPATH_WINDOWS = '\\src\\tests\\test_wav_files\\'
+    WAV_FILEPATH_UNIX = '/src/tests/test_wav_files/'
+    VALID_WAV_SPEECH_UNIX = '/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/test_wav_files/Test_05.wav'
 
-import unittest
-
-
-class Test(unittest.TestCase):
-
-    def setUp(self) -> None:
-        pass
-
-    def tearDown(self) -> None:
-        pass
