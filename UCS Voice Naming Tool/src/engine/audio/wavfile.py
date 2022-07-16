@@ -61,7 +61,8 @@ class Wav(Audio):
                 'comp_type': wave_file.getcomptype(),
                 'fp': wave_file.getfp(),
                 'markers': wave_file.getmarkers(),
-                'n_frames': wave_file.getnframes()
+                'n_frames': wave_file.getnframes(),
+                # 'bit_depth' : wave_file.
             }
             
             return data
