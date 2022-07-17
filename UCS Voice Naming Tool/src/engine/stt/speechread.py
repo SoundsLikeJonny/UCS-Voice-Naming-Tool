@@ -23,6 +23,9 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from pydub import AudioSegment
+from pydub.silence import detect_nonsilent
+
 from src.engine.audio.wavfile import Wav
 from src.engine.audio.audio import is_file_valid
 
@@ -39,6 +42,12 @@ class SpeechRead:
         self.wav = None
         self.recognizer = None
         self.speech_transcription_from_file = None
+        self.audio_data_from_file_pydub = None
+        self.audio_data_from_file_googrec = None
+
+        self.min_silence_len = 50
+        self.silence_threshold = -16
+        self.seek_step = 1
 
         if is_file_valid(file_path):
             self.wav = Wav(file_path)
@@ -46,7 +55,20 @@ class SpeechRead:
         if self.wav.file_path is not None:
             self.recognizer = stt.Recognizer()
         
+        self.init_all_audio_data()
+
+    def init_all_audio_data(self):
         self.init_audio_data_from_file_googrec()
+        self.init_audio_data_from_file_pydub()
+
+    def init_audio_data_from_file_pydub(self) -> None:
+        """
+        
+        """
+        if self.wav is None:
+            return None
+
+        self.audio_data_from_file_pydub = AudioSegment.from_wav(self.wav.file_path)
 
     def init_audio_data_from_file_googrec(self) -> None:
         """
@@ -62,6 +84,13 @@ class SpeechRead:
     def store_speech_from_file(self) -> None:
         """``
         Attempt to access the Google Speech Recognition API and read the file. 
-        """ 
+        """
         self.speech_transcription_from_file = self.recognizer.recognize_google(self.audio_data_from_file_googrec)
-        
+
+    def get_non_silent_ranges(self) -> list:
+        return detect_nonsilent(
+            self.audio_data_from_file_pydub,
+            min_silence_len=self.min_silence_len,
+            silence_thresh=self.silence_threshold,
+            seek_step=self.seek_step
+            )

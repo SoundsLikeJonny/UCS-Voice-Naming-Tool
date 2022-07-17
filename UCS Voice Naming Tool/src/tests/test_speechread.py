@@ -33,11 +33,14 @@ class TestSpeechRead(unittest.TestCase):
 
     def setUp(self) -> None:
         self.obj_good = SpeechRead(file_path=Defaults.VALID_WAV_SPEECH_UNIX)
-        
+        self.obj_good.store_speech_from_file()
 
     def tearDown(self) -> None:
         pass
 
     def test_store_speech_from_file(self) -> None:
-        self.obj_good.store_speech_from_file()
         print(self.obj_good.speech_transcription_from_file)
+        pass
+
+    def test_get_non_silent_ranges(self) -> None:
+        print(self.obj_good.get_non_silent_ranges())
