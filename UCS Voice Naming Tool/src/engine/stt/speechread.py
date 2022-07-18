@@ -23,13 +23,13 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+import speech_recognition as stt
 from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
 
-from src.engine.audio.wavfile import Wav
 from src.engine.audio.audio import is_file_valid
+from src.engine.audio.wavfile import Wav
 
-import speech_recognition as stt
 
 class SpeechRead:
     """
@@ -37,6 +37,7 @@ class SpeechRead:
 
     Requires an internet connection
     """
+
     def __init__(self, file_path=None) -> None:
         self.file_path = None
         self.wav = None
@@ -46,15 +47,16 @@ class SpeechRead:
         self.audio_data_from_file_googrec = None
 
         self.min_silence_len = 50
-        self.silence_threshold = -16
+        self.silence_threshold = -20
         self.seek_step = 1
+        self.pad_length = 500
 
         if is_file_valid(file_path):
             self.wav = Wav(file_path)
 
         if self.wav.file_path is not None:
             self.recognizer = stt.Recognizer()
-        
+
         self.init_all_audio_data()
 
     def init_all_audio_data(self):
@@ -93,4 +95,11 @@ class SpeechRead:
             min_silence_len=self.min_silence_len,
             silence_thresh=self.silence_threshold,
             seek_step=self.seek_step
-            )
+        )
+
+    def get_audio_data_non_silent_from_ranges(self) -> None:
+        non_silent_ranges = self.get_non_silent_ranges()
+        audio_datas = []
+        if non_silent_ranges and self.audio_data_from_file_pydub:
+            for start_range, end_range in non_silent_ranges:
+                audio_datas.append(self.audio_data_from_file_pydub[start_range:end_range:])

@@ -5,6 +5,7 @@ Author: Jon Evans
 Last Modified: July 16, 2022
 """
 
+
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
 #
@@ -27,4 +28,4 @@ class Defaults:
     WAV_FILEPATH_WINDOWS = '\\src\\tests\\test_wav_files\\'
     WAV_FILEPATH_UNIX = '/src/tests/test_wav_files/'
     VALID_WAV_SPEECH_UNIX = '/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/test_wav_files/Test_05.wav'
-
+    VALID_WAV_SPEECH_WINDOWS = 'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_01.wav'

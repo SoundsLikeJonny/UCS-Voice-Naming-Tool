@@ -26,7 +26,9 @@ Last Modified: July 10, 2022
 
 import os
 import unittest
+
 from src.engine.audio.wavfile import Wav, is_file_valid
+from src.tests.test_testdata import Defaults
 
 
 class TestWav(unittest.TestCase):
@@ -35,7 +37,8 @@ class TestWav(unittest.TestCase):
         self.path = os.getcwd() + Defaults.WAV_FILEPATH_UNIX
         self.filenames = os.listdir(self.path)
         self.audio_files = [self.path + filename for filename in self.filenames]
-        self.wav_obj = Wav(file_path='/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/test_wav_files/Test_05.wav')
+        self.wav_obj = Wav(
+            file_path=Defaults.VALID_WAV_SPEECH_WINDOWS)
         # self.wav_obj = Wav(file_path=self.audio_files[4])
 
     def tearDown(self) -> None:
@@ -49,12 +52,10 @@ class TestWav(unittest.TestCase):
         # self.fail()
 
     def test_is_file_valid(self):
-        self.assertTrue(is_file_valid(self.audio_files[0]))
-        self.assertFalse('')
-        self.assertFalse(None)
-        self.assertFalse(0)
-
-class Defaults:
-    WAV_FILEPATH_WINDOWS = '\\src\\tests\\test_wav_files\\'
-    WAV_FILEPATH_UNIX = '/src/tests/test_wav_files/'
-
+        self.assertTrue(is_file_valid(Defaults.VALID_WAV_SPEECH_WINDOWS))
+        # noinspection PyTypeChecker
+        self.assertFalse(is_file_valid(''))
+        # noinspection PyTypeChecker
+        self.assertFalse(is_file_valid(None))
+        # noinspection PyTypeChecker
+        self.assertFalse(is_file_valid(0))

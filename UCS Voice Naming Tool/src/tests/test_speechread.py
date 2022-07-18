@@ -32,7 +32,7 @@ from src.tests.test_testdata import Defaults
 class TestSpeechRead(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.obj_good = SpeechRead(file_path=Defaults.VALID_WAV_SPEECH_UNIX)
+        self.obj_good = SpeechRead(file_path=Defaults.VALID_WAV_SPEECH_WINDOWS)
         self.obj_good.store_speech_from_file()
 
     def tearDown(self) -> None:
@@ -44,3 +44,6 @@ class TestSpeechRead(unittest.TestCase):
 
     def test_get_non_silent_ranges(self) -> None:
         print(self.obj_good.get_non_silent_ranges())
+
+    def test_get_audio_data_non_silent_from_ranges(self) -> None:
+        print(self.obj_good.get_audio_data_non_silent_from_ranges())
