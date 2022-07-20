@@ -55,7 +55,7 @@ class Defaults:
     Default theme values
     """
 
-    DEFAULT_THEME = list_themes()[1]
+    DEFAULT_THEME = list_themes()[2]
     DEFAULT_EXTRA = {
         'density_scale': '-2',
     }

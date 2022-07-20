@@ -24,11 +24,32 @@ Last Modified: July 10, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
+import datetime
 import wave
+
+import soundfile
 
 from src.engine.audio.audio import Audio, is_file_valid
 
-import soundfile
+
+def get_length_formatted(wave_file) -> str:
+    """
+    Returns a formatted string of the length of the audio file
+    :param wave_file:
+    :return:
+    """
+    len_sec = wave_file.getnframes() / float(wave_file.getframerate())
+    len_sec = round(len_sec)
+    return str(datetime.timedelta(seconds=len_sec))
+
+
+def get_samplerate(wave_file):
+    """
+    Return the framerate multiplied bu the samplewidth
+    :param wave_file:
+    :return:
+    """
+    return wave_file.getframerate() * wave_file.getnchannels()
 
 
 class Wav(Audio):
@@ -41,13 +62,22 @@ class Wav(Audio):
         # if not is_file_valid(file_path):
         # self = None
         self.file_path = None
-        
+        self.sample_width = None
+        self.channels = None
+        self.sample_rate = None
+        self.comp_name = None
+        self.comp_type = None
+        self.fp = None
+        self.bit_depth = None
+        self.n_frames = None
+        self.length = None
+
         if is_file_valid(file_path):
             self.file_path = file_path
 
-        self.data = self.get_audio_info()
+        self.set_audio_info()
 
-    def get_audio_info(self) -> dict:
+    def set_audio_info(self) -> None:
         """
         Return wave info on file
         """
@@ -56,26 +86,24 @@ class Wav(Audio):
         if self.file_path is not None:
             wave_file = wave.open(self.file_path, 'rb')
             wave_file_sf = soundfile.SoundFile(self.file_path)
-            data = {
-                'sample_width': wave_file.getsampwidth(),
-                'channels': wave_file.getnchannels(),
-                'sample_rate': wave_file.getframerate(),
-                'comp_name': wave_file.getcompname(),
-                'comp_type': wave_file.getcomptype(),
-                'fp': wave_file.getfp(),
-                'bit_depth' : wave_file_sf.subtype,
-                # 'markers': wave_file.getmarkers(),
-                'n_frames': wave_file.getnframes(),
-                # 'bit_depth' : wave_file.
-            }
-            return data
-        return {}
+
+            # wave_file.getsampwidth()
+            self.sample_width = wave_file.getsampwidth()
+            self.channels = wave_file.getnchannels() or None
+            self.sample_rate = get_samplerate(wave_file) or None
+            self.comp_name = wave_file.getcompname() or None
+            self.comp_type = wave_file.getcomptype() or None
+            self.fp = wave_file.getfp() or None
+            self.bit_depth = wave_file_sf.subtype or None
+            self.n_frames = wave_file.getnframes() or None
+            self.length = get_length_formatted(wave_file) or None
 
     def get_audio_data(self):
         """
-
+        .
         """
         # TODO: return audio data
         pass
 
-    # TODO: write a function to get audio chunks
+        # TODO: write a function to get audio chunks
+        pass

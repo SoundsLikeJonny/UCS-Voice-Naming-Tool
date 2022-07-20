@@ -30,9 +30,13 @@ from PyQt5.Qt import (
 from PyQt5.QtGui import (
     QIcon,
 )
-from PyQt5.QtWidgets import QDialog
+from PyQt5.QtWidgets import (
+    QDialog,
+    QMessageBox
+)
 
 from src.engine import utilities
+from src.engine.stt.speechread import SpeechRead
 from src.ui.ui_file_confirmation_window import FileConfirmation
 
 
@@ -167,53 +171,35 @@ class MainWindow(QMainWindow):
         else:
             event.ignore()
 
-    def reset_file_confirmation_window(self):
+    def reset_file_confirmation_window(self) -> None:
         """
         Reset window object back to None. Used to ensure that only one FileConfirmation window is made
         """
         self.file_confirmation_window = None
 
-    def file_confirmation_window_analyze_stt(self):
+    def file_confirmation_window_analyze_stt(self) -> None:
         """
         If the window exists, get the files to analyse
         """
         if self.file_confirmation_window is not None:
             files = self.file_confirmation_window.selected_wav_items
             self.analyze_stt(files)
+            self.reset_window()
 
-    def analyze_stt(self, files=None) -> bool:
+    def analyze_stt(self, files=None) -> None:
         """
         Hand off to STT engine to handle processing of speech
         :param files:
         """
+        if utilities.is_list(files):
+            sr = SpeechRead(files[0])
+            sr.get_transcription_from_wav_file_google()
+            QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
+
+    def reset_window(self):
+        """
+        Reset the
+        :return: 
+        """
         if not utilities.is_type(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
-
-        if utilities.is_list(files):
-            return True
-        return False
-
-        #
-        # def eventFilter(self, source, event):
-        #
-        #     if self.frame_DragDrop.underMouse():
-        #         self.frame_DragDrop.setStyleSheet("color: rgb(255, 255, 0);")
-        #         print("Mouse")
-        #
-        #     else:
-        #         self.frame_DragDrop.setStyleSheet("")
-        #         print("setStyleSheet("")")
-
-        # def mousePressEvent(self, event):
-        #     if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
-        #         print(event.type())
-        #         drag = QDrag(self)
-        #         # mimeData = QMimeData()
-        #         # mimeData.setText(self.label_DragDrop.toPlainText())
-        #         # drag.setMimeData(mimeData)
-
-        # pixmap = QPixmap(self.size())
-        # self.render(pixmap)
-        # drag.setPixmap(pixmap)
-        #
-        # drag.exec_(Qt.MoveAction)

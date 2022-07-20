@@ -453,71 +453,6 @@
               </size>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
-              <item row="2" column="1">
-               <layout class="QVBoxLayout" name="verticalLayout_9">
-                <property name="sizeConstraint">
-                 <enum>QLayout::SetNoConstraint</enum>
-                </property>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_10">
-                  <item>
-                   <widget class="QLabel" name="label_19">
-                    <property name="text">
-                     <string>Silence Threshold:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QDoubleSpinBox" name="doubleSpinBox">
-                    <property name="minimum">
-                     <double>-70.000000000000000</double>
-                    </property>
-                    <property name="maximum">
-                     <double>-10.000000000000000</double>
-                    </property>
-                    <property name="value">
-                     <double>-24.000000000000000</double>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_4">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_15">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QCheckBox" name="checkBox_SkipFileSelection">
-                    <property name="text">
-                     <string>Skip File Selection</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="checkBox_SkipNamingReview">
-                    <property name="text">
-                     <string>Skip Naming Review</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
               <item row="1" column="1">
                <spacer name="verticalSpacer_6">
                 <property name="orientation">
@@ -554,9 +489,9 @@
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -626,18 +561,18 @@
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -700,9 +635,9 @@
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -772,18 +707,18 @@
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -846,9 +781,9 @@
                    <colorrole role="Button">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -918,18 +853,18 @@
                    <colorrole role="Base">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
                    <colorrole role="Window">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
-                      <red>160</red>
-                      <green>180</green>
-                      <blue>190</blue>
+                      <red>81</red>
+                      <green>86</green>
+                      <blue>102</blue>
                      </color>
                     </brush>
                    </colorrole>
@@ -988,10 +923,99 @@
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(160, 180, 190);</string>
+                 <string notr="true">background-color: rgb(81, 86, 102);</string>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_3"/>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_22">
+                   <property name="font">
+                    <font>
+                     <pointsize>7</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
+                   <property name="text">
+                    <string>DROP FILES HERE</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
+              </item>
+              <item row="3" column="1">
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetNoConstraint</enum>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>Silence Threshold:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                    <property name="minimum">
+                     <double>-70.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>-10.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>-24.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="2" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_SkipFileSelection">
+                  <property name="text">
+                   <string>Skip File Selection</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_SkipNamingReview">
+                  <property name="text">
+                   <string>Skip Naming Review</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </widget>
@@ -1539,7 +1563,7 @@
                       </size>
                      </property>
                      <property name="text">
-                      <string>$location $objects $actions $desc</string>
+                      <string>$title ($ntake$vtake) - $subtitle - $prop, $verb, $descriptions</string>
                      </property>
                     </widget>
                    </item>

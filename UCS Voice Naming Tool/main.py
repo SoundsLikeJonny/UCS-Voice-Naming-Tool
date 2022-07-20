@@ -28,10 +28,11 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
+from src.ui.theme import theme
 from src.ui.ui_main_window import MainWindow
 
 app = QApplication(sys.argv)
-# theme.set_default_theme(app)
+theme.set_default_theme(app)
 
 obj = MainWindow()
 obj.show()
