@@ -164,10 +164,14 @@ class SpeechRead:
                                   if file is not None]
             self.speech_transcription_from_file = ' '.join(transcription_list)
 
-            for file in self.temp_wav_list_to_process:
-                if file:
-                    path = pathlib.Path(file)
-                    path.unlink()
+            try:
+                for file in self.temp_wav_list_to_process:
+                    if file:
+                        file.close()
+                        path = pathlib.Path(str(file.name))
+                        path.unlink()
+            except Exception as e:
+                print(e)
 
     def save_segment_to_temp_wav(self, segment: AudioSegment, segment_file_name: str = 'chunk') -> str | None:
         """

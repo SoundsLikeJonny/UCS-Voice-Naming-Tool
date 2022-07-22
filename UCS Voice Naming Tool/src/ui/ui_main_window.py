@@ -27,6 +27,12 @@ from PyQt5 import uic
 from PyQt5.Qt import (
     QMainWindow
 )
+from PyQt5.QtCore import (
+    QRunnable,
+    # TODO: setup pyside6
+    # Signal,
+
+)
 from PyQt5.QtGui import (
     QIcon,
 )
@@ -203,3 +209,12 @@ class MainWindow(QMainWindow):
         """
         if not utilities.is_type(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
+
+
+class Worker(QRunnable):
+
+    def __init__(self):
+        super().__init__()
+
+# TODO: continue setting up the worker
+# class WorkerSignals(QO)

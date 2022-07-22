@@ -25,9 +25,11 @@ Last Modified: July 16, 2022
 
 from src.engine.stt.speechread import SpeechRead
 
+
 class SpeechAnalyse(SpeechRead):
     """
-    
+    Extends SpeechRead, but with functionality for parsing apart the text and extracting info
     """
+
     def __init__(self) -> None:
         super().__init__()
