@@ -23,11 +23,39 @@ Last Modified: July 24, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from PySide6.QtCore import QAbstractListModel
+from typing import Union
+
+from PySide6.QtCore import (
+    QAbstractListModel,
+    Qt,
+    QPersistentModelIndex,
+    QModelIndex
+)
+
 
 class DefaultListModel(QAbstractListModel):
     """
     Extends QAbstractListModel to provide basic functionality for updating data and UI
     """
-    def __init__(self) -> None:
+
+    def __init__(self, data_list: list = None) -> None:
         super().__init__()
+        self.data_list = data_list or []
+
+    def _data(self, index, role):
+        """
+
+        :param index:
+        :param role:
+        :return:
+        """
+        if role == Qt.DisplayRole:
+            status, text = self.data_list[index.row()]
+
+    def rowCount(self, index: Union[QModelIndex, QPersistentModelIndex] = ...) -> int:
+        """
+
+        :param index:
+        :return:
+        """
+        return len(self.data_list)
