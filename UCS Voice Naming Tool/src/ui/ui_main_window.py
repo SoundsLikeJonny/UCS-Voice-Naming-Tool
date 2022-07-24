@@ -22,27 +22,35 @@ Last Modified: July 11, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-import PyQt5
-from PyQt5 import uic
-from PyQt5.Qt import (
-    QMainWindow
+import PySide6
+from PySide6.QtCore import (
+    QRunnable
 )
-from PyQt5.QtGui import (
+from PySide6.QtGui import (
     QIcon,
 )
-from PyQt5.QtWidgets import QDialog
+from PySide6.QtWidgets import (
+    QDialog,
+    QMessageBox
+)
+from PySide6.QtWidgets import (
+    QMainWindow
+)
 
 from src.engine import utilities
+from src.engine.stt.speechread import SpeechRead
+from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
 
 
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Core functionality of the software. Most used by end user.
     """
 
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+
         self.file_confirmation_window = None
         self.init_all_ui()
 
@@ -51,10 +59,8 @@ class MainWindow(QMainWindow):
         Initialize all UI elements, calling individual ui init functions
         :return: None
         """
-        ui_path = utilities.get_project_ui_file('MainWindow.ui')
 
-        if ui_path is not None:
-            uic.loadUi(ui_path, self)
+        self.setupUi(self)
 
         icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
         self.setWindowIcon(QIcon(icon_path))
@@ -88,6 +94,7 @@ class MainWindow(QMainWindow):
         self.groupBox_UserCat.setChecked(False)
         self.groupBox_VendorCat.setChecked(False)
         self.groupBox_UserData.setChecked(False)
+        pass
         # self.label_DragDrop.set
 
     def init_ui_conflict_tab(self) -> None:
@@ -126,7 +133,7 @@ class MainWindow(QMainWindow):
         # noinspection PyTypeChecker
         return True
 
-    def dropEvent(self, event: PyQt5.QtGui.QDropEvent) -> None:
+    def dropEvent(self, event: PySide6.QtGui.QDropEvent) -> None:
         """
         Override QT drop event
         :param event:
@@ -157,7 +164,7 @@ class MainWindow(QMainWindow):
             self.file_confirmation_window.destroyed.connect(self.reset_file_confirmation_window)
             self.file_confirmation_window.buttonBox.accepted.connect(self.file_confirmation_window_analyze_stt)
 
-    def dragEnterEvent(self, event: PyQt5.QtGui.QDragEnterEvent) -> None:
+    def dragEnterEvent(self, event: PySide6.QtGui.QDragEnterEvent) -> None:
         """
         Set drag and drop to only handle urls
         :param event:
@@ -167,53 +174,44 @@ class MainWindow(QMainWindow):
         else:
             event.ignore()
 
-    def reset_file_confirmation_window(self):
+    def reset_file_confirmation_window(self) -> None:
         """
         Reset window object back to None. Used to ensure that only one FileConfirmation window is made
         """
         self.file_confirmation_window = None
 
-    def file_confirmation_window_analyze_stt(self):
+    def file_confirmation_window_analyze_stt(self) -> None:
         """
         If the window exists, get the files to analyse
         """
         if self.file_confirmation_window is not None:
             files = self.file_confirmation_window.selected_wav_items
             self.analyze_stt(files)
+            self.reset_window()
 
-    def analyze_stt(self, files=None) -> bool:
+    def analyze_stt(self, files=None) -> None:
         """
         Hand off to STT engine to handle processing of speech
         :param files:
         """
+        if utilities.is_list(files):
+            sr = SpeechRead(files[0])
+            sr.get_transcription_from_wav_file_google()
+            QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
+
+    def reset_window(self):
+        """
+        Reset the
+        :return: 
+        """
         if not utilities.is_type(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
 
-        if utilities.is_list(files):
-            return True
-        return False
 
-        #
-        # def eventFilter(self, source, event):
-        #
-        #     if self.frame_DragDrop.underMouse():
-        #         self.frame_DragDrop.setStyleSheet("color: rgb(255, 255, 0);")
-        #         print("Mouse")
-        #
-        #     else:
-        #         self.frame_DragDrop.setStyleSheet("")
-        #         print("setStyleSheet("")")
+class Worker(QRunnable):
 
-        # def mousePressEvent(self, event):
-        #     if event.button() == Qt.LeftButton and self.label_DragDrop.geometry().contains(event.pos()):
-        #         print(event.type())
-        #         drag = QDrag(self)
-        #         # mimeData = QMimeData()
-        #         # mimeData.setText(self.label_DragDrop.toPlainText())
-        #         # drag.setMimeData(mimeData)
+    def __init__(self):
+        super().__init__()
 
-        # pixmap = QPixmap(self.size())
-        # self.render(pixmap)
-        # drag.setPixmap(pixmap)
-        #
-        # drag.exec_(Qt.MoveAction)
+# TODO: continue setting up the worker
+# class WorkerSignals(QO)

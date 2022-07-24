@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 6, 2022
+Last Modified: July 23, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -26,12 +26,16 @@ Last Modified: July 6, 2022
 
 import sys
 
-from PyQt5.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication
 
+from src.ui import generate_ui_files
+from src.ui.theme import theme
 from src.ui.ui_main_window import MainWindow
 
+generate_ui_files.main()
+
 app = QApplication(sys.argv)
-# theme.set_default_theme(app)
+theme.set_default_theme(app)
 
 obj = MainWindow()
 obj.show()

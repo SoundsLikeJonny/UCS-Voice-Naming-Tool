@@ -23,7 +23,7 @@ Last Modified: July 6, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from PyQt5.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication
 from qt_material import apply_stylesheet, list_themes
 
 from src.engine import utilities
@@ -55,7 +55,7 @@ class Defaults:
     Default theme values
     """
 
-    DEFAULT_THEME = list_themes()[1]
+    DEFAULT_THEME = list_themes()[2]
     DEFAULT_EXTRA = {
         'density_scale': '-2',
     }

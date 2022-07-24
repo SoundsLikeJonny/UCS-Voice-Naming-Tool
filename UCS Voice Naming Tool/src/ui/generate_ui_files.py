@@ -2,9 +2,8 @@
 
 """
 Author: Jon Evans
-Last Modified: July 16, 2022
+Last Modified: July 23, 2022
 """
-
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
 #  recordings according to the Universal Category System.
@@ -24,8 +23,44 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-class Defaults:
-    WAV_FILEPATH_WINDOWS = '\\src\\tests\\test_wav_files\\'
-    WAV_FILEPATH_UNIX = '/src/tests/test_wav_files/'
-    VALID_WAV_SPEECH_UNIX = '/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/test_wav_files/Test_05.wav'
-    VALID_WAV_SPEECH_WINDOWS = 'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_01.wav'
+
+import glob
+import os
+from pathlib import Path
+
+"""
+Creates the PySide6 Python UI files from .ui files
+Created in UCS Voice Naming Tool\\src\\ui\\gui
+"""
+path_to_gui = Path().joinpath(os.getcwd(), 'src\\ui\\gui')
+
+print(f"""
+#################
+#################
+#################
+#################
+
+{path_to_gui}
+
+#################
+#################
+#################
+#################
+""")
+
+for file in glob.glob(f"{path_to_gui}\\*.ui"):
+    py_filename = Path(f'{path_to_gui}{file}').stem
+    py_filepath = Path(f'{path_to_gui}\\{py_filename}.py')
+    os.system(f'pyside6-uic "{file}" -o "{py_filepath}"')
+
+
+def main():
+    """
+    Unused
+    :return:
+    """
+    pass
+
+
+if __name__ == "__main__":
+    main()
