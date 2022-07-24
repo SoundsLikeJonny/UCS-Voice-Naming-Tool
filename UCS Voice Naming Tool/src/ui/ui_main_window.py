@@ -22,37 +22,35 @@ Last Modified: July 11, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-import PyQt5
-from PyQt5 import uic
-from PyQt5.Qt import (
-    QMainWindow
+import PySide6
+from PySide6.QtCore import (
+    QRunnable
 )
-from PyQt5.QtCore import (
-    QRunnable,
-    # TODO: setup pyside6
-    # Signal,
-
-)
-from PyQt5.QtGui import (
+from PySide6.QtGui import (
     QIcon,
 )
-from PyQt5.QtWidgets import (
+from PySide6.QtWidgets import (
     QDialog,
     QMessageBox
+)
+from PySide6.QtWidgets import (
+    QMainWindow
 )
 
 from src.engine import utilities
 from src.engine.stt.speechread import SpeechRead
+from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
 
 
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Core functionality of the software. Most used by end user.
     """
 
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+
         self.file_confirmation_window = None
         self.init_all_ui()
 
@@ -61,10 +59,8 @@ class MainWindow(QMainWindow):
         Initialize all UI elements, calling individual ui init functions
         :return: None
         """
-        ui_path = utilities.get_project_ui_file('MainWindow.ui')
 
-        if ui_path is not None:
-            uic.loadUi(ui_path, self)
+        self.setupUi(self)
 
         icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
         self.setWindowIcon(QIcon(icon_path))
@@ -98,6 +94,7 @@ class MainWindow(QMainWindow):
         self.groupBox_UserCat.setChecked(False)
         self.groupBox_VendorCat.setChecked(False)
         self.groupBox_UserData.setChecked(False)
+        pass
         # self.label_DragDrop.set
 
     def init_ui_conflict_tab(self) -> None:
@@ -136,7 +133,7 @@ class MainWindow(QMainWindow):
         # noinspection PyTypeChecker
         return True
 
-    def dropEvent(self, event: PyQt5.QtGui.QDropEvent) -> None:
+    def dropEvent(self, event: PySide6.QtGui.QDropEvent) -> None:
         """
         Override QT drop event
         :param event:
@@ -167,7 +164,7 @@ class MainWindow(QMainWindow):
             self.file_confirmation_window.destroyed.connect(self.reset_file_confirmation_window)
             self.file_confirmation_window.buttonBox.accepted.connect(self.file_confirmation_window_analyze_stt)
 
-    def dragEnterEvent(self, event: PyQt5.QtGui.QDragEnterEvent) -> None:
+    def dragEnterEvent(self, event: PySide6.QtGui.QDragEnterEvent) -> None:
         """
         Set drag and drop to only handle urls
         :param event:

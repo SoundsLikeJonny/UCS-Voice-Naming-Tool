@@ -23,23 +23,24 @@ Last Modified: July 12, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from PyQt5 import uic
-from PyQt5.Qt import (
-    QDialog
-)
-from PyQt5.QtCore import (
+
+from PySide6.QtCore import (
     Qt
 )
-from PyQt5.QtGui import (
+from PySide6.QtGui import (
     QIcon,
 )
-from PyQt5.QtWidgets import (
+from PySide6.QtWidgets import (
+    QDialog
+)
+from PySide6.QtWidgets import (
     QListWidgetItem,
     QLabel
 )
 
 from src.engine import utilities
 from src.engine.audio import wavfile
+from src.ui.gui.FileConfirmation import Ui_Dialog
 
 
 def set_wav_info_label(obj: QLabel, info_text: any, ):
@@ -56,7 +57,7 @@ def set_wav_info_label(obj: QLabel, info_text: any, ):
         obj.setText('-')
 
 
-class FileConfirmation(QDialog):
+class FileConfirmation(QDialog, Ui_Dialog):
     """
     .
     """
@@ -72,9 +73,7 @@ class FileConfirmation(QDialog):
         Initialize UI window
         :return: None
         """
-        ui_path = utilities.get_project_ui_file('FileConfirmation.ui')
-        if ui_path is not None:
-            uic.loadUi(ui_path, self)
+        self.setupUi(self)
 
         icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
         self.setWindowIcon(QIcon(icon_path))

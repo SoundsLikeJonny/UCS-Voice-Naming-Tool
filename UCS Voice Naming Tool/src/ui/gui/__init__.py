@@ -22,22 +22,3 @@ Last Modified: July 23, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
-import sys
-
-from PySide6.QtWidgets import QApplication
-
-from src.ui import generate_ui_files
-from src.ui.theme import theme
-from src.ui.ui_main_window import MainWindow
-
-generate_ui_files.main()
-
-app = QApplication(sys.argv)
-theme.set_default_theme(app)
-
-obj = MainWindow()
-obj.show()
-
-sys.exit(app.exec_())

@@ -24,20 +24,43 @@ Last Modified: July 23, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-import sys
+import glob
+import os
+from pathlib import Path
 
-from PySide6.QtWidgets import QApplication
+"""
+Creates the PySide6 Python UI files from .ui files
+Created in UCS Voice Naming Tool\\src\\ui\\gui
+"""
+path_to_gui = Path().joinpath(os.getcwd(), 'src\\ui\\gui')
 
-from src.ui import generate_ui_files
-from src.ui.theme import theme
-from src.ui.ui_main_window import MainWindow
+print(f"""
+#################
+#################
+#################
+#################
 
-generate_ui_files.main()
+{path_to_gui}
 
-app = QApplication(sys.argv)
-theme.set_default_theme(app)
+#################
+#################
+#################
+#################
+""")
 
-obj = MainWindow()
-obj.show()
+for file in glob.glob(f"{path_to_gui}\\*.ui"):
+    py_filename = Path(f'{path_to_gui}{file}').stem
+    py_filepath = Path(f'{path_to_gui}\\{py_filename}.py')
+    os.system(f'pyside6-uic "{file}" -o "{py_filepath}"')
 
-sys.exit(app.exec_())
+
+def main():
+    """
+    Unused
+    :return:
+    """
+    pass
+
+
+if __name__ == "__main__":
+    main()
