@@ -102,7 +102,7 @@ class SpeechRead:
 
     def store_speech_from_file(self) -> None:
         """``
-        Attempt to access the Google Speech Recognition API and read the file. 
+        Attempt to access the Google Speech Recognition API and read the file.
         """
         self.speech_transcription_from_file = self.recognizer.recognize_google(self.audio_data_from_file_googrec)
 
