@@ -13,7 +13,6 @@ from PySide6.QtWidgets import (QAbstractItemView, QDialogButtonBox, QGridLayout,
                                QListWidget, QListWidgetItem, QSizePolicy, QSpacerItem,
                                QVBoxLayout, QWidget)
 
-
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
@@ -96,6 +95,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout.addWidget(self.label_Channels)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_2 = QHBoxLayout()
@@ -133,6 +133,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout_2.addWidget(self.label_Length)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
         self.verticalWidget = QWidget(self.widget_2)
@@ -143,7 +144,9 @@ class Ui_Dialog(object):
 
         self.verticalLayout_2.addWidget(self.verticalWidget)
 
+
         self.gridLayout.addWidget(self.widget_2, 3, 0, 1, 1)
+
 
         self.verticalLayout.addWidget(self.widget)
 
@@ -154,16 +157,16 @@ class Ui_Dialog(object):
         self.buttonBox = QDialogButtonBox(Dialog)
         self.buttonBox.setObjectName(u"buttonBox")
         self.buttonBox.setOrientation(Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
 
         self.verticalLayout.addWidget(self.buttonBox)
+
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
         self.buttonBox.rejected.connect(Dialog.reject)
 
         QMetaObject.connectSlotsByName(Dialog)
-
     # setupUi
 
     def retranslateUi(self, Dialog):
@@ -193,3 +196,4 @@ class Ui_Dialog(object):
         self.label_5.setText(QCoreApplication.translate("Dialog", u"Length: ", None))
         self.label_Length.setText(QCoreApplication.translate("Dialog", u"*", None))
     # retranslateUi
+

@@ -18,7 +18,6 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QCheckBox, QComboBox,
                                QSpacerItem, QSpinBox, QStatusBar, QTabWidget,
                                QToolButton, QVBoxLayout, QWidget)
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -113,6 +112,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.label_22, 0, 0, 1, 1)
 
+
         self.gridLayout_2.addWidget(self.frame_DragDrop, 0, 1, 1, 1)
 
         self.verticalLayout_9 = QVBoxLayout()
@@ -137,7 +137,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10.addItem(self.horizontalSpacer_4)
 
+
         self.verticalLayout_9.addLayout(self.horizontalLayout_10)
+
 
         self.gridLayout_2.addLayout(self.verticalLayout_9, 3, 1, 1, 1)
 
@@ -154,7 +156,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_15.addWidget(self.checkBox_SkipNamingReview)
 
+
         self.gridLayout_2.addLayout(self.horizontalLayout_15, 2, 1, 1, 1)
+
 
         self.gridLayout_5.addWidget(self.widget, 1, 1, 1, 1)
 
@@ -285,6 +289,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_12.addItem(self.horizontalSpacer_13)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_12)
 
         self.horizontalLayout_13 = QHBoxLayout()
@@ -310,6 +315,7 @@ class Ui_MainWindow(object):
         self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_13.addItem(self.horizontalSpacer_5)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_13)
 
@@ -341,6 +347,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_11.addWidget(self.comboBox, 0, 0, 1, 1)
 
+
         self.horizontalLayout_2.addWidget(self.groupBox_SourceID_2)
 
         self.groupBox_CreatorID = QGroupBox(self.widget_Naming)
@@ -358,6 +365,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.lineEdit_CreatorID, 0, 0, 1, 1)
 
+
         self.horizontalLayout_2.addWidget(self.groupBox_CreatorID)
 
         self.groupBox_SourceID = QGroupBox(self.widget_Naming)
@@ -373,7 +381,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addWidget(self.lineEdit_SourceID, 0, 0, 1, 1)
 
+
         self.horizontalLayout_2.addWidget(self.groupBox_SourceID)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
@@ -395,6 +405,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.lineEdit_4, 0, 0, 1, 1)
 
+
         self.gridLayout_12.addWidget(self.groupBox, 0, 0, 1, 1)
 
         self.frame_3 = QFrame(self.widget_Naming)
@@ -403,6 +414,7 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShadow(QFrame.Raised)
 
         self.gridLayout_12.addWidget(self.frame_3, 0, 1, 1, 1)
+
 
         self.verticalLayout.addLayout(self.gridLayout_12)
 
@@ -423,6 +435,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.lineEdit_UserCat)
 
+
         self.horizontalLayout.addWidget(self.groupBox_UserCat)
 
         self.groupBox_VendorCat = QGroupBox(self.widget_Naming)
@@ -439,6 +452,7 @@ class Ui_MainWindow(object):
         self.lineEdit_VendorCat.setFrame(True)
 
         self.gridLayout_4.addWidget(self.lineEdit_VendorCat, 0, 0, 1, 1)
+
 
         self.horizontalLayout.addWidget(self.groupBox_VendorCat)
 
@@ -457,9 +471,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_6.addWidget(self.lineEdit_UserData, 0, 0, 1, 1)
 
+
         self.horizontalLayout.addWidget(self.groupBox_UserData)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
+
 
         self.gridLayout_5.addWidget(self.widget_Naming, 1, 2, 1, 1)
 
@@ -470,6 +487,7 @@ class Ui_MainWindow(object):
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_5.addItem(self.horizontalSpacer, 1, 3, 1, 1)
+
 
         self.gridLayout_9.addWidget(self.widget_2, 0, 0, 1, 1)
 
@@ -524,6 +542,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.label_7)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_5)
 
         self.horizontalLayout_6 = QHBoxLayout()
@@ -549,7 +568,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.label_8)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_6)
+
 
         self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles)
 
@@ -577,6 +598,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addWidget(self.lineEdit)
 
+
         self.verticalLayout_5.addLayout(self.horizontalLayout_7)
 
         self.horizontalLayout_8 = QHBoxLayout()
@@ -600,7 +622,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.lineEdit_2)
 
+
         self.verticalLayout_5.addLayout(self.horizontalLayout_8)
+
 
         self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles_2)
 
@@ -635,6 +659,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.lineEdit_3)
 
+
         self.verticalLayout_6.addLayout(self.horizontalLayout_9)
 
         self.checkBox_3 = QCheckBox(self.groupBox_OnlyAnalyseEndsOfFiles_3)
@@ -642,11 +667,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.checkBox_3)
 
+
         self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles_3)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
+
 
         self.gridLayout_15.addLayout(self.horizontalLayout_3, 0, 0, 1, 1)
 
@@ -660,6 +687,7 @@ class Ui_MainWindow(object):
         self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_14.addItem(self.horizontalSpacer_7)
+
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_14)
 
@@ -675,6 +703,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName(u"label")
 
         self.verticalLayout_3.addWidget(self.label)
+
 
         self.gridLayout_9.addLayout(self.verticalLayout_3, 3, 0, 1, 1)
 
@@ -771,11 +800,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addWidget(self.toolButton_3, 2, 4, 1, 1)
 
+
         self.horizontalLayout_11.addWidget(self.groupBox_2)
 
         self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_11.addItem(self.horizontalSpacer_9)
+
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_11)
 
@@ -783,7 +814,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addItem(self.verticalSpacer)
 
+
         self.verticalLayout_8.addLayout(self.verticalLayout_7)
+
 
         self.gridLayout_13.addWidget(self.widget_4, 0, 0, 1, 1)
 
@@ -835,8 +868,8 @@ class Ui_MainWindow(object):
 
         self.tabWidget.setCurrentIndex(0)
 
-        QMetaObject.connectSlotsByName(MainWindow)
 
+        QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -875,46 +908,33 @@ class Ui_MainWindow(object):
         self.groupBox_SourceID.setTitle(QCoreApplication.translate("MainWindow", u"SourceID", None))
         self.lineEdit_SourceID.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. HomeSFXLib", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Custom FXName Template", None))
-        self.lineEdit_4.setText(
-            QCoreApplication.translate("MainWindow", u"$title ($ntake$vtake) - $subtitle - $prop, $verb, $descriptions",
-                                       None))
+        self.lineEdit_4.setText(QCoreApplication.translate("MainWindow", u"$title ($ntake$vtake) - $subtitle - $prop, $verb, $descriptions", None))
         self.groupBox_UserCat.setTitle(QCoreApplication.translate("MainWindow", u"UserCat", None))
-        self.lineEdit_UserCat.setPlaceholderText(
-            QCoreApplication.translate("MainWindow", u"e.g. Garage Trinkets", None))
+        self.lineEdit_UserCat.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. Garage Trinkets", None))
         self.groupBox_VendorCat.setTitle(QCoreApplication.translate("MainWindow", u"VendorCat", None))
-        self.lineEdit_VendorCat.setPlaceholderText(
-            QCoreApplication.translate("MainWindow", u"e.g. Wrestle Car Mania", None))
+        self.lineEdit_VendorCat.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. Wrestle Car Mania", None))
         self.groupBox_UserData.setTitle(QCoreApplication.translate("MainWindow", u"UserData", None))
         self.lineEdit_UserData.setText("")
         self.lineEdit_UserData.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. $num", None))
-        self.groupBox_OnlyAnalyseEndsOfFiles.setTitle(
-            QCoreApplication.translate("MainWindow", u"Only Analyse Ends Of Files", None))
+        self.groupBox_OnlyAnalyseEndsOfFiles.setTitle(QCoreApplication.translate("MainWindow", u"Only Analyse Ends Of Files", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Start: ", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"sec.", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"End: ", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"sec.", None))
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setTitle(
-            QCoreApplication.translate("MainWindow", u"Only Read Between Markers", None))
+        self.groupBox_OnlyAnalyseEndsOfFiles_2.setTitle(QCoreApplication.translate("MainWindow", u"Only Read Between Markers", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Start Phrase:", None))
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"Start Analysis", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"End Phrase:  ", None))
         self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"End Analysis", None))
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setTitle(
-            QCoreApplication.translate("MainWindow", u"Use Take Markers", None))
+        self.groupBox_OnlyAnalyseEndsOfFiles_3.setTitle(QCoreApplication.translate("MainWindow", u"Use Take Markers", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Phrase: ", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"Take $num", None))
         self.checkBox_3.setText(QCoreApplication.translate("MainWindow", u"Create unique files at take", None))
-        self.label.setText(
-            QCoreApplication.translate("MainWindow", u"\u2020 Values with this symbol will not be saved to preferences",
-                                       None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Voice),
-                                  QCoreApplication.translate("MainWindow", u"Voice", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab),
-                                  QCoreApplication.translate("MainWindow", u"Conflict Resolution", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_MicList),
-                                  QCoreApplication.translate("MainWindow", u"Mic List", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2),
-                                  QCoreApplication.translate("MainWindow", u"Wild Cards", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"\u2020 Values with this symbol will not be saved to preferences", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Voice), QCoreApplication.translate("MainWindow", u"Voice", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Conflict Resolution", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_MicList), QCoreApplication.translate("MainWindow", u"Mic List", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Wild Cards", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"UCS Files (.csv)", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Full Translations List:", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
@@ -925,6 +945,6 @@ class Ui_MainWindow(object):
         self.toolButton.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.toolButton_2.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.toolButton_3.setText(QCoreApplication.translate("MainWindow", u"...", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Settings),
-                                  QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Settings), QCoreApplication.translate("MainWindow", u"Settings", None))
     # retranslateUi
+

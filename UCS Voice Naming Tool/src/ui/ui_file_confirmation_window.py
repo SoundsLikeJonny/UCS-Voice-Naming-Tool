@@ -34,12 +34,12 @@ from PySide6.QtWidgets import (
     QDialog
 )
 from PySide6.QtWidgets import (
-    QListWidgetItem,
     QLabel
 )
 
 from src.engine import utilities
 from src.engine.audio import wavfile
+from src.ui.data_models.list_models import DefaultListModel
 from src.ui.gui.FileConfirmation import Ui_Dialog
 
 
@@ -66,6 +66,9 @@ class FileConfirmation(QDialog, Ui_Dialog):
         super(FileConfirmation, self).__init__(parent, *args, **kwargs)
         self.wav_obj_dict = None
         self.selected_wav_items = []
+
+        self.list_model = DefaultListModel()
+
         self.init_all_ui()
 
     def init_all_ui(self) -> None:
@@ -81,6 +84,7 @@ class FileConfirmation(QDialog, Ui_Dialog):
         self.setWindowFlag(Qt.WindowCloseButtonHint, False)
         self.setWindowFlag(Qt.WindowContextHelpButtonHint, False)
         self.listWidget_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
+        self.listWidget_WavFileSelect.setModel(self.list_model)
 
     def exists_qt_widgets(self) -> None:
         """
@@ -93,16 +97,17 @@ class FileConfirmation(QDialog, Ui_Dialog):
         Fill the QListWidget with items from file_list
         :param file_list:
         """
-        self.listWidget_WavFileSelect.clear()
+        self.list_model.data_list.clear()
         self.set_wav_objects(file_list)
 
         if utilities.is_list(file_list):
             for file in file_list:
                 if wavfile.is_file_valid(file):
-                    item = QListWidgetItem(file)
-                    item.setCheckState(Qt.Checked)
-                    item.setToolTip(file)
-                    self.listWidget_WavFileSelect.addItem(item)
+                    self.list_model.data_list.append(file)
+
+                    # item.setCheckState(Qt.Checked)
+                    # item.setToolTip(file)
+                    # self.listWidget_WavFileSelect.addItem(item)
 
     def set_wav_objects(self, file_list: list[str]) -> None:
         """
@@ -124,7 +129,7 @@ class FileConfirmation(QDialog, Ui_Dialog):
         Store all .wav file paths to self.selected_wav_items as a list
         """
         self.selected_wav_items = []
-        print(self.listWidget_WavFileSelect.count())
+        # print(self.listWidget_WavFileSelect.count())
 
         for index in range(self.listWidget_WavFileSelect.count()):
             item = self.listWidget_WavFileSelect.item(index)
