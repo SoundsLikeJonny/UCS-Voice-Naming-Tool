@@ -29,7 +29,8 @@ from PySide6.QtCore import (
     QAbstractListModel,
     Qt,
     QPersistentModelIndex,
-    QModelIndex
+    QModelIndex,
+
 )
 
 
@@ -51,6 +52,7 @@ class DefaultListModel(QAbstractListModel):
         """
         if role == Qt.DisplayRole:
             status, text = self.data_list[index.row()]
+            return text
 
     def rowCount(self, index: Union[QModelIndex, QPersistentModelIndex] = ...) -> int:
         """
