@@ -8,42 +8,24 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, Qt)
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
 from PySide6.QtWidgets import (QAbstractItemView, QDialogButtonBox, QGridLayout, QHBoxLayout, QLabel,
-                               QListWidget, QListWidgetItem, QSizePolicy, QSpacerItem,
-                               QVBoxLayout, QWidget)
+                               QListView, QSizePolicy, QSpacerItem, QVBoxLayout,
+                               QWidget)
+
+from pyqtgraph import PlotWidget
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(479, 462)
+        Dialog.resize(479, 502)
         self.verticalLayout = QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.widget = QWidget(Dialog)
         self.widget.setObjectName(u"widget")
         self.gridLayout = QGridLayout(self.widget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.listWidget_WavFileSelect = QListWidget(self.widget)
-        __qlistwidgetitem = QListWidgetItem(self.listWidget_WavFileSelect)
-        __qlistwidgetitem.setCheckState(Qt.Checked);
-        __qlistwidgetitem1 = QListWidgetItem(self.listWidget_WavFileSelect)
-        __qlistwidgetitem1.setCheckState(Qt.Checked);
-        __qlistwidgetitem2 = QListWidgetItem(self.listWidget_WavFileSelect)
-        __qlistwidgetitem2.setCheckState(Qt.Checked);
-        __qlistwidgetitem3 = QListWidgetItem(self.listWidget_WavFileSelect)
-        __qlistwidgetitem3.setCheckState(Qt.Checked);
-        __qlistwidgetitem4 = QListWidgetItem(self.listWidget_WavFileSelect)
-        __qlistwidgetitem4.setCheckState(Qt.Checked);
-        self.listWidget_WavFileSelect.setObjectName(u"listWidget_WavFileSelect")
-        self.listWidget_WavFileSelect.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.listWidget_WavFileSelect.setAlternatingRowColors(False)
-        self.listWidget_WavFileSelect.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.listWidget_WavFileSelect.setTextElideMode(Qt.ElideLeft)
-        self.listWidget_WavFileSelect.setSortingEnabled(True)
-
-        self.gridLayout.addWidget(self.listWidget_WavFileSelect, 2, 0, 1, 1)
-
         self.label = QLabel(self.widget)
         self.label.setObjectName(u"label")
 
@@ -141,11 +123,26 @@ class Ui_Dialog(object):
         self.horizontalLayout_3 = QHBoxLayout(self.verticalWidget)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(-1, -1, -1, 10)
+        self.graphicsView = PlotWidget(self.verticalWidget)
+        self.graphicsView.setObjectName(u"graphicsView")
+        self.graphicsView.setMaximumSize(QSize(16777215, 50))
+
+        self.horizontalLayout_3.addWidget(self.graphicsView)
+
 
         self.verticalLayout_2.addWidget(self.verticalWidget)
 
 
         self.gridLayout.addWidget(self.widget_2, 3, 0, 1, 1)
+
+        self.listView_WavFileSelect = QListView(self.widget)
+        self.listView_WavFileSelect.setObjectName(u"listView_WavFileSelect")
+        self.listView_WavFileSelect.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.listView_WavFileSelect.setAlternatingRowColors(False)
+        self.listView_WavFileSelect.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.listView_WavFileSelect.setTextElideMode(Qt.ElideLeft)
+
+        self.gridLayout.addWidget(self.listView_WavFileSelect, 2, 0, 1, 1)
 
 
         self.verticalLayout.addWidget(self.widget)
@@ -171,21 +168,6 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-
-        __sortingEnabled = self.listWidget_WavFileSelect.isSortingEnabled()
-        self.listWidget_WavFileSelect.setSortingEnabled(False)
-        ___qlistwidgetitem = self.listWidget_WavFileSelect.item(0)
-        ___qlistwidgetitem.setText(QCoreApplication.translate("Dialog", u"File 1", None));
-        ___qlistwidgetitem1 = self.listWidget_WavFileSelect.item(1)
-        ___qlistwidgetitem1.setText(QCoreApplication.translate("Dialog", u"File 2", None));
-        ___qlistwidgetitem2 = self.listWidget_WavFileSelect.item(2)
-        ___qlistwidgetitem2.setText(QCoreApplication.translate("Dialog", u"File 3", None));
-        ___qlistwidgetitem3 = self.listWidget_WavFileSelect.item(3)
-        ___qlistwidgetitem3.setText(QCoreApplication.translate("Dialog", u"File 4", None));
-        ___qlistwidgetitem4 = self.listWidget_WavFileSelect.item(4)
-        ___qlistwidgetitem4.setText(QCoreApplication.translate("Dialog", u"File 5", None));
-        self.listWidget_WavFileSelect.setSortingEnabled(__sortingEnabled)
-
         self.label.setText(QCoreApplication.translate("Dialog", u"Confirm files for speech analysis:", None))
         self.label_2.setText(QCoreApplication.translate("Dialog", u"Sample Rate:", None))
         self.label_SampleRate.setText(QCoreApplication.translate("Dialog", u"*", None))

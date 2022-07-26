@@ -194,7 +194,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Hand off to STT engine to handle processing of speech
         :param files:
         """
-        if utilities.is_list(files):
+        if utilities.is_list(files) and files:
             sr = SpeechRead(files[0])
             sr.get_transcription_from_wav_file_google()
             QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)

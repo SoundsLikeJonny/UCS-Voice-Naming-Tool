@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>479</width>
-    <height>462</height>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,65 +17,6 @@
    <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="0">
-       <widget class="QListWidget" name="listWidget_WavFileSelect">
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="alternatingRowColors">
-         <bool>false</bool>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-        <property name="textElideMode">
-         <enum>Qt::ElideLeft</enum>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-        <item>
-         <property name="text">
-          <string>File 1</string>
-         </property>
-         <property name="checkState">
-          <enum>Checked</enum>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>File 2</string>
-         </property>
-         <property name="checkState">
-          <enum>Checked</enum>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>File 3</string>
-         </property>
-         <property name="checkState">
-          <enum>Checked</enum>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>File 4</string>
-         </property>
-         <property name="checkState">
-          <enum>Checked</enum>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>File 5</string>
-         </property>
-         <property name="checkState">
-          <enum>Checked</enum>
-         </property>
-        </item>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
@@ -249,10 +190,36 @@
             <property name="bottomMargin">
              <number>10</number>
             </property>
+            <item>
+             <widget class="PlotWidget" name="graphicsView">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
         </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QListView" name="listView_WavFileSelect">
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="textElideMode">
+         <enum>Qt::ElideLeft</enum>
+        </property>
        </widget>
       </item>
      </layout>
@@ -283,6 +250,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

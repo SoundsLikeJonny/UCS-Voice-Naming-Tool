@@ -83,8 +83,8 @@ class FileConfirmation(QDialog, Ui_Dialog):
 
         self.setWindowFlag(Qt.WindowCloseButtonHint, False)
         self.setWindowFlag(Qt.WindowContextHelpButtonHint, False)
-        self.listWidget_WavFileSelect.setModel(self.model)
-        self.listWidget_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
+        self.listView_WavFileSelect.setModel(self.model)
+        # self.listView_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
 
     def exists_qt_widgets(self) -> None:
         """
@@ -131,8 +131,8 @@ class FileConfirmation(QDialog, Ui_Dialog):
         self.selected_wav_items = []
         # print(self.listWidget_WavFileSelect.count())
 
-        for index in range(self.listWidget_WavFileSelect.count()):
-            item = self.listWidget_WavFileSelect.item(index)
+        for index in range(len(self.model.data_list)):
+            item = self.listView_WavFileSelect.item(index)
 
             if item.checkState() == Qt.Checked:
                 self.selected_wav_items.append(item.text())
