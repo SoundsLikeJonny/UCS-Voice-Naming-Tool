@@ -10,6 +10,454 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C1s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C2s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C3s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C4s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C5.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C5s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C6.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C6s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C7.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-C7s.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBC1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBC2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBD1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBL1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBL2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBTC1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBTC2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBTD1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBTL1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-CBTL2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D10.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D11.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D12.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D13.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D1A.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D6.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D7.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D8.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-D9.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-I1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-I2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-I3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L10.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L11.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L12.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L13.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L14.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L15.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L16.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L17.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L18.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L19.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L5.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L6.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L7.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L8.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-L9.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-R1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-R2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-R3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\CET-R4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\env\Lib\site-packages\pyqtgraph\colors\maps\cividis.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
