@@ -1,0 +1,298 @@
+[
+    {
+        "classes": [
+            {
+                "className": "QNearFieldManager",
+                "enums": [
+                    {
+                        "isClass": true,
+                        "isFlag": false,
+                        "name": "AdapterState",
+                        "values": [
+                            "Offline",
+                            "TurningOn",
+                            "Online",
+                            "TurningOff"
+                        ]
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "QNearFieldManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "QNearFieldManager::AdapterState"
+                            }
+                        ],
+                        "name": "adapterStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "targetDetectionStopped",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "QNearFieldTarget*"
+                            }
+                        ],
+                        "name": "targetDetected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "QNearFieldTarget*"
+                            }
+                        ],
+                        "name": "targetLost",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qnearfieldmanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QNearFieldManagerPrivate",
+                "object": true,
+                "qualifiedClassName": "QNearFieldManagerPrivate",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "QNearFieldManager::AdapterState"
+                            }
+                        ],
+                        "name": "adapterStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "targetDetectionStopped",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "QNearFieldTarget*"
+                            }
+                        ],
+                        "name": "targetDetected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "QNearFieldTarget*"
+                            }
+                        ],
+                        "name": "targetLost",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qnearfieldmanager_p.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QNearFieldTarget",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "Type",
+                        "values": [
+                            "ProprietaryTag",
+                            "NfcTagType1",
+                            "NfcTagType2",
+                            "NfcTagType3",
+                            "NfcTagType4",
+                            "NfcTagType4A",
+                            "NfcTagType4B",
+                            "MifareTag"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "AccessMethod",
+                        "values": [
+                            "UnknownAccess",
+                            "NdefAccess",
+                            "TagTypeSpecificAccess",
+                            "AnyAccess"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "Error",
+                        "values": [
+                            "NoError",
+                            "UnknownError",
+                            "UnsupportedError",
+                            "TargetOutOfRangeError",
+                            "NoResponseError",
+                            "ChecksumMismatchError",
+                            "InvalidParametersError",
+                            "ConnectionError",
+                            "NdefReadError",
+                            "NdefWriteError",
+                            "CommandError",
+                            "TimeoutError"
+                        ]
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "QNearFieldTarget",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "disconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QNdefMessage"
+                            }
+                        ],
+                        "name": "ndefMessageRead",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "QNearFieldTarget::RequestId"
+                            }
+                        ],
+                        "name": "requestCompleted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QNearFieldTarget::Error"
+                            },
+                            {
+                                "name": "id",
+                                "type": "QNearFieldTarget::RequestId"
+                            }
+                        ],
+                        "name": "error",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qnearfieldtarget.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QNearFieldTargetPrivate",
+                "object": true,
+                "qualifiedClassName": "QNearFieldTargetPrivate",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "disconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QNdefMessage"
+                            }
+                        ],
+                        "name": "ndefMessageRead",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "QNearFieldTarget::RequestId"
+                            }
+                        ],
+                        "name": "requestCompleted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QNearFieldTarget::Error"
+                            },
+                            {
+                                "name": "id",
+                                "type": "QNearFieldTarget::RequestId"
+                            }
+                        ],
+                        "name": "error",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qnearfieldtarget_p.h",
+        "outputRevision": 68
+    }
+]
