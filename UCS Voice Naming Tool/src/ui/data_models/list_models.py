@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 24, 2022
+Last Modified: July 27, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -30,7 +30,6 @@ from PySide6.QtCore import (
     Qt,
     QPersistentModelIndex,
     QModelIndex,
-
 )
 
 
@@ -43,7 +42,7 @@ class DefaultListModel(QAbstractListModel):
         super().__init__()
         self.data_list = data_list or []
 
-    def _data(self, index, role):
+    def data(self, index, role):
         """
 
         :param index:

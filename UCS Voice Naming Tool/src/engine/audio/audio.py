@@ -26,8 +26,6 @@ Last Modified: July 10, 2022
 import os
 import pathlib
 
-from pyaudio import PyAudio
-
 from src.engine.utilities import is_str
 
 
@@ -49,9 +47,9 @@ class Audio:
     Extends pyaudio and pydub for audio manipulation
     """
 
-    def __init__(self, file_path=None, **kwargs):
+    def __init__(self, file_path: str = None, **kwargs):
         if file_path and is_file_valid(file_path):
             # self.py_audio = PyAudio()
             # self.data, self.samplerate = soundfile.read(file_path)
             # self.audio_segment = AudioSegment().from_wav(file_path)
-            self.file_path = file_path
+            self.file_path: str = file_path

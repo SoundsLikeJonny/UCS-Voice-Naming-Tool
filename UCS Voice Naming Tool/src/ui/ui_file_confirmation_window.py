@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 12, 2022
+Last Modified: July 27, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -34,12 +34,12 @@ from PySide6.QtWidgets import (
     QDialog
 )
 from PySide6.QtWidgets import (
+    QListWidgetItem,
     QLabel
 )
 
 from src.engine import utilities
 from src.engine.audio import wavfile
-from src.ui.data_models.list_models import DefaultListModel
 from src.ui.gui.FileConfirmation import Ui_Dialog
 
 
@@ -66,9 +66,6 @@ class FileConfirmation(QDialog, Ui_Dialog):
         super(FileConfirmation, self).__init__(parent, *args, **kwargs)
         self.wav_obj_dict = None
         self.selected_wav_items = []
-
-        self.model = DefaultListModel()
-
         self.init_all_ui()
 
     def init_all_ui(self) -> None:
@@ -83,8 +80,7 @@ class FileConfirmation(QDialog, Ui_Dialog):
 
         self.setWindowFlag(Qt.WindowCloseButtonHint, False)
         self.setWindowFlag(Qt.WindowContextHelpButtonHint, False)
-        self.listView_WavFileSelect.setModel(self.model)
-        # self.listView_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
+        self.listWidget_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
 
     def exists_qt_widgets(self) -> None:
         """
@@ -97,17 +93,16 @@ class FileConfirmation(QDialog, Ui_Dialog):
         Fill the QListWidget with items from file_list
         :param file_list:
         """
-        self.model.data_list.clear()
+        self.listWidget_WavFileSelect.clear()
         self.set_wav_objects(file_list)
 
         if utilities.is_list(file_list):
             for file in file_list:
                 if wavfile.is_file_valid(file):
-                    self.model.data_list.append(file)
-
-                    # item.setCheckState(Qt.Checked)
-                    # item.setToolTip(file)
-                    # self.listWidget_WavFileSelect.addItem(item)
+                    item = QListWidgetItem(file)
+                    item.setCheckState(Qt.Checked)
+                    item.setToolTip(file)
+                    self.listWidget_WavFileSelect.addItem(item)
 
     def set_wav_objects(self, file_list: list[str]) -> None:
         """
@@ -129,10 +124,10 @@ class FileConfirmation(QDialog, Ui_Dialog):
         Store all .wav file paths to self.selected_wav_items as a list
         """
         self.selected_wav_items = []
-        # print(self.listWidget_WavFileSelect.count())
+        print(self.listWidget_WavFileSelect.count())
 
-        for index in range(len(self.model.data_list)):
-            item = self.listView_WavFileSelect.item(index)
+        for index in range(self.listWidget_WavFileSelect.count()):
+            item = self.listWidget_WavFileSelect.item(index)
 
             if item.checkState() == Qt.Checked:
                 self.selected_wav_items.append(item.text())

@@ -8,12 +8,10 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
+from PySide6.QtCore import (QCoreApplication, QMetaObject, Qt)
 from PySide6.QtWidgets import (QAbstractItemView, QDialogButtonBox, QGridLayout, QHBoxLayout, QLabel,
-                               QListView, QSizePolicy, QSpacerItem, QVBoxLayout,
-                               QWidget)
-
-from pyqtgraph import PlotWidget
+                               QListWidget, QSizePolicy, QSpacerItem,
+                               QVBoxLayout, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -123,26 +121,20 @@ class Ui_Dialog(object):
         self.horizontalLayout_3 = QHBoxLayout(self.verticalWidget)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(-1, -1, -1, 10)
-        self.graphicsView = PlotWidget(self.verticalWidget)
-        self.graphicsView.setObjectName(u"graphicsView")
-        self.graphicsView.setMaximumSize(QSize(16777215, 50))
-
-        self.horizontalLayout_3.addWidget(self.graphicsView)
-
 
         self.verticalLayout_2.addWidget(self.verticalWidget)
 
 
         self.gridLayout.addWidget(self.widget_2, 3, 0, 1, 1)
 
-        self.listView_WavFileSelect = QListView(self.widget)
-        self.listView_WavFileSelect.setObjectName(u"listView_WavFileSelect")
-        self.listView_WavFileSelect.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.listView_WavFileSelect.setAlternatingRowColors(False)
-        self.listView_WavFileSelect.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.listView_WavFileSelect.setTextElideMode(Qt.ElideLeft)
+        self.listWidget_WavFileSelect = QListWidget(self.widget)
+        self.listWidget_WavFileSelect.setObjectName(u"listWidget_WavFileSelect")
+        self.listWidget_WavFileSelect.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.listWidget_WavFileSelect.setAlternatingRowColors(False)
+        self.listWidget_WavFileSelect.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.listWidget_WavFileSelect.setTextElideMode(Qt.ElideLeft)
 
-        self.gridLayout.addWidget(self.listView_WavFileSelect, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.listWidget_WavFileSelect, 2, 0, 1, 1)
 
 
         self.verticalLayout.addWidget(self.widget)

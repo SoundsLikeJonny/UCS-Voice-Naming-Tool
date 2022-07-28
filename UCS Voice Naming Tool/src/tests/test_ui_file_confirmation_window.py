@@ -54,7 +54,7 @@ class TestFileConfirmation(TestCase):
         self.app.exit()
 
     def test_exists_qt_widgets(self):
-        self.assertIsNotNone(self.obj_good.listView_WavFileSelect)
+        self.assertIsNotNone(self.obj_good.listWidget_WavFileSelect)
 
     def test_store_list_widget_wav_file_paths(self):
         self.obj_good.set_wav_list(Defaults.test_file_list)
@@ -87,7 +87,7 @@ class TestFileConfirmation(TestCase):
         self.assertEqual(self.obj_good.selected_wav_items, [])
 
     def test_get_selected_wave_file_info(self):
-        index = self.obj_good.listView_WavFileSelect.currentIndex()
+        index = self.obj_good.listWidget_WavFileSelect.currentIndex()
         self.obj_good.get_selected_wave_file_info()
 
     def test_reject(self):

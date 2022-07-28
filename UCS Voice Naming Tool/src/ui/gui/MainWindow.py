@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1000, 798)
+        MainWindow.resize(1000, 783)
         MainWindow.setMinimumSize(QSize(959, 0))
         MainWindow.setMaximumSize(QSize(1000, 16777215))
         MainWindow.setStyleSheet(u"")
@@ -30,10 +30,10 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.tabWidget = QTabWidget(self.centralwidget)
-        self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setStyleSheet(u"")
-        self.tabWidget.setMovable(True)
+        self.tabWidget_Main = QTabWidget(self.centralwidget)
+        self.tabWidget_Main.setObjectName(u"tabWidget_Main")
+        self.tabWidget_Main.setStyleSheet(u"")
+        self.tabWidget_Main.setMovable(True)
         self.tab_Voice = QWidget()
         self.tab_Voice.setObjectName(u"tab_Voice")
         self.gridLayout_9 = QGridLayout(self.tab_Voice)
@@ -714,16 +714,16 @@ class Ui_MainWindow(object):
 
         self.gridLayout_9.addWidget(self.line, 1, 0, 1, 1)
 
-        self.tabWidget.addTab(self.tab_Voice, "")
+        self.tabWidget_Main.addTab(self.tab_Voice, "")
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
-        self.tabWidget.addTab(self.tab, "")
+        self.tabWidget_Main.addTab(self.tab, "")
         self.tab_MicList = QWidget()
         self.tab_MicList.setObjectName(u"tab_MicList")
-        self.tabWidget.addTab(self.tab_MicList, "")
+        self.tabWidget_Main.addTab(self.tab_MicList, "")
         self.tab_2 = QWidget()
         self.tab_2.setObjectName(u"tab_2")
-        self.tabWidget.addTab(self.tab_2, "")
+        self.tabWidget_Main.addTab(self.tab_2, "")
         self.tab_Settings = QWidget()
         self.tab_Settings.setObjectName(u"tab_Settings")
         self.gridLayout_13 = QGridLayout(self.tab_Settings)
@@ -752,10 +752,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addItem(self.horizontalSpacer_10, 0, 2, 1, 1)
 
-        self.label_12 = QLabel(self.groupBox_2)
-        self.label_12.setObjectName(u"label_12")
+        self.label_LoadTopLevelCSV = QLabel(self.groupBox_2)
+        self.label_LoadTopLevelCSV.setObjectName(u"label_LoadTopLevelCSV")
 
-        self.gridLayout_14.addWidget(self.label_12, 1, 3, 1, 1)
+        self.gridLayout_14.addWidget(self.label_LoadTopLevelCSV, 1, 3, 1, 1)
 
         self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -770,35 +770,35 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addWidget(self.label_10, 1, 0, 1, 1)
 
-        self.label_14 = QLabel(self.groupBox_2)
-        self.label_14.setObjectName(u"label_14")
+        self.label_LoadTransCSV = QLabel(self.groupBox_2)
+        self.label_LoadTransCSV.setObjectName(u"label_LoadTransCSV")
 
-        self.gridLayout_14.addWidget(self.label_14, 2, 3, 1, 1)
+        self.gridLayout_14.addWidget(self.label_LoadTransCSV, 2, 3, 1, 1)
 
         self.label_2 = QLabel(self.groupBox_2)
         self.label_2.setObjectName(u"label_2")
 
         self.gridLayout_14.addWidget(self.label_2, 0, 0, 1, 1)
 
-        self.label_11 = QLabel(self.groupBox_2)
-        self.label_11.setObjectName(u"label_11")
+        self.label_LoadFullCatCSV = QLabel(self.groupBox_2)
+        self.label_LoadFullCatCSV.setObjectName(u"label_LoadFullCatCSV")
 
-        self.gridLayout_14.addWidget(self.label_11, 0, 3, 1, 1)
+        self.gridLayout_14.addWidget(self.label_LoadFullCatCSV, 0, 3, 1, 1)
 
-        self.toolButton = QToolButton(self.groupBox_2)
-        self.toolButton.setObjectName(u"toolButton")
+        self.toolButton_LoadFullCatCSV = QToolButton(self.groupBox_2)
+        self.toolButton_LoadFullCatCSV.setObjectName(u"toolButton_LoadFullCatCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton, 0, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadFullCatCSV, 0, 4, 1, 1)
 
-        self.toolButton_2 = QToolButton(self.groupBox_2)
-        self.toolButton_2.setObjectName(u"toolButton_2")
+        self.toolButton_LoadTopLevelCSV = QToolButton(self.groupBox_2)
+        self.toolButton_LoadTopLevelCSV.setObjectName(u"toolButton_LoadTopLevelCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton_2, 1, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadTopLevelCSV, 1, 4, 1, 1)
 
-        self.toolButton_3 = QToolButton(self.groupBox_2)
-        self.toolButton_3.setObjectName(u"toolButton_3")
+        self.toolButton_LoadTransCSV = QToolButton(self.groupBox_2)
+        self.toolButton_LoadTransCSV.setObjectName(u"toolButton_LoadTransCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton_3, 2, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadTransCSV, 2, 4, 1, 1)
 
 
         self.horizontalLayout_11.addWidget(self.groupBox_2)
@@ -820,9 +820,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.widget_4, 0, 0, 1, 1)
 
-        self.tabWidget.addTab(self.tab_Settings, "")
+        self.tabWidget_Main.addTab(self.tab_Settings, "")
 
-        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.tabWidget_Main, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
@@ -846,10 +846,10 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.lineEdit, self.lineEdit_2)
         QWidget.setTabOrder(self.lineEdit_2, self.lineEdit_3)
         QWidget.setTabOrder(self.lineEdit_3, self.checkBox_3)
-        QWidget.setTabOrder(self.checkBox_3, self.tabWidget)
-        QWidget.setTabOrder(self.tabWidget, self.toolButton)
-        QWidget.setTabOrder(self.toolButton, self.toolButton_2)
-        QWidget.setTabOrder(self.toolButton_2, self.toolButton_3)
+        QWidget.setTabOrder(self.checkBox_3, self.tabWidget_Main)
+        QWidget.setTabOrder(self.tabWidget_Main, self.toolButton_LoadFullCatCSV)
+        QWidget.setTabOrder(self.toolButton_LoadFullCatCSV, self.toolButton_LoadTopLevelCSV)
+        QWidget.setTabOrder(self.toolButton_LoadTopLevelCSV, self.toolButton_LoadTransCSV)
 
         self.retranslateUi(MainWindow)
         self.groupBox_UserData.toggled.connect(self.label_UserData.setVisible)
@@ -866,7 +866,7 @@ class Ui_MainWindow(object):
         self.lineEdit_VendorCat.textChanged.connect(self.label_VendorCat.setText)
         self.lineEdit_UserData.textChanged.connect(self.label_UserData.setText)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget_Main.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -931,20 +931,20 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"Take $num", None))
         self.checkBox_3.setText(QCoreApplication.translate("MainWindow", u"Create unique files at take", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u2020 Values with this symbol will not be saved to preferences", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Voice), QCoreApplication.translate("MainWindow", u"Voice", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Conflict Resolution", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_MicList), QCoreApplication.translate("MainWindow", u"Mic List", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Wild Cards", None))
+        self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_Voice), QCoreApplication.translate("MainWindow", u"Voice", None))
+        self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Conflict Resolution", None))
+        self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_MicList), QCoreApplication.translate("MainWindow", u"Mic List", None))
+        self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Wild Cards", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"UCS Files (.csv)", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Full Translations List:", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.label_LoadTopLevelCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Top Level Categories:", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.label_LoadTransCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Full Category List:", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
-        self.toolButton.setText(QCoreApplication.translate("MainWindow", u"...", None))
-        self.toolButton_2.setText(QCoreApplication.translate("MainWindow", u"...", None))
-        self.toolButton_3.setText(QCoreApplication.translate("MainWindow", u"...", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Settings), QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.label_LoadFullCatCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.toolButton_LoadFullCatCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.toolButton_LoadTopLevelCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.toolButton_LoadTransCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_Settings), QCoreApplication.translate("MainWindow", u"Settings", None))
     # retranslateUi
 

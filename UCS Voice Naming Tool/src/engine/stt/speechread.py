@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 16, 2022
+Last Modified: July 27, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -22,6 +22,7 @@ Last Modified: July 16, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import pathlib
 import tempfile
 from pathlib import (

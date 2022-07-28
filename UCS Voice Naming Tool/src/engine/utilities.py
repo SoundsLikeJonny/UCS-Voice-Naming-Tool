@@ -24,6 +24,9 @@ Last Modified: July 6, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
+from pathlib import (
+    Path
+)
 
 """
 #######################################
@@ -39,9 +42,9 @@ def get_file(file_name: str) -> str | None:
     :return: Full path
     """
     if type(file_name) == str:
-        current_dir = os.getcwd()
-        file = current_dir + file_name
-        if os.path.isfile(file) and type(file) == str:
+        current_dir = Path.cwd()
+        file = str(current_dir) + file_name
+        if os.path.isfile(file) and isinstance(file, str):
             return file
     return None
 
@@ -127,6 +130,21 @@ def is_dict(value: dict) -> bool:
     :rtype: bool
     """
     return is_type(value, dict)
+
+
+"""
+#######################################
+############# DIRECTORY ###############
+#######################################
+"""
+
+
+def get_home_path() -> str:
+    """
+    Return the user's main directory
+    :return:
+    """
+    return str(Path().home())
 
 
 """

@@ -26,13 +26,11 @@ import os
 import sys
 from unittest import TestCase
 
-from PyQt5 import QtCore
-from PyQt5.QtGui import QDropEvent
-from PyQt5.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication
 
 from src.ui.theme import theme
-from src.ui.ui_main_window import MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
+from src.ui.ui_main_window import MainWindow
 
 
 class TestMainWindow(TestCase):

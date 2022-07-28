@@ -22,6 +22,7 @@ Last Modified: July 11, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import PySide6
 from PySide6.QtCore import (
     QRunnable
@@ -31,14 +32,14 @@ from PySide6.QtGui import (
 )
 from PySide6.QtWidgets import (
     QDialog,
-    QMessageBox
-)
-from PySide6.QtWidgets import (
+    QMessageBox,
+    QFileDialog,
     QMainWindow
 )
 
 from src.engine import utilities
 from src.engine.stt.speechread import SpeechRead
+from src.engine.ucs import ucs_data
 from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
 
@@ -70,6 +71,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.file_confirmation_window = None
 
+        self.tabWidget_Main.setCurrentIndex(0)
         self.init_ui_voice_tab()
         self.init_ui_conflict_tab()
         self.init_ui_mic_list_tab()
@@ -130,6 +132,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :return: None
         """
         # Remove this when more in function. Then resolve in tests
+        self.toolButton_LoadFullCatCSV.pressed.connect(self.save_full_cat_feather)
+        self.toolButton_LoadTopLevelCSV.pressed.connect(self.save_top_level_feather)
+        self.toolButton_LoadTransCSV.pressed.connect(self.save_full_trans_feather)
+        self.update_settings_csv_labels()
         # noinspection PyTypeChecker
         return True
 
@@ -199,7 +205,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             sr.get_transcription_from_wav_file_google()
             QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
 
-    def reset_window(self):
+    def reset_window(self) -> None:
         """
         Reset the
         :return: 
@@ -207,8 +213,80 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if not utilities.is_type(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
 
+    def save_full_cat_feather(self):
+        """
+        Save a feather file of the UCS Full Category List .csv file
+        """
+        file = self.get_csv_file(Defaults.DIALOG_UCS_FULL_CAT_WINDOW)
+        ucs_data.create_feather_from_csv(file, ucs_data.Defaults.UCS_FULL_CAT_FILE)
+        self.update_settings_csv_labels()
+
+    def save_full_trans_feather(self):
+        """
+        Save a feather file of the UCS Full Translations List .csv file
+        """
+        file = self.get_csv_file(Defaults.DIALOG_UCS_FULL_TRANS_WINDOW)
+        ucs_data.create_feather_from_csv(file, ucs_data.Defaults.UCS_FULL_TRANS_FILE)
+        self.update_settings_csv_labels()
+
+    def save_top_level_feather(self):
+        """
+        Save a feather file of the UCS Full Category List .csv file
+        """
+        file = self.get_csv_file(Defaults.DIALOG_UCS_TOP_LEVEL_WINDOW)
+        ucs_data.create_feather_from_csv(file, ucs_data.Defaults.UCS_TOP_LEVEL_FILE)
+        self.update_settings_csv_labels()
+
+    def get_csv_file(self, window_prompt: str) -> str:
+        """
+
+        :param window_prompt:
+        """
+        file: tuple = QFileDialog.getOpenFileName(
+            self,
+            window_prompt,
+            utilities.get_home_path(),
+            "Comma Seperated Value File (*.csv)"
+        )
+        return file[0]
+
+    def update_settings_csv_labels(self):
+        """
+        Update the label values if they exist
+        :return:
+        """
+        if ucs_data.exists_full_cat_feather():
+            self.label_LoadFullCatCSV.setText(Defaults.TOOL_BUTTON_CSV_LOADED)
+        else:
+            self.label_LoadFullCatCSV.setText(Defaults.TOOL_BUTTON_CSV_NOT_LOADED)
+
+        if ucs_data.exists_top_level_feather():
+            self.label_LoadTopLevelCSV.setText(Defaults.TOOL_BUTTON_CSV_LOADED)
+        else:
+            self.label_LoadTopLevelCSV.setText(Defaults.TOOL_BUTTON_CSV_NOT_LOADED)
+
+        if ucs_data.exists_full_trans_feather():
+            self.label_LoadTransCSV.setText(Defaults.TOOL_BUTTON_CSV_LOADED)
+        else:
+            self.label_LoadTransCSV.setText(Defaults.TOOL_BUTTON_CSV_NOT_LOADED)
+
+
+class Defaults:
+    """
+    Default values
+    """
+    DIALOG_UCS_FULL_CAT_WINDOW: str = "Select the UCS Full Category List .csv file"
+    DIALOG_UCS_TOP_LEVEL_WINDOW: str = "Select the UCS Top Level Categories .csv file"
+    DIALOG_UCS_FULL_TRANS_WINDOW: str = "Select the UCS Full Translations List .csv file"
+
+    TOOL_BUTTON_CSV_LOADED: str = '.csv is loaded'
+    TOOL_BUTTON_CSV_NOT_LOADED: str = '[NO .CSV LOADED]'
+
 
 class Worker(QRunnable):
+    """
+.
+    """
 
     def __init__(self):
         super().__init__()

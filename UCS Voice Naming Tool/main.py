@@ -40,4 +40,4 @@ theme.set_default_theme(app)
 obj = MainWindow()
 obj.show()
 
-sys.exit(app.exec_())
+sys.exit(app.exec())

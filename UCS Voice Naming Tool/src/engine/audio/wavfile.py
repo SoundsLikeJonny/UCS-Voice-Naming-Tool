@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 10, 2022
+Last Modified: July 27, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -26,6 +26,7 @@ Last Modified: July 10, 2022
 
 import datetime
 import wave
+from typing import BinaryIO
 
 import soundfile
 
@@ -38,12 +39,12 @@ def get_length_formatted(wave_file) -> str:
     :param wave_file:
     :return:
     """
-    len_sec = wave_file.getnframes() / float(wave_file.getframerate())
-    len_sec = round(len_sec)
+    len_sec: float = wave_file.getnframes() / float(wave_file.getframerate())
+    len_sec: int = round(len_sec)
     return str(datetime.timedelta(seconds=len_sec))
 
 
-def get_samplerate(wave_file):
+def get_samplerate(wave_file) -> int:
     """
     Return the framerate multiplied bu the samplewidth
     :param wave_file:
@@ -73,37 +74,26 @@ class Wav(Audio):
         self.length = None
 
         if is_file_valid(file_path):
-            self.file_path = file_path
+            self.file_path: str = file_path
 
         self.set_audio_info()
 
     def set_audio_info(self) -> None:
         """
-        Return wave info on file
+        Set all audio info to the object
         """
         # TODO: find a way to load without errors. FFmpeg needs installation, can't read RIF
 
         if self.file_path is not None:
-            wave_file = wave.open(self.file_path, 'rb')
-            wave_file_sf = soundfile.SoundFile(self.file_path)
+            wave_file: any = wave.open(self.file_path, 'rb')
+            wave_file_sf: soundfile.SoundFile = soundfile.SoundFile(self.file_path)
 
-            # wave_file.getsampwidth()
-            self.sample_width = wave_file.getsampwidth()
-            self.channels = wave_file.getnchannels() or None
-            self.sample_rate = get_samplerate(wave_file) or None
-            self.comp_name = wave_file.getcompname() or None
-            self.comp_type = wave_file.getcomptype() or None
-            self.fp = wave_file.getfp() or None
-            self.bit_depth = wave_file_sf.subtype or None
-            self.n_frames = wave_file.getnframes() or None
-            self.length = get_length_formatted(wave_file) or None
-
-    def get_audio_data(self):
-        """
-        .
-        """
-        # TODO: return audio data
-        pass
-
-        # TODO: write a function to get audio chunks
-        pass
+            self.sample_width: int = wave_file.getsampwidth()
+            self.channels: int = wave_file.getnchannels() or None
+            self.sample_rate: int = get_samplerate(wave_file) or None
+            self.comp_name: str = wave_file.getcompname() or None
+            self.comp_type: str = wave_file.getcomptype() or None
+            self.fp: BinaryIO = wave_file.getfp() or None
+            self.bit_depth: str = wave_file_sf.subtype or None
+            self.n_frames: int = wave_file.getnframes() or None
+            self.length: str = get_length_formatted(wave_file) or None

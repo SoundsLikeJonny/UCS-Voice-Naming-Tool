@@ -26,7 +26,7 @@ Last Modified: July 6, 2022
 import sys
 import unittest
 
-from PyQt5.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication
 from qt_material import build_stylesheet
 
 from src.ui.theme import theme
