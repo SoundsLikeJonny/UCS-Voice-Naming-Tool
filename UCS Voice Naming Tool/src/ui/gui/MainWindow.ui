@@ -36,7 +36,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>0</number>
       </property>
       <property name="movable">
        <bool>true</bool>
@@ -1567,14 +1567,21 @@
                   <string>UCS Files (.csv)</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_14">
-                  <item row="2" column="0">
+                  <item row="3" column="3">
+                   <widget class="QLabel" name="label_LoadTopLevelCSV">
+                    <property name="text">
+                     <string>[file not found]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
                    <widget class="QLabel" name="label_13">
                     <property name="text">
                      <string>Full Translations List:</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="2">
+                  <item row="2" column="2">
                    <spacer name="horizontalSpacer_10">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
@@ -1587,14 +1594,56 @@
                     </property>
                    </spacer>
                   </item>
-                  <item row="1" column="3">
-                   <widget class="QLabel" name="label_LoadTopLevelCSV">
+                  <item row="2" column="4">
+                   <widget class="QToolButton" name="toolButton_LoadFullCatCSV">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="3">
+                   <widget class="QLabel" name="label_LoadTransCSV">
                     <property name="text">
                      <string>[file not found]</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="2">
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_10">
+                    <property name="text">
+                     <string>Top Level Categories:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="4">
+                   <widget class="QToolButton" name="toolButton_LoadTopLevelCSV">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="4">
+                   <widget class="QToolButton" name="toolButton_LoadTransCSV">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="QLabel" name="label_LoadFullCatCSV">
+                    <property name="text">
+                     <string>[file not found]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="text">
+                     <string>Full Category List:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
                    <spacer name="horizontalSpacer_11">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
@@ -1607,7 +1656,7 @@
                     </property>
                    </spacer>
                   </item>
-                  <item row="2" column="2">
+                  <item row="4" column="2">
                    <spacer name="horizontalSpacer_12">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
@@ -1620,52 +1669,10 @@
                     </property>
                    </spacer>
                   </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="label_10">
-                    <property name="text">
-                     <string>Top Level Categories:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="3">
-                   <widget class="QLabel" name="label_LoadTransCSV">
-                    <property name="text">
-                     <string>[file not found]</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="0" column="0">
-                   <widget class="QLabel" name="label_2">
+                   <widget class="QLabel" name="label_11">
                     <property name="text">
-                     <string>Full Category List:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="3">
-                   <widget class="QLabel" name="label_LoadFullCatCSV">
-                    <property name="text">
-                     <string>[file not found]</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="4">
-                   <widget class="QToolButton" name="toolButton_LoadFullCatCSV">
-                    <property name="text">
-                     <string>...</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="4">
-                   <widget class="QToolButton" name="toolButton_LoadTopLevelCSV">
-                    <property name="text">
-                     <string>...</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="4">
-                   <widget class="QToolButton" name="toolButton_LoadTransCSV">
-                    <property name="text">
-                     <string>...</string>
+                     <string>** When importing .csv files, please sure to remove unnecessary rows</string>
                     </property>
                    </widget>
                   </item>

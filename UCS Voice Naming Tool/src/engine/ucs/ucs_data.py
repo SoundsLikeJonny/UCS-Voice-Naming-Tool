@@ -24,7 +24,7 @@ Last Modified: July 27, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-
+import pandas as pd
 from pyarrow import (
     csv,
     feather,
@@ -88,7 +88,26 @@ class UCS:
     """
 
     def __init__(self) -> None:
-        pass
+        self.ucs_full_cat = None
+        self.ucs_full_trans = None
+        self.ucs_top_level = None
+        self.load_feathers()
+
+    def load_feathers(self):
+        """
+        Attempt to load the feathers if they exist
+        """
+        if exists_full_cat_feather():
+            self.ucs_full_cat = pd.read_feather(Defaults.UCS_FULL_CAT_FILE)
+            # columns = self.ucs_full_cat.loc[:, "Category"]
+            self.ucs_full_cat = self.ucs_full_cat.columns.to_list()
+
+            print(self.ucs_full_cat)
+            
+        if exists_full_trans_feather():
+            self.ucs_full_trans = pd.read_feather(Defaults.UCS_FULL_TRANS_FILE)
+        if exists_top_level_feather():
+            self.ucs_top_level = pd.read_feather(Defaults.UCS_FULL_TRANS_FILE)
 
 
 class Defaults:

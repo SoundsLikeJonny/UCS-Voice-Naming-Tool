@@ -1,84 +1,81 @@
-,UCS v8.1 TOP CATEGORY EXPLANATIONS
-Category,Explanation
-AIR,"The sound of air, blowing, bursting, hissing."
-AIRCRAFT,"Aircraft from prop airplanes to jets, helicopters, etc. Rockets also included here."
-ALARMS,"Sounds that raise alarms, from alarm clocks, to fire alarms, klaxons."
-AMBIENCE,Usually a recording of a specific location that contains several elements. Isolated sounds often have a more distinct category available.
-ANIMALS,Vocalizations for all living animals except BIRDS or CREATURES which have their own categories. Also see WINGS and MOVEMENT categories.
-ARCHIVED,"A useful place to store certain material in your library, from Stems and Printmasters, to logos, test tones, PFX, impulse responses."
-BEEPS,Most types of beeps from vehicle to appliants. User interface beeps has it's own category in USER INTERFACE-BEEP
-BELLS,Bells from small hand bells to church bells. Bell type alarms go to ALARMS-BELL.
-BIRDS,All birds vocalizations. Bird wingflaps would go in WINGS-BIRD.
-BOATS,"Boats, including motorized and non-motorized. Boat HORNS would also go here, a ship horn, or tug boat horn."
-BULLETS,"Separated from GUNS, this category includes bullet hits, bys, impacts, ricochets."
-CARTOON,"Overtly humorous sounds, as you'd use in a saturday morning cartoon. Silly over the top sounds."
-CERAMICS,"Ceramics, pottery, crashes, hits, breaks, friction."
-CHAINS,"Chains, movement hits and breaks."
-CHEMICALS,"Chemical reactions, acid, bubbling, and other reactions between chemicals and objects."
-CLOCKS,"Clocks, ticking, chiming, ringing and other mechanical actions like winding or gears moving."
-CLOTH,"General manipulation of cloth like rustling, sliding or tearing. Leather has it's own category in LEATHER."
-COMMUNICATIONS,"Various devices pertaining to radio waves, transmission, or other forms of communication."
-COMPUTERS,"Sounds pertaining to the hardware of computers like the CD drive, keyboard or mouse. Sounds involving the interface of the computer belong in USER INTERFACE."
-CREATURES,Any variety of fictional creature sounds and the components to make those sounds. See user list of suggested user categories for more information.
-CROWDS,Crowd vocals and reactions. Movement belongs in MOVEMENT-CROWD.
-DESIGNED,Any variety of designed sounds that won't fit into another category. In particular cinematic and trailer style textural sounds. 
-DESTRUCTION,"Mixed material destruction like collapsing buildings, or mixed crashes and debris. Single isolated materials like WOOD and METAL belong in their own categories."
-DIRT & SAND,Dirt and Sand. Mud belongs in the category LIQUID & MUD.
-DOORS,"Doors, hardware, and cabinets. Also knocking. Car doors belong in VEHICLES-DOORS. WINDOWS and DRAWERS have their own category too."
-DRAWERS,Drawers of any type. WINDOWS has it's own category and wouldn't go here.
-ELECTRICITY,"Sounds created by electricity including EMF sounds, so zaps, arcs, hums and things like that."
-EQUIPMENT,"Various types of equipment like utility belts, police gear and horse riding gear."
-EXPLOSIONS,Explosions both recorded and designed.
-FARTS,"Farts from humans, animals and creatures, real or designed."
-FIGHT,"Combat specific sounds like punches, grabs and bodyfalls."
-FIRE,"Fire of all kind, including ignition, burning, crackling, torches."
-FIREWORKS,"Fireworks. Recreational refers to consumer level fireworks you'd buy from a booth, commercial refers to large Mortars used in large displays like at Disneyland."
-FOLEY,For use SPECIFICALLY for archiving foley on projects that have foley recorded for it. Your own footsteps recordings to go to FOOTSTEPS and your props to OBJECTS.
-FOOD & DRINK,"Drinking and eating sounds, and sounds associated with food like plates, tableware, and cutlery, cooking."
-FOOTSTEPS,"Footsteps for humans, animals, and creatures. Real recorded Foley to go to FOLEY-FEET."
-GAMES,"Various games like boardgames, slot machines, video games, ect. A mixed recording of a casino or arcade would go in AMBIENCE-PUBLIC PLACE."
-GEOTHERMAL,"Sounds caused by geothermal activity. Mud pots, geysers and lava. Earthquakes and Volcanoes belong in NATURAL DISASTER."
-GLASS,"Glass. Breaking, hits, friction, all manner of glass sounds."
-GORE,"Sounds refering to gore and violence. Blood, bone breaks and stabs, flesh ripping."
-GUNS,"Sounds pertaining to guns, shooting and mechanical actions. Bullet related actions like pass bys and shells dropping belong in BULLETS."
-HORNS,"Non-musical horns, like air horns, war horns and party horns. Brass instruments to go in MUSICAL-BRASS. TRAIN, BOAT and VEHICLE horn to those categories."
-HUMAN,"Human body sounds like sneezes, breathes and heartbeats."
-ICE,"Ice. Cracking, breaking, friction. SNOW has it's own category. Dry ice recording could go here but probably better suited in METAL-FRICTION if particularly metallic."
-LASERS,"Laser blasts, pass bys and impacts. The classic Star Wars blaster would go in LASERS-GUN."
-LEATHER,"Sound specifically made from leather or pleather textiles. The creak of a leather jacket, or a leather couch."
-LIQUID & MUD,"Liquids thicker than water like oil, mud or goop. Could be some overlap with GORE category."
-MACHINES,"Machinery powered by a mototor or some other consistant power source. From fans, to pumps, to medical machines, elevators, quite a wide category."
-MAGIC,"Spells, magic and general wizardry."
-MECHANICAL,"Simple human powered mechanisms like pullies, ratchets and rollers. Isolated recordings of mechanial sounds. Switches, levers, latches all go here."
-METAL,"Metal of all kind, impacts, warps, screeches, rings."
-MOTORS,"Specifically isolated motors like steam pistons or stationary electric motors, also various combustion or electric motors. Servos go here."
-MOVEMENT,"Sounds of general movement of crowds, swarms or creatures. Group footstep recordings would better go in CROWDS-MOVEMENT."
-MUSICAL,"Sounds created by musical instruments including music samples, loops or songs."
+AIRCRAFT        ,"Aircraft from prop airplanes to jets, helicopters, etc. Rockets also included here."
+ALARMS          ,"Sounds that raise alarms, from alarm clocks, to fire alarms, klaxons."
+AMBIENCE        ,Usually a recording of a specific location that contains several elements. Isolated sounds often have a more distinct category available.
+ANIMALS         ,Vocalizations for all living animals except BIRDS or CREATURES which have their own categories. Also see WINGS and MOVEMENT categories.
+ARCHIVED        ,"A useful place to store certain material in your library, from Stems and Printmasters, to logos, test tones, PFX, impulse responses."
+BEEPS           ,Most types of beeps from vehicle to appliants. User interface beeps has it's own category in USER INTERFACE-BEEP
+BELLS           ,Bells from small hand bells to church bells. Bell type alarms go to ALARMS-BELL.
+BIRDS           ,All birds vocalizations. Bird wingflaps would go in WINGS-BIRD.
+BOATS           ,"Boats, including motorized and non-motorized. Boat HORNS would also go here, a ship horn, or tug boat horn."
+BULLETS         ,"Separated from GUNS, this category includes bullet hits, bys, impacts, ricochets."
+CARTOON         ,"Overtly humorous sounds, as you'd use in a saturday morning cartoon. Silly over the top sounds."
+CERAMICS        ,"Ceramics, pottery, crashes, hits, breaks, friction."
+CHAINS          ,"Chains, movement hits and breaks."
+CHEMICALS       ,"Chemical reactions, acid, bubbling, and other reactions between chemicals and objects."
+CLOCKS          ,"Clocks, ticking, chiming, ringing and other mechanical actions like winding or gears moving."
+CLOTH           ,"General manipulation of cloth like rustling, sliding or tearing. Leather has it's own category in LEATHER."
+COMMUNICATIONS  ,"Various devices pertaining to radio waves, transmission, or other forms of communication."
+COMPUTERS       ,"Sounds pertaining to the hardware of computers like the CD drive, keyboard or mouse. Sounds involving the interface of the computer belong in USER INTERFACE."
+CREATURES       ,Any variety of fictional creature sounds and the components to make those sounds. See user list of suggested user categories for more information.
+CROWDS          ,Crowd vocals and reactions. Movement belongs in MOVEMENT-CROWD.
+DESIGNED        ,Any variety of designed sounds that won't fit into another category. In particular cinematic and trailer style textural sounds.
+DESTRUCTION     ,"Mixed material destruction like collapsing buildings, or mixed crashes and debris. Single isolated materials like WOOD and METAL belong in their own categories."
+DIRT & SAND     ,Dirt and Sand. Mud belongs in the category LIQUID & MUD.
+DOORS           ,"Doors, hardware, and cabinets. Also knocking. Car doors belong in VEHICLES-DOORS. WINDOWS and DRAWERS have their own category too."
+DRAWERS         ,Drawers of any type. WINDOWS has it's own category and wouldn't go here.
+ELECTRICITY     ,"Sounds created by electricity including EMF sounds, so zaps, arcs, hums and things like that."
+EQUIPMENT       ,"Various types of equipment like utility belts, police gear and horse riding gear."
+EXPLOSIONS      ,Explosions both recorded and designed.
+FARTS           ,"Farts from humans, animals and creatures, real or designed."
+FIGHT           ,"Combat specific sounds like punches, grabs and bodyfalls."
+FIRE            ,"Fire of all kind, including ignition, burning, crackling, torches."
+FIREWORKS       ,"Fireworks. Recreational refers to consumer level fireworks you'd buy from a booth, commercial refers to large Mortars used in large displays like at Disneyland."
+FOLEY           ,For use SPECIFICALLY for archiving foley on projects that have foley recorded for it. Your own footsteps recordings to go to FOOTSTEPS and your props to OBJECTS.
+FOOD & DRINK    ,"Drinking and eating sounds, and sounds associated with food like plates, tableware, and cutlery, cooking."
+FOOTSTEPS       ,"Footsteps for humans, animals, and creatures. Real recorded Foley to go to FOLEY-FEET."
+GAMES           ,"Various games like boardgames, slot machines, video games, ect. A mixed recording of a casino or arcade would go in AMBIENCE-PUBLIC PLACE."
+GEOTHERMAL      ,"Sounds caused by geothermal activity. Mud pots, geysers and lava. Earthquakes and Volcanoes belong in NATURAL DISASTER."
+GLASS           ,"Glass. Breaking, hits, friction, all manner of glass sounds."
+GORE            ,"Sounds refering to gore and violence. Blood, bone breaks and stabs, flesh ripping."
+GUNS            ,"Sounds pertaining to guns, shooting and mechanical actions. Bullet related actions like pass bys and shells dropping belong in BULLETS."
+HORNS           ,"Non-musical horns, like air horns, war horns and party horns. Brass instruments to go in MUSICAL-BRASS. TRAIN, BOAT and VEHICLE horn to those categories."
+HUMAN           ,"Human body sounds like sneezes, breathes and heartbeats."
+ICE             ,"Ice. Cracking, breaking, friction. SNOW has it's own category. Dry ice recording could go here but probably better suited in METAL-FRICTION if particularly metallic."
+LASERS          ,"Laser blasts, pass bys and impacts. The classic Star Wars blaster would go in LASERS-GUN."
+LEATHER         ,"Sound specifically made from leather or pleather textiles. The creak of a leather jacket, or a leather couch."
+LIQUID & MUD    ,"Liquids thicker than water like oil, mud or goop. Could be some overlap with GORE category."
+MACHINES        ,"Machinery powered by a mototor or some other consistant power source. From fans, to pumps, to medical machines, elevators, quite a wide category."
+MAGIC           ,"Spells, magic and general wizardry."
+MECHANICAL      ,"Simple human powered mechanisms like pullies, ratchets and rollers. Isolated recordings of mechanial sounds. Switches, levers, latches all go here."
+METAL           ,"Metal of all kind, impacts, warps, screeches, rings."
+MOTORS          ,"Specifically isolated motors like steam pistons or stationary electric motors, also various combustion or electric motors. Servos go here."
+MOVEMENT        ,"Sounds of general movement of crowds, swarms or creatures. Group footstep recordings would better go in CROWDS-MOVEMENT."
+MUSICAL         ,"Sounds created by musical instruments including music samples, loops or songs."
 NATURAL DISASTER,"Cataclysmic weather or geological events like earthquakes, tornadoes, tsunamis."
-OBJECTS,"Manipulating specific props or common objects. Your own PROP recordings would go here. This covers wild sfx of foley actions like pickups and set downs, etc."
-PAPER,"Paper. Handling, fluttering, ripping. See OBJECTS-PACKAGING for things like cardboard."
-PLASTIC,"Plastic general sounds. Impacts, rattles, scrapes."
-RAIN,Common surfaces are defined as subcategories but multiple surfaces or undefinied rain can be placed in RAIN-GENERAL.
-ROBOTS,Various complex movements and vocalizations for robots. An isolated servo motor better placed in MOTORS-SERVO.
-ROCKS,"Rocks. Cracks, breaks, debris, collapses, etc."
-ROPE,"Rope handling, sliding, zuzzing. Nylon or hemp, it all goes here. Rope creaks here too."
-RUBBER,"Rubber. Stretches, bounces, etc. A ballon or rubber bouncing ball."
-SCIFI,"Science Fiction, think Star Trek. Vehicles, computers, retro, spaceships all here. Blasters would go to LASERS-GUN. Some overlap with HI-TECH subcategories."
-SNOW,"Snow recordings. Impacts, body movement through snow. ICE has it's own category and should go there."
-SPORTS,"Sports, isolated sounds or recordings of sports being played. Sports gear to EQUIPMENT-SPORT. Sporting events to either CROWDS-SPORT or AMBIENCE-SPORT."
-SWOOSHES,"Combined swishes and whooshes, any item moving rapidly through the air. a SWISH is a smaller object through air, a WHOOSH much bigger and often designed."
-TOOLS,"Hand tools, power tools, they all go here. Pneumatic tools here too."
-TOYS,"Mechanical and electronic toys. An electronic game would go in GAMES, which has its own category."
-TRAINS,"Trains. Diesel, electric, trams and trolleys. Train HORNS and BRAKES also here."
-USER INTERFACE,"Specifically tones, beeps, alerts for someone interacting with technology, usually a computer or a phone. That classic CSI computer data."
-VEGETATION,"Grass, leaves, trees, all isolated recordings of plants and vegetation. Not for wind through trees which would go into WIND-VEGETATION."
-VEHICLES,"Most vehicles except for BOATS, TRAINS and AIRCRAFT. But cars, buses, motorcycles, tractors. Also isolated vehicle sounds like TIRES, HORNS, SIRENS."
-VOICES,"Single isolated voices, as opposed to CROWDS."
-WATER,"Water of all kinds. Rivers, fountains, pouring, lapping."
-WEAPONS,"Weapons except for GUNS and BULLETS which have their own categories. Swords, siege weapons, bows and arrows."
-WEATHER,"Weather except for RAIN and WIND which have their own categories. But Thunder, hail, composite storms."
-WHISTLES,Whistles either human or mechanical. Slide whistles or silly whistles to CARTOON-WHISTLE.
-WIND,"Split into some specific sub-categories, but most wind would probably go into WIND-GENERAL."
-WINDOWS,"Windows of various materials, window hardware, etc. Knocking on a window here too."
-WINGS,"Wings of various creatures, such as bird wingflaps, creature wings, and insect wings."
-WOOD,"All things wood, breaks, shatter, cracks, creaks."
+OBJECTS         ,"Manipulating specific props or common objects. Your own PROP recordings would go here. This covers wild sfx of foley actions like pickups and set downs, etc."
+PAPER           ,"Paper. Handling, fluttering, ripping. See OBJECTS-PACKAGING for things like cardboard."
+PLASTIC         ,"Plastic general sounds. Impacts, rattles, scrapes."
+RAIN            ,Common surfaces are defined as subcategories but multiple surfaces or undefinied rain can be placed in RAIN-GENERAL.
+ROBOTS          ,Various complex movements and vocalizations for robots. An isolated servo motor better placed in MOTORS-SERVO.
+ROCKS           ,"Rocks. Cracks, breaks, debris, collapses, etc."
+ROPE            ,"Rope handling, sliding, zuzzing. Nylon or hemp, it all goes here. Rope creaks here too."
+RUBBER          ,"Rubber. Stretches, bounces, etc. A ballon or rubber bouncing ball."
+SCIFI           ,"Science Fiction, think Star Trek. Vehicles, computers, retro, spaceships all here. Blasters would go to LASERS-GUN. Some overlap with HI-TECH subcategories."
+SNOW            ,"Snow recordings. Impacts, body movement through snow. ICE has it's own category and should go there."
+SPORTS          ,"Sports, isolated sounds or recordings of sports being played. Sports gear to EQUIPMENT-SPORT. Sporting events to either CROWDS-SPORT or AMBIENCE-SPORT."
+SWOOSHES        ,"Combined swishes and whooshes, any item moving rapidly through the air. a SWISH is a smaller object through air, a WHOOSH much bigger and often designed."
+TOOLS           ,"Hand tools, power tools, they all go here. Pneumatic tools here too."
+TOYS            ,"Mechanical and electronic toys. An electronic game would go in GAMES, which has its own category."
+TRAINS          ,"Trains. Diesel, electric, trams and trolleys. Train HORNS and BRAKES also here."
+USER INTERFACE  ,"Specifically tones, beeps, alerts for someone interacting with technology, usually a computer or a phone. That classic CSI computer data."
+VEGETATION      ,"Grass, leaves, trees, all isolated recordings of plants and vegetation. Not for wind through trees which would go into WIND-VEGETATION."
+VEHICLES        ,"Most vehicles except for BOATS, TRAINS and AIRCRAFT. But cars, buses, motorcycles, tractors. Also isolated vehicle sounds like TIRES, HORNS, SIRENS."
+VOICES          ,"Single isolated voices, as opposed to CROWDS."
+WATER           ,"Water of all kinds. Rivers, fountains, pouring, lapping."
+WEAPONS         ,"Weapons except for GUNS and BULLETS which have their own categories. Swords, siege weapons, bows and arrows."
+WEATHER         ,"Weather except for RAIN and WIND which have their own categories. But Thunder, hail, composite storms."
+WHISTLES        ,Whistles either human or mechanical. Slide whistles or silly whistles to CARTOON-WHISTLE.
+WIND            ,"Split into some specific sub-categories, but most wind would probably go into WIND-GENERAL."
+WINDOWS         ,"Windows of various materials, window hardware, etc. Knocking on a window here too."
+WINGS           ,"Wings of various creatures, such as bird wingflaps, creature wings, and insect wings."
+WOOD            ,"All things wood, breaks, shatter, cracks, creaks."

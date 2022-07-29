@@ -458,6 +458,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\UCS Voice Naming Tool\src\tests\ucs_csv\UCS v8.1 Full Category List.xlsx - UCS v8.0.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\src\tests\ucs_csv\UCS v8.1 Full Translations List.xlsx - categorylist.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\UCS Voice Naming Tool\src\tests\ucs_csv\UCS v8.1 Top Level Categories.xlsx - USC Category Overview.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
