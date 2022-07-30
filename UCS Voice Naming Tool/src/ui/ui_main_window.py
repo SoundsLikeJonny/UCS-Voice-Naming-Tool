@@ -38,7 +38,8 @@ from PySide6.QtWidgets import (
 )
 
 from src.engine import utilities
-from src.engine.stt.speechread import SpeechRead
+# from src.engine.stt.speechread import SpeechRead
+from src.engine.stt.speechanalyse import SpeechAnalyse
 from src.engine.ucs import ucs_data
 from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
@@ -53,6 +54,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
 
         self.file_confirmation_window = None
+
+        self.ucs = ucs_data.UCS()
+
         self.init_all_ui()
 
     def init_all_ui(self) -> None:
@@ -68,8 +72,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.setMouseTracking(True)
         self.setAcceptDrops(True)
-
-        self.file_confirmation_window = None
 
         self.tabWidget_Main.setCurrentIndex(0)
         self.init_ui_voice_tab()
@@ -201,7 +203,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :param files:
         """
         if utilities.is_list(files) and files:
-            sr = SpeechRead(files[0])
+            sr = SpeechAnalyse(files[0])
             sr.get_transcription_from_wav_file_google()
             QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
 

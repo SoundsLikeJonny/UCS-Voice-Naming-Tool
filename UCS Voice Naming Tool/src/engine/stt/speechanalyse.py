@@ -31,5 +31,5 @@ class SpeechAnalyse(SpeechRead):
     Extends SpeechRead, but with functionality for parsing apart the text and extracting info
     """
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, file_path=None) -> None:
+        super(SpeechAnalyse, self).__init__(file_path)
