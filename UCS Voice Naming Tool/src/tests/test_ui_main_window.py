@@ -104,3 +104,77 @@ class Defaults:
         '',
         ''
     ]
+
+
+class TestMainWindow(TestCase):
+    def test_init_all_ui(self):
+        self.fail()
+
+    def test_exists_qt_widgets(self):
+        self.fail()
+
+    def test_init_ui_voice_tab(self):
+        self.fail()
+
+    def test_init_ui_conflict_tab(self):
+        self.fail()
+
+    def test_init_ui_mic_list_tab(self):
+        self.fail()
+
+    def test_init_ui_wildcard_tab(self):
+        self.fail()
+
+    def test_init_ui_settings_tab(self):
+        self.fail()
+
+    def test_ui_init_all_groupboxes(self):
+        self.fail()
+
+    def test_ui_init_groupbox_filename_signals(self):
+        self.fail()
+
+    def test_toggle_all_groupboxes_colors(self):
+        self.fail()
+
+    def test_set_opacity(self):
+        self.fail()
+
+    def test_drop_event(self):
+        self.fail()
+
+    def test_handle_drop_event_files(self):
+        self.fail()
+
+    def test_open_file_confirmation_window(self):
+        self.fail()
+
+    def test_drag_enter_event(self):
+        self.fail()
+
+    def test_reset_file_confirmation_window(self):
+        self.fail()
+
+    def test_file_confirmation_window_analyze_stt(self):
+        self.fail()
+
+    def test_analyze_stt(self):
+        self.fail()
+
+    def test_reset_window(self):
+        self.fail()
+
+    def test_save_full_cat_feather(self):
+        self.fail()
+
+    def test_save_full_trans_feather(self):
+        self.fail()
+
+    def test_save_top_level_feather(self):
+        self.fail()
+
+    def test_get_csv_file(self):
+        self.fail()
+
+    def test_update_settings_csv_labels(self):
+        self.fail()

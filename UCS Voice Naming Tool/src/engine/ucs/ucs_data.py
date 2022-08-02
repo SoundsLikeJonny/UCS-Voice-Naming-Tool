@@ -126,12 +126,20 @@ class UCS:
         if exists_top_level_feather():
             self.ucs_top_level = pd.read_feather(Defaults.UCS_FULL_TRANS_FILE)
 
-    def get_row_from_catid(self, catid: str):
+    def get_row_from_catid(self, catid: str) -> DataFrame:
         """
         Use the catid to determine the row
         :param catid:
         """
-        pass
+        return self.ucs_full_cat.loc[self.ucs_full_cat['CatID'] == catid]
+
+    def get_rows_from_category(self, category: str) -> DataFrame:
+        """
+
+        :param category:
+        :return:
+        """
+        return self.ucs_full_cat.loc[self.ucs_full_cat['Category'] == category]
 
 
 class Defaults:

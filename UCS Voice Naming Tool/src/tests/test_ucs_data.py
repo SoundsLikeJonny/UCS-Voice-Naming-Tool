@@ -72,3 +72,52 @@ class TestUCS(TestCase):
         self.assertIsNotNone(self.ucs_obj_good.ucs_full_cat)
         self.assertIsNotNone(self.ucs_obj_good.ucs_full_trans)
         self.assertIsNotNone(self.ucs_obj_good.ucs_top_level)
+
+
+class Test(TestCase):
+    def test_create_feather_from_csv(self):
+        self.fail()
+
+    def test_exists_full_cat_feather(self):
+        self.fail()
+
+    def test_exists_top_level_feather(self):
+        self.fail()
+
+    def test_exists_full_trans_feather(self):
+        self.fail()
+
+    def test__exists_feather_path(self):
+        self.fail()
+
+    def test_get_sorted_unique_list(self):
+        self.fail()
+
+    def test_ucs(self):
+        self.fail()
+
+
+class Test(TestCase):
+    def test_create_feather_from_csv(self):
+        self.fail()
+
+    def test_exists_full_cat_feather(self):
+        self.fail()
+
+    def test_exists_top_level_feather(self):
+        self.fail()
+
+    def test_exists_full_trans_feather(self):
+        self.fail()
+
+    def test__exists_feather_path(self):
+        self.fail()
+
+    def test_get_sorted_unique_list(self):
+        self.fail()
+
+    def test_ucs(self):
+        self.fail()
+
+    def test_defaults(self):
+        self.fail()

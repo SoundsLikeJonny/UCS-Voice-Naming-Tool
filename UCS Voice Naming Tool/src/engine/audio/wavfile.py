@@ -78,6 +78,11 @@ class Wav(Audio):
 
         self.set_audio_info()
 
+    def __str__(self):
+        f"""
+
+        """
+
     def set_audio_info(self) -> None:
         """
         Set all audio info to the object

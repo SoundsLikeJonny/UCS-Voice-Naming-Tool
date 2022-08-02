@@ -23,6 +23,8 @@ Last Modified: July 16, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+import nlu
+
 from src.engine.stt.speechread import SpeechRead
 
 
@@ -33,3 +35,17 @@ class SpeechAnalyse(SpeechRead):
 
     def __init__(self, file_path=None) -> None:
         super(SpeechAnalyse, self).__init__(file_path)
+
+    def get_transcription_from_wav_file_google(self):
+        """
+        Override the get_transcription_from_wav_file_google method from the base class
+        Perform nlu analysis on all text
+        """
+        super(SpeechAnalyse, self).get_transcription_from_wav_file_google()
+        self.analyse_all_text()
+
+    def analyse_all_text(self):
+        """
+
+        """
+        pass

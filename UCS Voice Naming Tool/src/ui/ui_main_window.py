@@ -289,9 +289,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :param files:
         """
         if utilities.is_list(files) and files:
-            sr = SpeechAnalyse(files[0])
-            sr.get_transcription_from_wav_file_google()
-            QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
+            sa = SpeechAnalyse(files[0])
+            sa.get_transcription_from_wav_file_google()
+            QMessageBox.about(self, "Speech-To-Text File Results", sa.speech_transcription_from_file)
 
     def reset_window(self) -> None:
         """

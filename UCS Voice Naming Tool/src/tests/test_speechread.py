@@ -24,6 +24,7 @@ Last Modified: July 16, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import unittest
+from unittest import TestCase
 
 from src.engine.stt.speechread import SpeechRead
 from src.tests.test_testdata import Defaults
@@ -72,3 +73,44 @@ class TestSpeechRead(unittest.TestCase):
     def test_get_transcription_from_wav_file_google(self):
         self.obj_good.get_transcription_from_wav_file_google()
         print(self.obj_good.speech_transcription_from_file)
+
+
+class TestSpeechRead(TestCase):
+    def test_init_all_audio_data(self):
+        self.fail()
+
+    def test_init_audio_data_from_file_pydub(self):
+        self.fail()
+
+    def test_init_audio_data_from_file_googrec(self):
+        self.fail()
+
+    def test_store_speech_from_file(self):
+        self.fail()
+
+    def test_get_non_silent_ranges(self):
+        self.fail()
+
+    def test_get_audio_segments_non_silent_from_ranges(self):
+        self.fail()
+
+    def test_get_stt_from_segment_list(self):
+        self.fail()
+
+    def test_save_segment_list_to_temp_wav(self):
+        self.fail()
+
+    def test_get_transcription_from_wav_file_google(self):
+        self.fail()
+
+    def test_save_segment_to_temp_wav(self):
+        self.fail()
+
+    def test_get_stt_from_file(self):
+        self.fail()
+
+    def test_get_stt_from_raw_data(self):
+        self.fail()
+
+    def test_get_padded_ranges(self):
+        self.fail()
