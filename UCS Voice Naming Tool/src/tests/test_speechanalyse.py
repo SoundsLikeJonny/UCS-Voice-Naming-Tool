@@ -20,5 +20,14 @@ from unittest import TestCase
 
 
 class TestSpeechAnalyse(TestCase):
+
+    def setUp(self) -> None:
+        pass
+
+    def tearDown(self) -> None:
+        pass
+
     def test_analyse_all_text(self):
         self.fail()
+
+

@@ -30,3 +30,8 @@ class Defaults:
     VALID_WAV_SPEECH_UNIX = '/workspaces/UCS-Voice-Naming-Tool/UCS Voice Naming Tool/src/tests/test_wav_files/Test_05.wav'
     VALID_WAV_SPEECH_WINDOWS = 'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming Tool\\src\\tests\\test_wav_files\\TEST_01.wav'
     VALID_UCS_CSV = "\\ucs_csv\\UCS v8.1 Full Category List.xlsx - UCS v8.0.csv"
+
+    MODEL_SENTENCES = [["AIRHiss", "Compressed", "Air", "Escaping", "Thermos", "Thin", "Hiss", "Slight", "Hollow", "Hum"],
+             ["AIRHiss", "Compressed", "Air", "Escaping", "Thermos", "Thin", "Hiss", "Slight", "Hollow", "Hum"],
+             ["AEROProp", "Airplane", "Interior", "Loop", "Aircraft", "Plane", "Propeller", "Engine", "Noise", "Idle", "Revving", "RPM"]
+             ]

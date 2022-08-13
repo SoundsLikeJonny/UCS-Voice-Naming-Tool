@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 27, 2022
+Last Modified: Aug 12, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -23,40 +23,15 @@ Last Modified: July 27, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from typing import Union
 
-from PySide6.QtCore import (
-    QAbstractListModel,
-    Qt,
-    QPersistentModelIndex,
-    QModelIndex
-)
+from unittest import TestCase
 
+from src.engine.stt import ml
 
-class DefaultListModel(QAbstractListModel):
-    """
-    Extends QAbstractListModel to provide basic functionality for updating data and UI
-    """
+import os
 
-    def __init__(self, data_list: list = None) -> None:
-        super().__init__()
-        self.data_list = data_list or []
+class TestML(TestCase):
 
-    def data(self, index, role):
-        """
-
-        :param index:
-        :param role:
-        :return:
-        """
-        if role == Qt.DisplayRole:
-            status, text = self.data_list[index.row()]
-            return text
-
-    def rowCount(self, index: Union[QModelIndex, QPersistentModelIndex] = ...) -> int:
-        """
-
-        :param index:
-        :return:
-        """
-        return len(self.data_list)
+    def test_create_data_file(self):
+        ml.create_data_file(ml.Defaults.global_ucs_data)
+        self.assertTrue(os.path.exists(ml.Defaults.global_ucs_data))
