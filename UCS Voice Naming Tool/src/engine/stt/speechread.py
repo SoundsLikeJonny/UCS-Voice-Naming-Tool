@@ -43,6 +43,11 @@ class SpeechRead:
     Reading of speech and storing of text from the Google Speech Recognition API
 
     Requires an internet connection
+
+    # Example Usage:
+    sa = SpeechAnalyse('my_vo_file.wav)
+    sa.get_transcription_from_wav_file_google()
+    print(sa.speech_transcription_from_file)
     """
 
     # audio_data_from_file_googrec: AudioData
@@ -70,6 +75,11 @@ class SpeechRead:
         self.temp_dir = PurePath(tempfile.gettempdir())
 
         self.init_all_audio_data()
+
+    def __str__(self):
+        f"""
+        
+        """
 
     def init_all_audio_data(self):
         """

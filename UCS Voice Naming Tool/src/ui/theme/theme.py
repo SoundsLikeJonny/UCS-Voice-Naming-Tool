@@ -23,8 +23,12 @@ Last Modified: July 6, 2022
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from PySide6.QtWidgets import QApplication
-from qt_material import apply_stylesheet, list_themes
+from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtUiTools import QUiLoader
+
+from src.ui.gui.MainWindow import Ui_MainWindow
+
+from qt_material import apply_stylesheet, list_themes, QtStyleTools
 
 from src.engine import utilities
 
@@ -62,14 +66,13 @@ class Defaults:
 
 # Does not work with PyQt5
 #
-# class RuntimeStylesheets(QMainWindow, QtStyleTools):
+# class RuntimeStylesheets(QMainWindow, QtStyleTools, Ui_MainWindow):
 #     """
 #     Used to create a custom UI style .xml
 #     """
+#
 #     def __init__(self):
 #         super().__init__()
+#         self.setupUi(self)
 #
-#         path = utilities.get_project_ui_file('MainWindow.ui')
-#         print(path)
-#         self.main = QUiLoader().load(path)
-#         self.show_dock_theme(self.main)
+#         self.show_dock_theme(self)

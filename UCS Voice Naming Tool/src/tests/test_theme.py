@@ -25,6 +25,7 @@ Last Modified: July 6, 2022
 
 import sys
 import unittest
+from unittest import TestCase
 
 from PySide6.QtWidgets import QApplication
 from qt_material import build_stylesheet
@@ -35,7 +36,10 @@ from src.ui.theme import theme
 class Test(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.app = QApplication(sys.argv)
+        if not QApplication.instance():
+            self.app = QApplication(sys.argv)
+        else:
+            self.app = QApplication.instance()
 
     def tearDown(self) -> None:
         self.app.exit()

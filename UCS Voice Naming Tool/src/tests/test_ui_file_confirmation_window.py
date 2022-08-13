@@ -121,3 +121,46 @@ class Defaults:
         '',
         ''
     ]
+
+
+class Test(TestCase):
+    def test_set_wav_info_label(self):
+        self.fail()
+
+    def test_file_confirmation(self):
+        self.fail()
+
+
+class TestFileConfirmation(TestCase):
+    def test_init_all_ui(self):
+        self.fail()
+
+    def test_exists_qt_widgets(self):
+        self.fail()
+
+    def test_set_wav_list(self):
+        self.fail()
+
+    def test_set_wav_objects(self):
+        self.fail()
+
+    def test_accept(self):
+        self.fail()
+
+    def test_store_list_widget_wav_file_paths(self):
+        self.fail()
+
+    def test_set_selected_wave_file_info(self):
+        self.fail()
+
+    def test_clear_audio_info_labels(self):
+        self.fail()
+
+    def test_reject(self):
+        self.fail()
+
+    def test_close_event(self):
+        self.fail()
+
+    def test_close(self):
+        self.fail()

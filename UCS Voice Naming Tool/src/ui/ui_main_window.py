@@ -34,14 +34,51 @@ from PySide6.QtWidgets import (
     QDialog,
     QMessageBox,
     QFileDialog,
-    QMainWindow
+    QMainWindow,
+    QGraphicsOpacityEffect,
+    QWidget, QGroupBox
 )
 
 from src.engine import utilities
-from src.engine.stt.speechread import SpeechRead
+from src.engine.stt.speechanalyse import SpeechAnalyse
 from src.engine.ucs import ucs_data
 from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
+
+
+def set_groupbox_title_white(widget: QGroupBox):
+    """
+    Set the groupbox color to white
+    :param widget:
+    """
+    widget.setStyleSheet("QGroupBox::title {color: white}")
+
+
+def set_groupbox_title_grey(widget: QGroupBox):
+    """
+    Set the groupbox color to grey
+    :param widget:
+    """
+    widget.setStyleSheet("QGroupBox::title {color: grey}")
+
+
+def toggle_groupbox_colors(widget: QGroupBox):
+    """
+    Switch title between white and grey if the checkboxes are selected
+    :param widget:
+    :return:
+    """
+    if widget.isCheckable():
+        if widget.isChecked():
+            set_groupbox_title_white(widget)
+        else:
+            set_groupbox_title_grey(widget)
+
+    # self.groupBox_UserCat.setStyleSheet("QLabel"
+    #                                     "{"
+    #                                     "border : 2px solid grey;"
+    #                                     "background : grey;"
+    #                                     "}")
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -51,8 +88,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+        self.setupUi(self)
 
+        # list of parent widgets that contain QGroupBox widgets as children
+        # These will be looped over to apply signals
+        self.groupbox_parent_widgets = [
+            self.widget_Naming,
+            self.widget_AnalysisPrefs
+        ]
+
+        self.opacity = None
         self.file_confirmation_window = None
+
+        self.ucs = ucs_data.UCS()
         self.init_all_ui()
 
     def init_all_ui(self) -> None:
@@ -61,15 +109,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :return: None
         """
 
-        self.setupUi(self)
-
-        icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
+        icon_path = utilities.get_resource(Defaults.UCS_LOGO)
         self.setWindowIcon(QIcon(icon_path))
 
         self.setMouseTracking(True)
         self.setAcceptDrops(True)
-
-        self.file_confirmation_window = None
 
         self.tabWidget_Main.setCurrentIndex(0)
         self.init_ui_voice_tab()
@@ -83,9 +127,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Not used. Definition is used for testing
         :return:
         """
-        self.groupBox_UserCat
-        self.groupBox_VendorCat
-        self.groupBox_UserData
+        # self.groupBox_UserCat
+        # self.groupBox_VendorCat
+        # self.groupBox_UserData
         return True
 
     def init_ui_voice_tab(self) -> None:
@@ -93,11 +137,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Used to only initialize UI elements in the Voice tab
         :return: None
         """
-        self.groupBox_UserCat.setChecked(False)
-        self.groupBox_VendorCat.setChecked(False)
-        self.groupBox_UserData.setChecked(False)
-        pass
-        # self.label_DragDrop.set
+        self.ui_init_groupbox_filename_signals()
+        self.ui_init_all_groupboxes()
+        self.toggle_all_groupboxes_colors()
+        self.comboBox_CatID.addItems(self.ucs.catids)
+        self.set_opacity(self.frame_DragDrop, 0.3)
 
     def init_ui_conflict_tab(self) -> None:
         """
@@ -138,6 +182,50 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_settings_csv_labels()
         # noinspection PyTypeChecker
         return True
+
+    #####################################
+    # Funcs #############################
+    #####################################
+
+    def ui_init_all_groupboxes(self):
+        """
+        Initializes the signals for all groupboxes
+        """
+        for parent in self.groupbox_parent_widgets:
+            for self.widget in parent.children():
+                if isinstance(self.widget, QGroupBox):
+                    self.widget.toggled.connect(self.toggle_all_groupboxes_colors)
+
+    def ui_init_groupbox_filename_signals(self):
+        """
+        Initializes the groupbox signals for the filename section
+        """
+        self.groupBox_UserCat.setChecked(False)
+        self.groupBox_VendorCat.setChecked(False)
+        self.groupBox_UserData.setChecked(False)
+        set_groupbox_title_white(self.groupBox_CreatorID)
+        set_groupbox_title_white(self.groupBox_SourceID)
+
+    def toggle_all_groupboxes_colors(self):
+        """
+        Switch title between white and grey if the checkboxes are selected
+        Checks all children of certain layouts that contain groupboxes
+        """
+        for layout in self.groupbox_parent_widgets:
+            for widget in layout.children():
+                if isinstance(widget, QGroupBox):
+                    toggle_groupbox_colors(widget)
+
+    def set_opacity(self, widget: QWidget, opacity_f: float) -> None:
+        """
+        Set the widget opacity
+        :param opacity_f: value to change the opacity
+        :param widget: Qt widget to apply the opacity change
+        :return:
+        """
+        self.opacity = QGraphicsOpacityEffect()
+        self.opacity.setOpacity(opacity_f)
+        widget.setGraphicsEffect(self.opacity)
 
     def dropEvent(self, event: PySide6.QtGui.QDropEvent) -> None:
         """
@@ -201,9 +289,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :param files:
         """
         if utilities.is_list(files) and files:
-            sr = SpeechRead(files[0])
-            sr.get_transcription_from_wav_file_google()
-            QMessageBox.about(self, "Speech-To-Text File Results", sr.speech_transcription_from_file)
+            sa = SpeechAnalyse(files[0])
+            sa.get_transcription_from_wav_file_google()
+            QMessageBox.about(self, "Speech-To-Text File Results", sa.speech_transcription_from_file)
 
     def reset_window(self) -> None:
         """
@@ -281,6 +369,8 @@ class Defaults:
 
     TOOL_BUTTON_CSV_LOADED: str = '.csv is loaded'
     TOOL_BUTTON_CSV_NOT_LOADED: str = '[NO .CSV LOADED]'
+
+    UCS_LOGO = '\\UCS_Logos\\ucs_black_small.ico'
 
 
 class Worker(QRunnable):

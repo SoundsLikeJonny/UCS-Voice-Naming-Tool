@@ -26,7 +26,15 @@ Last Modified: July 27, 2022
 import os
 from unittest import TestCase
 
-from src.engine.ucs.ucs_data import UCS, Defaults, create_feather_from_csv
+from src.engine.ucs.ucs_data import (
+    UCS,
+    Defaults,
+    create_feather_from_csv,
+    exists_top_level_feather,
+    exists_full_trans_feather,
+    exists_full_cat_feather,
+    _exists_feather_path
+)
 from src.engine.utilities import get_file
 from src.tests import test_testdata
 
@@ -49,6 +57,28 @@ class TestUCS(TestCase):
         self.assertTrue(os.path.exists(Defaults.UCS_FULL_TRANS_FILE))
 
     def test_exists_full_cat_feather(self):
+        self.assertTrue(exists_full_cat_feather())
+
+    def test_exists_top_level_feather(self):
+        self.assertTrue(exists_top_level_feather())
+
+    def test_exists_full_trans_feather(self):
+        self.assertTrue(exists_full_trans_feather())
+
+    def test__exists_feather_path(self):
+        self.assertTrue(_exists_feather_path(Defaults.UCS_FULL_TRANS_FILE))
+
+    def test_load_feathers(self):
+        self.assertIsNotNone(self.ucs_obj_good.ucs_full_cat)
+        self.assertIsNotNone(self.ucs_obj_good.ucs_full_trans)
+        self.assertIsNotNone(self.ucs_obj_good.ucs_top_level)
+
+
+class Test(TestCase):
+    def test_create_feather_from_csv(self):
+        self.fail()
+
+    def test_exists_full_cat_feather(self):
         self.fail()
 
     def test_exists_top_level_feather(self):
@@ -58,4 +88,36 @@ class TestUCS(TestCase):
         self.fail()
 
     def test__exists_feather_path(self):
+        self.fail()
+
+    def test_get_sorted_unique_list(self):
+        self.fail()
+
+    def test_ucs(self):
+        self.fail()
+
+
+class Test(TestCase):
+    def test_create_feather_from_csv(self):
+        self.fail()
+
+    def test_exists_full_cat_feather(self):
+        self.fail()
+
+    def test_exists_top_level_feather(self):
+        self.fail()
+
+    def test_exists_full_trans_feather(self):
+        self.fail()
+
+    def test__exists_feather_path(self):
+        self.fail()
+
+    def test_get_sorted_unique_list(self):
+        self.fail()
+
+    def test_ucs(self):
+        self.fail()
+
+    def test_defaults(self):
         self.fail()

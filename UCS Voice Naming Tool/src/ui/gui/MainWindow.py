@@ -8,15 +8,19 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
-                            QSize, Qt)
-from PySide6.QtGui import (QBrush, QColor, QFont, QPalette)
-from PySide6.QtWidgets import (QAbstractScrollArea, QCheckBox, QComboBox,
-                               QDoubleSpinBox, QFrame, QGridLayout, QGroupBox,
-                               QHBoxLayout, QLabel, QLayout, QLineEdit,
-                               QMenuBar, QScrollArea, QSizePolicy,
-                               QSpacerItem, QSpinBox, QStatusBar, QTabWidget,
-                               QToolButton, QVBoxLayout, QWidget)
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
+    QDoubleSpinBox, QFrame, QGridLayout, QGroupBox,
+    QHBoxLayout, QLabel, QLayout, QLineEdit,
+    QMainWindow, QMenuBar, QScrollArea, QSizePolicy,
+    QSpacerItem, QSpinBox, QStatusBar, QTabWidget,
+    QToolButton, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -56,42 +60,6 @@ class Ui_MainWindow(object):
         self.frame_DragDrop.setObjectName(u"frame_DragDrop")
         self.frame_DragDrop.setMinimumSize(QSize(0, 200))
         palette = QPalette()
-        brush = QBrush(QColor(81, 86, 102, 255))
-        brush.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Button, brush)
-        brush1 = QBrush(QColor(226, 226, 226, 255))
-        brush1.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Midlight, brush1)
-        brush2 = QBrush(QColor(99, 99, 99, 255))
-        brush2.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Dark, brush2)
-        brush3 = QBrush(QColor(132, 132, 132, 255))
-        brush3.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Mid, brush3)
-        palette.setBrush(QPalette.Active, QPalette.Base, brush)
-        palette.setBrush(QPalette.Active, QPalette.Window, brush)
-        brush4 = QBrush(QColor(0, 0, 0, 255))
-        brush4.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Shadow, brush4)
-        palette.setBrush(QPalette.Active, QPalette.AlternateBase, brush1)
-        palette.setBrush(QPalette.Inactive, QPalette.Button, brush)
-        palette.setBrush(QPalette.Inactive, QPalette.Midlight, brush1)
-        palette.setBrush(QPalette.Inactive, QPalette.Dark, brush2)
-        palette.setBrush(QPalette.Inactive, QPalette.Mid, brush3)
-        palette.setBrush(QPalette.Inactive, QPalette.Base, brush)
-        palette.setBrush(QPalette.Inactive, QPalette.Window, brush)
-        palette.setBrush(QPalette.Inactive, QPalette.Shadow, brush4)
-        palette.setBrush(QPalette.Inactive, QPalette.AlternateBase, brush1)
-        palette.setBrush(QPalette.Disabled, QPalette.Button, brush)
-        palette.setBrush(QPalette.Disabled, QPalette.Midlight, brush1)
-        palette.setBrush(QPalette.Disabled, QPalette.Dark, brush2)
-        palette.setBrush(QPalette.Disabled, QPalette.Mid, brush3)
-        palette.setBrush(QPalette.Disabled, QPalette.Base, brush)
-        palette.setBrush(QPalette.Disabled, QPalette.Window, brush)
-        palette.setBrush(QPalette.Disabled, QPalette.Shadow, brush4)
-        brush5 = QBrush(QColor(198, 198, 198, 255))
-        brush5.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Disabled, QPalette.AlternateBase, brush5)
         self.frame_DragDrop.setPalette(palette)
         self.frame_DragDrop.setAcceptDrops(True)
         self.frame_DragDrop.setAutoFillBackground(False)
@@ -326,63 +294,65 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(-1, -1, -1, 0)
-        self.groupBox_SourceID_2 = QGroupBox(self.widget_Naming)
-        self.groupBox_SourceID_2.setObjectName(u"groupBox_SourceID_2")
-        self.groupBox_SourceID_2.setMinimumSize(QSize(145, 0))
-        self.groupBox_SourceID_2.setStyleSheet(u"")
-        self.groupBox_SourceID_2.setFlat(False)
-        self.groupBox_SourceID_2.setCheckable(True)
-        self.groupBox_SourceID_2.setChecked(False)
-        self.gridLayout_11 = QGridLayout(self.groupBox_SourceID_2)
+        self.groupBox_CatID = QGroupBox(self.widget_Naming)
+        self.groupBox_CatID.setObjectName(u"groupBox_CatID")
+        self.groupBox_CatID.setMinimumSize(QSize(145, 0))
+        self.groupBox_CatID.setStyleSheet(u"")
+        self.groupBox_CatID.setFlat(False)
+        self.groupBox_CatID.setCheckable(True)
+        self.groupBox_CatID.setChecked(False)
+        self.gridLayout_11 = QGridLayout(self.groupBox_CatID)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.comboBox = QComboBox(self.groupBox_SourceID_2)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_CatID = QComboBox(self.groupBox_CatID)
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.addItem("")
+        self.comboBox_CatID.setObjectName(u"comboBox_CatID")
 
-        self.gridLayout_11.addWidget(self.comboBox, 0, 0, 1, 1)
-
-
-        self.horizontalLayout_2.addWidget(self.groupBox_SourceID_2)
-
-        self.groupBox_CreatorID = QGroupBox(self.widget_Naming)
-        self.groupBox_CreatorID.setObjectName(u"groupBox_CreatorID")
-        self.groupBox_CreatorID.setMinimumSize(QSize(90, 50))
-        self.groupBox_CreatorID.setStyleSheet(u"color: rgb(170, 74, 74);")
-        self.groupBox_CreatorID.setFlat(False)
-        self.gridLayout_7 = QGridLayout(self.groupBox_CreatorID)
-        self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.lineEdit_CreatorID = QLineEdit(self.groupBox_CreatorID)
-        self.lineEdit_CreatorID.setObjectName(u"lineEdit_CreatorID")
-        self.lineEdit_CreatorID.setFocusPolicy(Qt.ClickFocus)
-        self.lineEdit_CreatorID.setFrame(True)
-        self.lineEdit_CreatorID.setCursorMoveStyle(Qt.LogicalMoveStyle)
-
-        self.gridLayout_7.addWidget(self.lineEdit_CreatorID, 0, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.comboBox_CatID, 0, 0, 1, 1)
 
 
-        self.horizontalLayout_2.addWidget(self.groupBox_CreatorID)
+        self.horizontalLayout_2.addWidget(self.groupBox_CatID)
 
-        self.groupBox_SourceID = QGroupBox(self.widget_Naming)
-        self.groupBox_SourceID.setObjectName(u"groupBox_SourceID")
-        self.groupBox_SourceID.setStyleSheet(u"color: rgb(170, 74, 74);")
-        self.groupBox_SourceID.setFlat(False)
-        self.gridLayout_8 = QGridLayout(self.groupBox_SourceID)
-        self.gridLayout_8.setObjectName(u"gridLayout_8")
-        self.lineEdit_SourceID = QLineEdit(self.groupBox_SourceID)
-        self.lineEdit_SourceID.setObjectName(u"lineEdit_SourceID")
-        self.lineEdit_SourceID.setFocusPolicy(Qt.ClickFocus)
-        self.lineEdit_SourceID.setFrame(True)
+        self.groupBox_UserCat = QGroupBox(self.widget_Naming)
+        self.groupBox_UserCat.setObjectName(u"groupBox_UserCat")
+        self.groupBox_UserCat.setMinimumSize(QSize(111, 50))
+        self.groupBox_UserCat.setMaximumSize(QSize(111111, 16777215))
+        self.groupBox_UserCat.setCheckable(True)
+        self.groupBox_UserCat.setChecked(True)
+        self.verticalLayout_2 = QVBoxLayout(self.groupBox_UserCat)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.lineEdit_UserCat = QLineEdit(self.groupBox_UserCat)
+        self.lineEdit_UserCat.setObjectName(u"lineEdit_UserCat")
+        self.lineEdit_UserCat.setFocusPolicy(Qt.ClickFocus)
+        self.lineEdit_UserCat.setFrame(False)
 
-        self.gridLayout_8.addWidget(self.lineEdit_SourceID, 0, 0, 1, 1)
+        self.verticalLayout_2.addWidget(self.lineEdit_UserCat)
 
 
-        self.horizontalLayout_2.addWidget(self.groupBox_SourceID)
+        self.horizontalLayout_2.addWidget(self.groupBox_UserCat)
+
+        self.groupBox_VendorCat = QGroupBox(self.widget_Naming)
+        self.groupBox_VendorCat.setObjectName(u"groupBox_VendorCat")
+        self.groupBox_VendorCat.setMinimumSize(QSize(111, 50))
+        self.groupBox_VendorCat.setMaximumSize(QSize(1111, 16777215))
+        self.groupBox_VendorCat.setCheckable(True)
+        self.groupBox_VendorCat.setChecked(True)
+        self.gridLayout_4 = QGridLayout(self.groupBox_VendorCat)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.lineEdit_VendorCat = QLineEdit(self.groupBox_VendorCat)
+        self.lineEdit_VendorCat.setObjectName(u"lineEdit_VendorCat")
+        self.lineEdit_VendorCat.setFocusPolicy(Qt.ClickFocus)
+        self.lineEdit_VendorCat.setFrame(False)
+
+        self.gridLayout_4.addWidget(self.lineEdit_VendorCat, 0, 1, 1, 1)
+
+
+        self.horizontalLayout_2.addWidget(self.groupBox_VendorCat)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -391,22 +361,23 @@ class Ui_MainWindow(object):
         self.gridLayout_12.setSpacing(0)
         self.gridLayout_12.setObjectName(u"gridLayout_12")
         self.gridLayout_12.setContentsMargins(-1, -1, -1, 0)
-        self.groupBox = QGroupBox(self.widget_Naming)
-        self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setMinimumSize(QSize(0, 63))
-        self.groupBox.setFlat(False)
-        self.groupBox.setCheckable(True)
-        self.groupBox.setChecked(False)
-        self.gridLayout_10 = QGridLayout(self.groupBox)
+        self.groupBox_FXName = QGroupBox(self.widget_Naming)
+        self.groupBox_FXName.setObjectName(u"groupBox_FXName")
+        self.groupBox_FXName.setMinimumSize(QSize(0, 63))
+        self.groupBox_FXName.setFlat(False)
+        self.groupBox_FXName.setCheckable(True)
+        self.groupBox_FXName.setChecked(False)
+        self.gridLayout_10 = QGridLayout(self.groupBox_FXName)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
-        self.lineEdit_4 = QLineEdit(self.groupBox)
+        self.lineEdit_4 = QLineEdit(self.groupBox_FXName)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
         self.lineEdit_4.setMinimumSize(QSize(0, 20))
+        self.lineEdit_4.setFrame(False)
 
         self.gridLayout_10.addWidget(self.lineEdit_4, 0, 0, 1, 1)
 
 
-        self.gridLayout_12.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.gridLayout_12.addWidget(self.groupBox_FXName, 0, 0, 1, 1)
 
         self.frame_3 = QFrame(self.widget_Naming)
         self.frame_3.setObjectName(u"frame_3")
@@ -420,41 +391,39 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.groupBox_UserCat = QGroupBox(self.widget_Naming)
-        self.groupBox_UserCat.setObjectName(u"groupBox_UserCat")
-        self.groupBox_UserCat.setMinimumSize(QSize(111, 50))
-        self.groupBox_UserCat.setMaximumSize(QSize(111111, 16777215))
-        self.groupBox_UserCat.setCheckable(True)
-        self.groupBox_UserCat.setChecked(True)
-        self.verticalLayout_2 = QVBoxLayout(self.groupBox_UserCat)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.lineEdit_UserCat = QLineEdit(self.groupBox_UserCat)
-        self.lineEdit_UserCat.setObjectName(u"lineEdit_UserCat")
-        self.lineEdit_UserCat.setFocusPolicy(Qt.ClickFocus)
-        self.lineEdit_UserCat.setFrame(True)
+        self.groupBox_CreatorID = QGroupBox(self.widget_Naming)
+        self.groupBox_CreatorID.setObjectName(u"groupBox_CreatorID")
+        self.groupBox_CreatorID.setMinimumSize(QSize(90, 50))
+        self.groupBox_CreatorID.setStyleSheet(u"color: rgb(170, 74, 74);")
+        self.groupBox_CreatorID.setFlat(False)
+        self.gridLayout_7 = QGridLayout(self.groupBox_CreatorID)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.lineEdit_CreatorID = QLineEdit(self.groupBox_CreatorID)
+        self.lineEdit_CreatorID.setObjectName(u"lineEdit_CreatorID")
+        self.lineEdit_CreatorID.setFocusPolicy(Qt.ClickFocus)
+        self.lineEdit_CreatorID.setFrame(False)
+        self.lineEdit_CreatorID.setCursorMoveStyle(Qt.LogicalMoveStyle)
 
-        self.verticalLayout_2.addWidget(self.lineEdit_UserCat)
-
-
-        self.horizontalLayout.addWidget(self.groupBox_UserCat)
-
-        self.groupBox_VendorCat = QGroupBox(self.widget_Naming)
-        self.groupBox_VendorCat.setObjectName(u"groupBox_VendorCat")
-        self.groupBox_VendorCat.setMinimumSize(QSize(111, 50))
-        self.groupBox_VendorCat.setMaximumSize(QSize(1111, 16777215))
-        self.groupBox_VendorCat.setCheckable(True)
-        self.groupBox_VendorCat.setChecked(True)
-        self.gridLayout_4 = QGridLayout(self.groupBox_VendorCat)
-        self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.lineEdit_VendorCat = QLineEdit(self.groupBox_VendorCat)
-        self.lineEdit_VendorCat.setObjectName(u"lineEdit_VendorCat")
-        self.lineEdit_VendorCat.setFocusPolicy(Qt.ClickFocus)
-        self.lineEdit_VendorCat.setFrame(True)
-
-        self.gridLayout_4.addWidget(self.lineEdit_VendorCat, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.lineEdit_CreatorID, 0, 0, 1, 1)
 
 
-        self.horizontalLayout.addWidget(self.groupBox_VendorCat)
+        self.horizontalLayout.addWidget(self.groupBox_CreatorID)
+
+        self.groupBox_SourceID = QGroupBox(self.widget_Naming)
+        self.groupBox_SourceID.setObjectName(u"groupBox_SourceID")
+        self.groupBox_SourceID.setStyleSheet(u"color: rgb(170, 74, 74);")
+        self.groupBox_SourceID.setFlat(False)
+        self.gridLayout_8 = QGridLayout(self.groupBox_SourceID)
+        self.gridLayout_8.setObjectName(u"gridLayout_8")
+        self.lineEdit_SourceID = QLineEdit(self.groupBox_SourceID)
+        self.lineEdit_SourceID.setObjectName(u"lineEdit_SourceID")
+        self.lineEdit_SourceID.setFocusPolicy(Qt.ClickFocus)
+        self.lineEdit_SourceID.setFrame(False)
+
+        self.gridLayout_8.addWidget(self.lineEdit_SourceID, 0, 0, 1, 1)
+
+
+        self.horizontalLayout.addWidget(self.groupBox_SourceID)
 
         self.groupBox_UserData = QGroupBox(self.widget_Naming)
         self.groupBox_UserData.setObjectName(u"groupBox_UserData")
@@ -467,7 +436,7 @@ class Ui_MainWindow(object):
         self.lineEdit_UserData = QLineEdit(self.groupBox_UserData)
         self.lineEdit_UserData.setObjectName(u"lineEdit_UserData")
         self.lineEdit_UserData.setFocusPolicy(Qt.ClickFocus)
-        self.lineEdit_UserData.setFrame(True)
+        self.lineEdit_UserData.setFrame(False)
 
         self.gridLayout_6.addWidget(self.lineEdit_UserData, 0, 0, 1, 1)
 
@@ -494,22 +463,24 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QVBoxLayout()
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(-1, -1, -1, 0)
-        self.scrollArea = QScrollArea(self.tab_Voice)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setMinimumSize(QSize(0, 130))
-        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.scrollArea.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
-        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea_AnalysisPrefs = QScrollArea(self.tab_Voice)
+        self.scrollArea_AnalysisPrefs.setObjectName(u"scrollArea_AnalysisPrefs")
+        self.scrollArea_AnalysisPrefs.setMinimumSize(QSize(0, 130))
+        self.scrollArea_AnalysisPrefs.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scrollArea_AnalysisPrefs.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scrollArea_AnalysisPrefs.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        self.scrollArea_AnalysisPrefs.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 954, 120))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
-        self.horizontalLayout_3 = QHBoxLayout()
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(-1, -1, -1, 0)
-        self.groupBox_OnlyAnalyseEndsOfFiles = QGroupBox(self.scrollAreaWidgetContents)
+        self.widget_AnalysisPrefs = QWidget(self.scrollAreaWidgetContents)
+        self.widget_AnalysisPrefs.setObjectName(u"widget_AnalysisPrefs")
+        self.horizontalLayout_AnalysisPrefs = QHBoxLayout(self.widget_AnalysisPrefs)
+        self.horizontalLayout_AnalysisPrefs.setObjectName(u"horizontalLayout_AnalysisPrefs")
+        self.horizontalLayout_AnalysisPrefs.setContentsMargins(-1, -1, -1, 1)
+        self.groupBox_OnlyAnalyseEndsOfFiles = QGroupBox(self.widget_AnalysisPrefs)
         self.groupBox_OnlyAnalyseEndsOfFiles.setObjectName(u"groupBox_OnlyAnalyseEndsOfFiles")
         self.groupBox_OnlyAnalyseEndsOfFiles.setMinimumSize(QSize(71, 100))
         self.groupBox_OnlyAnalyseEndsOfFiles.setMaximumSize(QSize(222, 16777215))
@@ -572,27 +543,27 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addLayout(self.horizontalLayout_6)
 
 
-        self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles)
+        self.horizontalLayout_AnalysisPrefs.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles)
 
-        self.groupBox_OnlyAnalyseEndsOfFiles_2 = QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setObjectName(u"groupBox_OnlyAnalyseEndsOfFiles_2")
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setMinimumSize(QSize(200, 100))
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setMaximumSize(QSize(230, 16777215))
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setCheckable(True)
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setChecked(False)
-        self.verticalLayout_5 = QVBoxLayout(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.groupBox_OnlyReadBetweenMarkers = QGroupBox(self.widget_AnalysisPrefs)
+        self.groupBox_OnlyReadBetweenMarkers.setObjectName(u"groupBox_OnlyReadBetweenMarkers")
+        self.groupBox_OnlyReadBetweenMarkers.setMinimumSize(QSize(200, 100))
+        self.groupBox_OnlyReadBetweenMarkers.setMaximumSize(QSize(230, 16777215))
+        self.groupBox_OnlyReadBetweenMarkers.setCheckable(True)
+        self.groupBox_OnlyReadBetweenMarkers.setChecked(False)
+        self.verticalLayout_5 = QVBoxLayout(self.groupBox_OnlyReadBetweenMarkers)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.horizontalLayout_7.setContentsMargins(-1, -1, 0, 0)
-        self.label_5 = QLabel(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.label_5 = QLabel(self.groupBox_OnlyReadBetweenMarkers)
         self.label_5.setObjectName(u"label_5")
         sizePolicy1.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
         self.label_5.setSizePolicy(sizePolicy1)
 
         self.horizontalLayout_7.addWidget(self.label_5)
 
-        self.lineEdit = QLineEdit(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.lineEdit = QLineEdit(self.groupBox_OnlyReadBetweenMarkers)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setFrame(True)
 
@@ -604,14 +575,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8 = QHBoxLayout()
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(-1, -1, -1, 0)
-        self.label_6 = QLabel(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.label_6 = QLabel(self.groupBox_OnlyReadBetweenMarkers)
         self.label_6.setObjectName(u"label_6")
         sizePolicy1.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
         self.label_6.setSizePolicy(sizePolicy1)
 
         self.horizontalLayout_8.addWidget(self.label_6)
 
-        self.lineEdit_2 = QLineEdit(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.lineEdit_2 = QLineEdit(self.groupBox_OnlyReadBetweenMarkers)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy2.setHorizontalStretch(0)
@@ -626,34 +597,34 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addLayout(self.horizontalLayout_8)
 
 
-        self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles_2)
+        self.horizontalLayout_AnalysisPrefs.addWidget(self.groupBox_OnlyReadBetweenMarkers)
 
-        self.frame_2 = QFrame(self.scrollAreaWidgetContents)
+        self.frame_2 = QFrame(self.widget_AnalysisPrefs)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
 
-        self.horizontalLayout_3.addWidget(self.frame_2)
+        self.horizontalLayout_AnalysisPrefs.addWidget(self.frame_2)
 
-        self.groupBox_OnlyAnalyseEndsOfFiles_3 = QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setObjectName(u"groupBox_OnlyAnalyseEndsOfFiles_3")
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setMinimumSize(QSize(202, 95))
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setMaximumSize(QSize(202, 16777215))
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setCheckable(True)
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setChecked(False)
-        self.verticalLayout_6 = QVBoxLayout(self.groupBox_OnlyAnalyseEndsOfFiles_3)
+        self.groupBox_UseTakeMarkers = QGroupBox(self.widget_AnalysisPrefs)
+        self.groupBox_UseTakeMarkers.setObjectName(u"groupBox_UseTakeMarkers")
+        self.groupBox_UseTakeMarkers.setMinimumSize(QSize(202, 95))
+        self.groupBox_UseTakeMarkers.setMaximumSize(QSize(202, 16777215))
+        self.groupBox_UseTakeMarkers.setCheckable(True)
+        self.groupBox_UseTakeMarkers.setChecked(False)
+        self.verticalLayout_6 = QVBoxLayout(self.groupBox_UseTakeMarkers)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.horizontalLayout_9.setContentsMargins(-1, -1, 0, 0)
-        self.label_9 = QLabel(self.groupBox_OnlyAnalyseEndsOfFiles_3)
+        self.label_9 = QLabel(self.groupBox_UseTakeMarkers)
         self.label_9.setObjectName(u"label_9")
         sizePolicy1.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
         self.label_9.setSizePolicy(sizePolicy1)
 
         self.horizontalLayout_9.addWidget(self.label_9)
 
-        self.lineEdit_3 = QLineEdit(self.groupBox_OnlyAnalyseEndsOfFiles_3)
+        self.lineEdit_3 = QLineEdit(self.groupBox_UseTakeMarkers)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setFrame(True)
 
@@ -662,24 +633,24 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addLayout(self.horizontalLayout_9)
 
-        self.checkBox_3 = QCheckBox(self.groupBox_OnlyAnalyseEndsOfFiles_3)
+        self.checkBox_3 = QCheckBox(self.groupBox_UseTakeMarkers)
         self.checkBox_3.setObjectName(u"checkBox_3")
 
         self.verticalLayout_6.addWidget(self.checkBox_3)
 
 
-        self.horizontalLayout_3.addWidget(self.groupBox_OnlyAnalyseEndsOfFiles_3)
+        self.horizontalLayout_AnalysisPrefs.addWidget(self.groupBox_UseTakeMarkers)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
+        self.horizontalLayout_AnalysisPrefs.addItem(self.horizontalSpacer_2)
 
 
-        self.gridLayout_15.addLayout(self.horizontalLayout_3, 0, 0, 1, 1)
+        self.gridLayout_15.addWidget(self.widget_AnalysisPrefs, 0, 0, 1, 1)
 
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.scrollArea_AnalysisPrefs.setWidget(self.scrollAreaWidgetContents)
 
-        self.verticalLayout_3.addWidget(self.scrollArea)
+        self.verticalLayout_3.addWidget(self.scrollArea_AnalysisPrefs)
 
         self.horizontalLayout_14 = QHBoxLayout()
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
@@ -743,62 +714,67 @@ class Ui_MainWindow(object):
         self.groupBox_2.setSizePolicy(sizePolicy1)
         self.gridLayout_14 = QGridLayout(self.groupBox_2)
         self.gridLayout_14.setObjectName(u"gridLayout_14")
-        self.label_13 = QLabel(self.groupBox_2)
-        self.label_13.setObjectName(u"label_13")
-
-        self.gridLayout_14.addWidget(self.label_13, 2, 0, 1, 1)
-
-        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout_14.addItem(self.horizontalSpacer_10, 0, 2, 1, 1)
-
         self.label_LoadTopLevelCSV = QLabel(self.groupBox_2)
         self.label_LoadTopLevelCSV.setObjectName(u"label_LoadTopLevelCSV")
 
-        self.gridLayout_14.addWidget(self.label_LoadTopLevelCSV, 1, 3, 1, 1)
+        self.gridLayout_14.addWidget(self.label_LoadTopLevelCSV, 3, 3, 1, 1)
 
-        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.label_13 = QLabel(self.groupBox_2)
+        self.label_13.setObjectName(u"label_13")
 
-        self.gridLayout_14.addItem(self.horizontalSpacer_11, 1, 2, 1, 1)
+        self.gridLayout_14.addWidget(self.label_13, 4, 0, 1, 1)
 
-        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.gridLayout_14.addItem(self.horizontalSpacer_12, 2, 2, 1, 1)
-
-        self.label_10 = QLabel(self.groupBox_2)
-        self.label_10.setObjectName(u"label_10")
-
-        self.gridLayout_14.addWidget(self.label_10, 1, 0, 1, 1)
-
-        self.label_LoadTransCSV = QLabel(self.groupBox_2)
-        self.label_LoadTransCSV.setObjectName(u"label_LoadTransCSV")
-
-        self.gridLayout_14.addWidget(self.label_LoadTransCSV, 2, 3, 1, 1)
-
-        self.label_2 = QLabel(self.groupBox_2)
-        self.label_2.setObjectName(u"label_2")
-
-        self.gridLayout_14.addWidget(self.label_2, 0, 0, 1, 1)
-
-        self.label_LoadFullCatCSV = QLabel(self.groupBox_2)
-        self.label_LoadFullCatCSV.setObjectName(u"label_LoadFullCatCSV")
-
-        self.gridLayout_14.addWidget(self.label_LoadFullCatCSV, 0, 3, 1, 1)
+        self.gridLayout_14.addItem(self.horizontalSpacer_10, 2, 2, 1, 1)
 
         self.toolButton_LoadFullCatCSV = QToolButton(self.groupBox_2)
         self.toolButton_LoadFullCatCSV.setObjectName(u"toolButton_LoadFullCatCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton_LoadFullCatCSV, 0, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadFullCatCSV, 2, 4, 1, 1)
+
+        self.label_LoadTransCSV = QLabel(self.groupBox_2)
+        self.label_LoadTransCSV.setObjectName(u"label_LoadTransCSV")
+
+        self.gridLayout_14.addWidget(self.label_LoadTransCSV, 4, 3, 1, 1)
+
+        self.label_10 = QLabel(self.groupBox_2)
+        self.label_10.setObjectName(u"label_10")
+
+        self.gridLayout_14.addWidget(self.label_10, 3, 0, 1, 1)
 
         self.toolButton_LoadTopLevelCSV = QToolButton(self.groupBox_2)
         self.toolButton_LoadTopLevelCSV.setObjectName(u"toolButton_LoadTopLevelCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton_LoadTopLevelCSV, 1, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadTopLevelCSV, 3, 4, 1, 1)
 
         self.toolButton_LoadTransCSV = QToolButton(self.groupBox_2)
         self.toolButton_LoadTransCSV.setObjectName(u"toolButton_LoadTransCSV")
 
-        self.gridLayout_14.addWidget(self.toolButton_LoadTransCSV, 2, 4, 1, 1)
+        self.gridLayout_14.addWidget(self.toolButton_LoadTransCSV, 4, 4, 1, 1)
+
+        self.label_LoadFullCatCSV = QLabel(self.groupBox_2)
+        self.label_LoadFullCatCSV.setObjectName(u"label_LoadFullCatCSV")
+
+        self.gridLayout_14.addWidget(self.label_LoadFullCatCSV, 2, 3, 1, 1)
+
+        self.label_2 = QLabel(self.groupBox_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout_14.addWidget(self.label_2, 2, 0, 1, 1)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_14.addItem(self.horizontalSpacer_11, 3, 2, 1, 1)
+
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_14.addItem(self.horizontalSpacer_12, 4, 2, 1, 1)
+
+        self.label_11 = QLabel(self.groupBox_2)
+        self.label_11.setObjectName(u"label_11")
+
+        self.gridLayout_14.addWidget(self.label_11, 0, 0, 1, 1)
 
 
         self.horizontalLayout_11.addWidget(self.groupBox_2)
@@ -832,17 +808,15 @@ class Ui_MainWindow(object):
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        QWidget.setTabOrder(self.groupBox_SourceID_2, self.comboBox)
-        QWidget.setTabOrder(self.comboBox, self.groupBox)
-        QWidget.setTabOrder(self.groupBox, self.lineEdit_4)
-        QWidget.setTabOrder(self.lineEdit_4, self.groupBox_UserCat)
-        QWidget.setTabOrder(self.groupBox_UserCat, self.groupBox_VendorCat)
-        QWidget.setTabOrder(self.groupBox_VendorCat, self.groupBox_UserData)
+        QWidget.setTabOrder(self.groupBox_CatID, self.comboBox_CatID)
+        QWidget.setTabOrder(self.comboBox_CatID, self.groupBox_FXName)
+        QWidget.setTabOrder(self.groupBox_FXName, self.lineEdit_4)
+        QWidget.setTabOrder(self.lineEdit_4, self.groupBox_UserData)
         QWidget.setTabOrder(self.groupBox_UserData, self.groupBox_OnlyAnalyseEndsOfFiles)
         QWidget.setTabOrder(self.groupBox_OnlyAnalyseEndsOfFiles, self.spinBox_StartOnlyAnalyseEndsOfFiles)
         QWidget.setTabOrder(self.spinBox_StartOnlyAnalyseEndsOfFiles, self.spinBox_EndOnlyAnalyseEndsOfFiles)
-        QWidget.setTabOrder(self.spinBox_EndOnlyAnalyseEndsOfFiles, self.groupBox_OnlyAnalyseEndsOfFiles_2)
-        QWidget.setTabOrder(self.groupBox_OnlyAnalyseEndsOfFiles_2, self.lineEdit)
+        QWidget.setTabOrder(self.spinBox_EndOnlyAnalyseEndsOfFiles, self.groupBox_OnlyReadBetweenMarkers)
+        QWidget.setTabOrder(self.groupBox_OnlyReadBetweenMarkers, self.lineEdit)
         QWidget.setTabOrder(self.lineEdit, self.lineEdit_2)
         QWidget.setTabOrder(self.lineEdit_2, self.lineEdit_3)
         QWidget.setTabOrder(self.lineEdit_3, self.checkBox_3)
@@ -861,12 +835,12 @@ class Ui_MainWindow(object):
         self.lineEdit_CreatorID.textChanged.connect(self.label_CreatorID.setText)
         self.lineEdit_CreatorID.textChanged.connect(self.groupBox_CreatorID.repaint)
         self.lineEdit_SourceID.textChanged.connect(self.label_SourceID.setText)
-        self.comboBox.currentTextChanged.connect(self.label_CatID.setText)
+        self.comboBox_CatID.currentTextChanged.connect(self.label_CatID.setText)
         self.lineEdit_UserCat.textChanged.connect(self.label_UserCat.setText)
         self.lineEdit_VendorCat.textChanged.connect(self.label_VendorCat.setText)
         self.lineEdit_UserData.textChanged.connect(self.label_UserData.setText)
 
-        self.tabWidget_Main.setCurrentIndex(4)
+        self.tabWidget_Main.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -893,26 +867,26 @@ class Ui_MainWindow(object):
         self.label_UserData.setText(QCoreApplication.translate("MainWindow", u"UserData", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"* Optional (manual input)", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"* Speech-To-Text Attempt", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"* Required manual input", None))
-        self.groupBox_SourceID_2.setTitle(QCoreApplication.translate("MainWindow", u"Override CatID", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"AIRBlow", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"AMBPubl", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"AMBTraf", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"AMBTraf", None))
-        self.comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"BELLHand", None))
-        self.comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"BIRDFowl", None))
-        self.comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"CRWDConv", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"* Required (manual input)", None))
+        self.groupBox_CatID.setTitle(QCoreApplication.translate("MainWindow", u"Override CatID", None))
+        self.comboBox_CatID.setItemText(0, QCoreApplication.translate("MainWindow", u"AIRBlow", None))
+        self.comboBox_CatID.setItemText(1, QCoreApplication.translate("MainWindow", u"AMBPubl", None))
+        self.comboBox_CatID.setItemText(2, QCoreApplication.translate("MainWindow", u"AMBTraf", None))
+        self.comboBox_CatID.setItemText(3, QCoreApplication.translate("MainWindow", u"AMBTraf", None))
+        self.comboBox_CatID.setItemText(4, QCoreApplication.translate("MainWindow", u"BELLHand", None))
+        self.comboBox_CatID.setItemText(5, QCoreApplication.translate("MainWindow", u"BIRDFowl", None))
+        self.comboBox_CatID.setItemText(6, QCoreApplication.translate("MainWindow", u"CRWDConv", None))
 
-        self.groupBox_CreatorID.setTitle(QCoreApplication.translate("MainWindow", u"CreatorID", None))
-        self.lineEdit_CreatorID.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. JKim", None))
-        self.groupBox_SourceID.setTitle(QCoreApplication.translate("MainWindow", u"SourceID", None))
-        self.lineEdit_SourceID.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. HomeSFXLib", None))
-        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Custom FXName Template", None))
-        self.lineEdit_4.setText(QCoreApplication.translate("MainWindow", u"$title ($ntake$vtake) - $subtitle - $prop, $verb, $descriptions", None))
         self.groupBox_UserCat.setTitle(QCoreApplication.translate("MainWindow", u"UserCat", None))
         self.lineEdit_UserCat.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. Garage Trinkets", None))
         self.groupBox_VendorCat.setTitle(QCoreApplication.translate("MainWindow", u"VendorCat", None))
         self.lineEdit_VendorCat.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. Wrestle Car Mania", None))
+        self.groupBox_FXName.setTitle(QCoreApplication.translate("MainWindow", u"Custom FXName Template", None))
+        self.lineEdit_4.setText(QCoreApplication.translate("MainWindow", u"$title ($ntake$vtake) - $subtitle - $prop, $verb, $descriptions", None))
+        self.groupBox_CreatorID.setTitle(QCoreApplication.translate("MainWindow", u"CreatorID", None))
+        self.lineEdit_CreatorID.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. JKim", None))
+        self.groupBox_SourceID.setTitle(QCoreApplication.translate("MainWindow", u"SourceID", None))
+        self.lineEdit_SourceID.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. HomeSFXLib", None))
         self.groupBox_UserData.setTitle(QCoreApplication.translate("MainWindow", u"UserData", None))
         self.lineEdit_UserData.setText("")
         self.lineEdit_UserData.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e.g. $num", None))
@@ -921,12 +895,12 @@ class Ui_MainWindow(object):
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"sec.", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"End: ", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"sec.", None))
-        self.groupBox_OnlyAnalyseEndsOfFiles_2.setTitle(QCoreApplication.translate("MainWindow", u"Only Read Between Markers", None))
+        self.groupBox_OnlyReadBetweenMarkers.setTitle(QCoreApplication.translate("MainWindow", u"Only Read Between Markers", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Start Phrase:", None))
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"Start Analysis", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"End Phrase:  ", None))
         self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"End Analysis", None))
-        self.groupBox_OnlyAnalyseEndsOfFiles_3.setTitle(QCoreApplication.translate("MainWindow", u"Use Take Markers", None))
+        self.groupBox_UseTakeMarkers.setTitle(QCoreApplication.translate("MainWindow", u"Use Take Markers", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Phrase: ", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"Take $num", None))
         self.checkBox_3.setText(QCoreApplication.translate("MainWindow", u"Create unique files at take", None))
@@ -936,15 +910,16 @@ class Ui_MainWindow(object):
         self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_MicList), QCoreApplication.translate("MainWindow", u"Mic List", None))
         self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Wild Cards", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"UCS Files (.csv)", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Full Translations List:", None))
         self.label_LoadTopLevelCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Top Level Categories:", None))
-        self.label_LoadTransCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Full Category List:", None))
-        self.label_LoadFullCatCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Full Translations List:", None))
         self.toolButton_LoadFullCatCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.label_LoadTransCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Top Level Categories:", None))
         self.toolButton_LoadTopLevelCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.toolButton_LoadTransCSV.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.label_LoadFullCatCSV.setText(QCoreApplication.translate("MainWindow", u"[file not found]", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Full Category List:", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"** When importing .csv files, please sure to remove unnecessary rows", None))
         self.tabWidget_Main.setTabText(self.tabWidget_Main.indexOf(self.tab_Settings), QCoreApplication.translate("MainWindow", u"Settings", None))
     # retranslateUi
 
