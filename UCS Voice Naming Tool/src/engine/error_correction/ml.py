@@ -58,3 +58,28 @@ Last Modified: August 3, 2022
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+from gensim.models.word2vec import Word2Vec
+from gensim.models.keyedvectors import KeyedVectors
+from pathlib import Path
+import pandas as pd
+from pandas import (
+    DataFrame
+)
+
+# sentences = [["AIRHiss", "Compressed", "Air", "Escaping", "Thermos", "Thin", "Hiss", "Slight", "Hollow", "Hum"],
+#              ["AIRHiss", "Compressed", "Air", "Escaping", "Thermos", "Thin", "Hiss", "Slight", "Hollow", "Hum"],
+#              ["AEROProp", "Airplane", "Interior", "Loop", "Aircraft", "Plane", "Propeller", "Engine", "Noise", "Idle", "Revving", "RPM"]
+#              ]
+
+xlsx_file = 'PSE_CORE3PRO-metadata.xlsx'
+
+data_file = pd.read_excel(xlsx_file)
+#
+# w2v_model = Word2Vec(sentences, min_count=1)
+# result = w2v_model.wv.most_similar(positive=['Airplane'])
+
+# row = data_file.loc[:0]
+row = data_file['Filename'].tolist()
+
+print(row[0])
