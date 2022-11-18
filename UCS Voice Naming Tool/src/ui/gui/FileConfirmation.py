@@ -123,14 +123,6 @@ class Ui_Dialog(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
-        self.verticalWidget = QWidget(self.widget_2)
-        self.verticalWidget.setObjectName(u"verticalWidget")
-        self.horizontalLayout_3 = QHBoxLayout(self.verticalWidget)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(-1, -1, -1, 10)
-
-        self.verticalLayout_2.addWidget(self.verticalWidget)
-
 
         self.gridLayout.addWidget(self.widget_2, 3, 0, 1, 1)
 
@@ -145,10 +137,6 @@ class Ui_Dialog(object):
 
 
         self.verticalLayout.addWidget(self.widget)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.verticalLayout.addItem(self.horizontalSpacer_2)
 
         self.buttonBox = QDialogButtonBox(Dialog)
         self.buttonBox.setObjectName(u"buttonBox")

@@ -124,7 +124,7 @@ class UCS:
         if exists_full_trans_feather():
             self.ucs_full_trans = pd.read_feather(Defaults.UCS_FULL_TRANS_FILE)
         if exists_top_level_feather():
-            self.ucs_top_level = pd.read_feather(Defaults.UCS_FULL_TRANS_FILE)
+            self.ucs_top_level = pd.read_feather(Defaults.UCS_TOP_LEVEL_FILE)
 
     def get_row_from_catid(self, catid: str) -> DataFrame:
         """

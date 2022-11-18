@@ -25,7 +25,7 @@ Last Modified: July 11, 2022
 
 import PySide6
 from PySide6.QtCore import (
-    QRunnable
+    QRunnable, Qt
 )
 from PySide6.QtGui import (
     QIcon,
@@ -44,6 +44,8 @@ from src.engine.stt.speechanalyse import SpeechAnalyse
 from src.engine.ucs import ucs_data
 from src.ui.gui.MainWindow import Ui_MainWindow
 from src.ui.ui_file_confirmation_window import FileConfirmation
+from src.ui.systray import SysTray
+from project_info import Info
 
 
 def set_groupbox_title_white(widget: QGroupBox):
@@ -89,6 +91,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
+        # self.setWindowFlags(Qt.FramelessWindowHint)
+        self.tray = SysTray()
 
         # list of parent widgets that contain QGroupBox widgets as children
         # These will be looped over to apply signals
@@ -109,8 +113,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         :return: None
         """
 
-        icon_path = utilities.get_resource(Defaults.UCS_LOGO)
-        self.setWindowIcon(QIcon(icon_path))
+        self.setWindowIcon(QIcon(Info.ICON_PATH))
 
         self.setMouseTracking(True)
         self.setAcceptDrops(True)
@@ -369,8 +372,6 @@ class Defaults:
 
     TOOL_BUTTON_CSV_LOADED: str = '.csv is loaded'
     TOOL_BUTTON_CSV_NOT_LOADED: str = '[NO .CSV LOADED]'
-
-    UCS_LOGO = '\\UCS_Logos\\ucs_black_small.ico'
 
 
 class Worker(QRunnable):

@@ -46,6 +46,10 @@ class Ui_MainWindow(object):
         self.widget_2.setObjectName(u"widget_2")
         self.gridLayout_5 = QGridLayout(self.widget_2)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_5.addItem(self.horizontalSpacer_3, 0, 0, 1, 1)
+
         self.widget = QWidget(self.widget_2)
         self.widget.setObjectName(u"widget")
         self.widget.setMinimumSize(QSize(300, 200))
@@ -60,6 +64,17 @@ class Ui_MainWindow(object):
         self.frame_DragDrop.setObjectName(u"frame_DragDrop")
         self.frame_DragDrop.setMinimumSize(QSize(0, 200))
         palette = QPalette()
+        brush = QBrush(QColor(81, 86, 102, 255))
+        brush.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Button, brush)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Button, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Button, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush)
         self.frame_DragDrop.setPalette(palette)
         self.frame_DragDrop.setAcceptDrops(True)
         self.frame_DragDrop.setAutoFillBackground(False)
@@ -128,7 +143,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addLayout(self.horizontalLayout_15, 2, 1, 1, 1)
 
 
-        self.gridLayout_5.addWidget(self.widget, 1, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.widget, 0, 1, 1, 1)
 
         self.widget_Naming = QWidget(self.widget_2)
         self.widget_Naming.setObjectName(u"widget_Naming")
@@ -447,15 +462,11 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
 
 
-        self.gridLayout_5.addWidget(self.widget_Naming, 1, 2, 1, 1)
-
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout_5.addItem(self.horizontalSpacer_3, 1, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.widget_Naming, 0, 2, 1, 1)
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.gridLayout_5.addItem(self.horizontalSpacer, 1, 3, 1, 1)
+        self.gridLayout_5.addItem(self.horizontalSpacer, 0, 3, 1, 1)
 
 
         self.gridLayout_9.addWidget(self.widget_2, 0, 0, 1, 1)
@@ -472,7 +483,7 @@ class Ui_MainWindow(object):
         self.scrollArea_AnalysisPrefs.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 954, 120))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 954, 128))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.widget_AnalysisPrefs = QWidget(self.scrollAreaWidgetContents)

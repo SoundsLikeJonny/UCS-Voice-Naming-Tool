@@ -169,7 +169,6 @@ class SpeechRead:
 
         :return:
         """
-
         if self.temp_wav_list_to_process:
             transcription_list = [self.get_stt_from_file(file) for file in self.temp_wav_list_to_process
                                   if file is not None]

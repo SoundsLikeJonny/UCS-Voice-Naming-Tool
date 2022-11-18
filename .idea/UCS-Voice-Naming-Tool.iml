@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/src/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/UCS-Voice-Naming-Tool" />
+      <excludeFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/builds" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (UCS-Voice-Naming-Tool)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

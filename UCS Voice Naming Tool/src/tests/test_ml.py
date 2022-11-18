@@ -30,8 +30,16 @@ from src.engine.stt import ml
 
 import os
 
+
 class TestML(TestCase):
 
     def test_create_data_file(self):
         ml.create_data_file(ml.Defaults.global_ucs_data)
-        self.assertTrue(os.path.exists(ml.Defaults.global_ucs_data))
+        self.assertTrue(os.path.isfile(ml.Defaults.global_ucs_data))
+
+    def test_add_data_to_model(self):
+        self.fail()
+
+    def test_get_data_file(self):
+        result = ml.get_data_file(ml.Defaults.global_ucs_data)
+        print(result)
