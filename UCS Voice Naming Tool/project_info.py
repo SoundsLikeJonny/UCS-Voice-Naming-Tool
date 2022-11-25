@@ -30,6 +30,6 @@ class Info:
     Gets used everywhere in the project
     """
     PROJECT_TITLE = 'UCS Voice Naming Tool'
-    COMPANY = ''
+    COMPANY = ' '
     ICON_PATH = './resources/UCS_Logos/ucs_black_small.ico'
     NOTIFICATION_TIME = 3000

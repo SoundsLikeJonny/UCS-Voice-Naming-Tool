@@ -42,6 +42,8 @@ from src.engine import utilities
 from src.engine.audio import wavfile
 from src.ui.gui.FileConfirmation import Ui_Dialog
 
+from project_info import Info
+
 
 def set_wav_info_label(obj: QLabel, info_text: any, ):
     """
@@ -57,13 +59,13 @@ def set_wav_info_label(obj: QLabel, info_text: any, ):
         obj.setText('-')
 
 
-class FileConfirmation(QDialog, Ui_Dialog):
+class UIFileConfirmation(QDialog, Ui_Dialog):
     """
     .
     """
 
     def __init__(self, *args: object, parent=None, **kwargs: object) -> None:
-        super(FileConfirmation, self).__init__(parent, *args, **kwargs)
+        super(UIFileConfirmation, self).__init__(parent, *args, **kwargs)
         self.wav_obj_dict = None
         self.selected_wav_items = []
         self.init_all_ui()
@@ -75,12 +77,12 @@ class FileConfirmation(QDialog, Ui_Dialog):
         """
         self.setupUi(self)
 
-        icon_path = utilities.get_resource('\\UCS_Logos\\ucs_black_small.ico')
-        self.setWindowIcon(QIcon(icon_path))
+        self.setWindowIcon(QIcon(Info.ICON_PATH))
 
         self.setWindowFlag(Qt.WindowCloseButtonHint, False)
         self.setWindowFlag(Qt.WindowContextHelpButtonHint, False)
         self.listWidget_WavFileSelect.itemSelectionChanged.connect(self.set_selected_wave_file_info)
+        self.show()
 
     def exists_qt_widgets(self) -> None:
         """

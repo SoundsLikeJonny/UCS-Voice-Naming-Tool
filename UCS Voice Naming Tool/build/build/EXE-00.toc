@@ -80,7 +80,7 @@
  [],
  False,
  False,
- 1668445083,
+ 1668749261,
  [('runw.exe',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
    'Tool\\env\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',

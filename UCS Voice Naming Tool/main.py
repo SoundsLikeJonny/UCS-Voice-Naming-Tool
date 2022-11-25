@@ -37,8 +37,10 @@ from project_info import Info
 
 
 def main():
+    generate_ui_files.main()
+
     app = QApplication(sys.argv)
-    # app.setQuitOnLastWindowClosed(False)
+    app.setQuitOnLastWindowClosed(False)
     theme.set_default_theme(app)
 
     show_splash()

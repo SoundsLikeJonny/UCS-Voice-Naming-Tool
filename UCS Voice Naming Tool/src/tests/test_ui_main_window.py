@@ -29,7 +29,7 @@ from unittest import TestCase
 from PySide6.QtWidgets import QApplication
 
 from src.ui.theme import theme
-from src.ui.ui_file_confirmation_window import FileConfirmation
+from src.ui.ui_file_confirmation_window import UIFileConfirmation
 from src.ui.ui_main_window import MainWindow
 
 
@@ -66,7 +66,7 @@ class TestMainWindow(TestCase):
         self.assertTrue(self.obj.init_ui_settings_tab(), True)
 
     def test_open_file_confirmation_window(self):
-        self.assertIsInstance(self.obj.file_confirmation_window, FileConfirmation)
+        self.assertIsInstance(self.obj.file_confirmation_window, UIFileConfirmation)
 
     def test_reset_file_confirmation_window(self):
         self.obj.reset_file_confirmation_window()
@@ -79,7 +79,7 @@ class TestMainWindow(TestCase):
 
     def test_handle_drop_event_files(self):
         self.obj.handle_drop_event_files(Defaults.test_file_list)
-        self.assertIsInstance(self.obj.file_confirmation_window, FileConfirmation)
+        self.assertIsInstance(self.obj.file_confirmation_window, UIFileConfirmation)
 
     def test_analyze_stt(self):
         self.assertFalse(self.obj.analyze_stt())

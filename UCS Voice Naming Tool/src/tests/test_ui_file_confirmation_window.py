@@ -30,7 +30,7 @@ from unittest import TestCase
 
 from PySide6.QtWidgets import QApplication
 
-from src.ui.ui_file_confirmation_window import FileConfirmation
+from src.ui.ui_file_confirmation_window import UIFileConfirmation
 from src.ui.ui_main_window import MainWindow
 
 
@@ -43,10 +43,10 @@ class TestFileConfirmation(TestCase):
             self.app = QApplication.instance()
 
         self.parent = MainWindow()
-        self.obj_good = FileConfirmation(parent=self.parent)
+        self.obj_good = UIFileConfirmation(parent=self.parent)
         self.obj_good.set_wav_list(Defaults.test_file_list)
         self.obj_good.show()
-        self.obj_bad = FileConfirmation(parent=self.parent)
+        self.obj_bad = UIFileConfirmation(parent=self.parent)
         self.obj_bad.set_wav_list(Defaults.bad_test_file_list)
         self.obj_bad.show()
 
@@ -97,12 +97,12 @@ class TestFileConfirmation(TestCase):
     def test_close_event(self):
         self.obj_good.closeEvent(None)
         self.assertFalse(self.obj_good.isVisible())
-        # self.assertIsInstance(self.obj, FileConfirmation)
+        # self.assertIsInstance(self.obj, UIFileConfirmation)
 
     def test_close(self):
         self.obj_good.close()
         self.assertFalse(self.obj_good.isVisible())
-        # self.assertIsInstance(self.obj, FileConfirmation)
+        # self.assertIsInstance(self.obj, UIFileConfirmation)
 
 
 class Defaults:

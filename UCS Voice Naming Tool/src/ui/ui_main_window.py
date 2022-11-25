@@ -2,7 +2,7 @@
 
 """
 Author: Jon Evans
-Last Modified: July 11, 2022
+Last Modified: Nov 24, 2022
 """
 
 #  UCS Voice Naming Tool. A tool that uses voice to name audio
@@ -43,8 +43,11 @@ from src.engine import utilities
 from src.engine.stt.speechanalyse import SpeechAnalyse
 from src.engine.ucs import ucs_data
 from src.ui.gui.MainWindow import Ui_MainWindow
-from src.ui.ui_file_confirmation_window import FileConfirmation
+from src.ui.ui_file_confirmation_window import UIFileConfirmation
+from src.ui.ui_file_naming_review_window import UIFileNamingReview
+from src.ui.ui_progress_window import ProgressWindow
 from src.ui.systray import SysTray
+
 from project_info import Info
 
 
@@ -76,12 +79,6 @@ def toggle_groupbox_colors(widget: QGroupBox):
         else:
             set_groupbox_title_grey(widget)
 
-    # self.groupBox_UserCat.setStyleSheet("QLabel"
-    #                                     "{"
-    #                                     "border : 2px solid grey;"
-    #                                     "background : grey;"
-    #                                     "}")
-
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
@@ -90,8 +87,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def __init__(self, *args: object, **kwargs: object) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+        # progress_window = ProgressWindow(parent=self)
         self.setupUi(self)
-        # self.setWindowFlags(Qt.FramelessWindowHint)
         self.tray = SysTray()
 
         # list of parent widgets that contain QGroupBox widgets as children
@@ -103,6 +100,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.opacity = None
         self.file_confirmation_window = None
+        self.file_naming_review_window = None
 
         self.ucs = ucs_data.UCS()
         self.init_all_ui()
@@ -250,16 +248,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def open_file_confirmation_window(self, file_list: list):
         """
-        Create FileConfirmation window with items from file_list
+        Create UIFileConfirmation window with items from file_list
         :param file_list:
         """
         if self.file_confirmation_window is None:
-            self.file_confirmation_window = FileConfirmation(parent=self)
-            self.file_confirmation_window.show()
+            self.file_confirmation_window = UIFileConfirmation(parent=self)
             self.file_confirmation_window.set_wav_list(file_list)
             self.file_confirmation_window.buttonBox.rejected.connect(self.reset_file_confirmation_window)
             self.file_confirmation_window.destroyed.connect(self.reset_file_confirmation_window)
             self.file_confirmation_window.buttonBox.accepted.connect(self.file_confirmation_window_analyze_stt)
+
+    def open_file_naming_review_window(self, speech_data: list[SpeechAnalyse]) -> None:
+        """
+        Create UIFileNamingReview window with items from file_list
+        :param speech_data:
+        """
+        if self.file_naming_review_window is None:
+            self.file_naming_review_window = UIFileNamingReview(parent=self)
+            self.file_naming_review_window.update_table(speech_data)
+            self.file_naming_review_window.buttonBox.rejected.connect(self.reset_file_naming_review_window)
+            self.file_naming_review_window.destroyed.connect(self.reset_file_naming_review_window)
+            # self.file_naming_review_window.buttonBox.accepted.connect(self.)
 
     def dragEnterEvent(self, event: PySide6.QtGui.QDragEnterEvent) -> None:
         """
@@ -273,9 +282,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def reset_file_confirmation_window(self) -> None:
         """
-        Reset window object back to None. Used to ensure that only one FileConfirmation window is made
+        Reset window object back to None. Used to ensure that only one UIFileConfirmation window is made
         """
         self.file_confirmation_window = None
+
+    def reset_file_naming_review_window(self) -> None:
+        """
+        Reset window object back to None. Used to ensure that only one UIFileConfirmation window is made
+        """
+        self.file_naming_review_window = None
 
     def file_confirmation_window_analyze_stt(self) -> None:
         """
@@ -291,10 +306,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Hand off to STT engine to handle processing of speech
         :param files:
         """
-        if utilities.is_list(files) and files:
-            sa = SpeechAnalyse(files[0])
-            sa.get_transcription_from_wav_file_google()
-            QMessageBox.about(self, "Speech-To-Text File Results", sa.speech_transcription_from_file)
+        if isinstance(files, list) and files:
+            speech_list = []
+            progress_window = ProgressWindow(parent=self)
+            # self.progress_window.buttonBox.rejected.connect()
+            for file in files:
+                sa = SpeechAnalyse(file)
+                sa.get_transcription_from_wav_file_google()
+                speech_list.append(sa)
+            progress_window.reject()
+
+            self.open_file_naming_review_window(speech_list)
+            # QMessageBox.about(self, "Speech-To-Text File Results", sa.speech_transcription_from_file)
 
     def reset_window(self) -> None:
         """
@@ -337,7 +360,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self,
             window_prompt,
             utilities.get_home_path(),
-            "Comma Seperated Value File (*.csv)"
+            Defaults.CSV_WINDOW_TITLE
         )
         return file[0]
 
@@ -372,6 +395,7 @@ class Defaults:
 
     TOOL_BUTTON_CSV_LOADED: str = '.csv is loaded'
     TOOL_BUTTON_CSV_NOT_LOADED: str = '[NO .CSV LOADED]'
+    CSV_WINDOW_TITLE: str = "Comma Seperated Value File (*.csv)"
 
 
 class Worker(QRunnable):
