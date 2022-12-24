@@ -33,7 +33,6 @@ import speech_recognition as stt
 from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
 
-from src.engine import utilities
 from src.engine.audio.audio import is_file_valid
 from src.engine.audio.wavfile import Wav
 
@@ -190,7 +189,7 @@ class SpeechRead:
         :param segment: The audio segment to save
         :return: filepath
         """
-        if utilities.is_type(segment, AudioSegment) and utilities.is_str(segment_file_name):
+        if isinstance(segment, AudioSegment) and isinstance(segment_file_name, str):
             full_filepath = PurePath(self.temp_dir, f'{segment_file_name}.wav')
             print(full_filepath)
             return segment.export(full_filepath, format='wav')

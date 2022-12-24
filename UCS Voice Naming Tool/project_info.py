@@ -33,3 +33,31 @@ class Info:
     COMPANY = ' '
     ICON_PATH = './resources/UCS_Logos/ucs_black_small.ico'
     NOTIFICATION_TIME = 3000
+
+
+class FileTypes:
+    """
+    File extensions for files related to the application
+    """
+    PROJECT: str = '.ucsvnt'
+    AUTO_SAVE: str = '.ucsvnt.save'
+    PREFS: str = '.prefs'
+
+    ALL_TYPES: list = [
+        PROJECT,
+        AUTO_SAVE,
+        PREFS,
+
+    ]
+
+    @staticmethod
+    def is_file_of_filetype(file: str) -> bool:
+        """
+        Check against
+        :param file:
+        :return:
+        """
+        for extension in FileTypes.ALL_TYPES:
+            if file.endswith(extension):
+                return True
+        return False

@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1000, 783)
+        MainWindow.resize(1000, 654)
         MainWindow.setMinimumSize(QSize(959, 0))
         MainWindow.setMaximumSize(QSize(1000, 16777215))
         MainWindow.setStyleSheet(u"")
@@ -42,10 +42,26 @@ class Ui_MainWindow(object):
         self.tab_Voice.setObjectName(u"tab_Voice")
         self.gridLayout_9 = QGridLayout(self.tab_Voice)
         self.gridLayout_9.setObjectName(u"gridLayout_9")
+        self.DEBUG_label_test1 = QLabel(self.tab_Voice)
+        self.DEBUG_label_test1.setObjectName(u"DEBUG_label_test1")
+
+        self.gridLayout_9.addWidget(self.DEBUG_label_test1, 0, 0, 1, 1)
+
+        self.line = QFrame(self.tab_Voice)
+        self.line.setObjectName(u"line")
+        self.line.setFrameShape(QFrame.HLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_9.addWidget(self.line, 2, 0, 1, 1)
+
         self.widget_2 = QWidget(self.tab_Voice)
         self.widget_2.setObjectName(u"widget_2")
         self.gridLayout_5 = QGridLayout(self.widget_2)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_5.addItem(self.horizontalSpacer, 0, 3, 1, 1)
+
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_5.addItem(self.horizontalSpacer_3, 0, 0, 1, 1)
@@ -313,7 +329,7 @@ class Ui_MainWindow(object):
         self.groupBox_CatID.setObjectName(u"groupBox_CatID")
         self.groupBox_CatID.setMinimumSize(QSize(145, 0))
         self.groupBox_CatID.setStyleSheet(u"")
-        self.groupBox_CatID.setFlat(False)
+        self.groupBox_CatID.setFlat(True)
         self.groupBox_CatID.setCheckable(True)
         self.groupBox_CatID.setChecked(False)
         self.gridLayout_11 = QGridLayout(self.groupBox_CatID)
@@ -337,6 +353,7 @@ class Ui_MainWindow(object):
         self.groupBox_UserCat.setObjectName(u"groupBox_UserCat")
         self.groupBox_UserCat.setMinimumSize(QSize(111, 50))
         self.groupBox_UserCat.setMaximumSize(QSize(111111, 16777215))
+        self.groupBox_UserCat.setFlat(True)
         self.groupBox_UserCat.setCheckable(True)
         self.groupBox_UserCat.setChecked(True)
         self.verticalLayout_2 = QVBoxLayout(self.groupBox_UserCat)
@@ -355,6 +372,7 @@ class Ui_MainWindow(object):
         self.groupBox_VendorCat.setObjectName(u"groupBox_VendorCat")
         self.groupBox_VendorCat.setMinimumSize(QSize(111, 50))
         self.groupBox_VendorCat.setMaximumSize(QSize(1111, 16777215))
+        self.groupBox_VendorCat.setFlat(True)
         self.groupBox_VendorCat.setCheckable(True)
         self.groupBox_VendorCat.setChecked(True)
         self.gridLayout_4 = QGridLayout(self.groupBox_VendorCat)
@@ -464,12 +482,8 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addWidget(self.widget_Naming, 0, 2, 1, 1)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.gridLayout_5.addItem(self.horizontalSpacer, 0, 3, 1, 1)
-
-
-        self.gridLayout_9.addWidget(self.widget_2, 0, 0, 1, 1)
+        self.gridLayout_9.addWidget(self.widget_2, 1, 0, 1, 1)
 
         self.verticalLayout_3 = QVBoxLayout()
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -687,14 +701,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.label)
 
 
-        self.gridLayout_9.addLayout(self.verticalLayout_3, 3, 0, 1, 1)
-
-        self.line = QFrame(self.tab_Voice)
-        self.line.setObjectName(u"line")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
-
-        self.gridLayout_9.addWidget(self.line, 1, 0, 1, 1)
+        self.gridLayout_9.addLayout(self.verticalLayout_3, 4, 0, 1, 1)
 
         self.tabWidget_Main.addTab(self.tab_Voice, "")
         self.tab = QWidget()
@@ -859,6 +866,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"UCS Voice Naming Tool", None))
+        self.DEBUG_label_test1.setText(QCoreApplication.translate("MainWindow", u"Debug", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"DROP FILES HERE", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Silence Threshold:", None))
         self.checkBox_SkipFileSelection.setText(QCoreApplication.translate("MainWindow", u"Skip File Selection", None))

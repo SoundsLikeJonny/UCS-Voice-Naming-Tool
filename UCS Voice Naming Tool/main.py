@@ -36,8 +36,16 @@ from src.ui.splash import show_splash
 from project_info import Info
 
 
-def main():
-    generate_ui_files.main()
+def main(is_build: bool = False):
+    """
+    The main function of the program.
+    Adds some functionality of the MainWindow to the system tray.
+    Creates the Qt application and main window
+    Generates the UI files
+    Starts the app loop
+    """
+    if not is_build:
+        generate_ui_files.main()
 
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
@@ -47,6 +55,8 @@ def main():
 
     app_window = MainWindow()
     app_window.show()
+
+    app_window.DEBUG_label_test1.setText(str(is_build))
 
     quit_app = QAction("Quit")
     quit_app.triggered.connect(app.quit)

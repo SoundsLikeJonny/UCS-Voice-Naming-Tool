@@ -38,7 +38,6 @@ from PySide6.QtWidgets import (
     QLabel
 )
 
-from src.engine import utilities
 from src.engine.audio import wavfile
 from src.ui.gui.FileConfirmation import Ui_Dialog
 
@@ -61,7 +60,8 @@ def set_wav_info_label(obj: QLabel, info_text: any, ):
 
 class UIFileConfirmation(QDialog, Ui_Dialog):
     """
-    .
+    Allow the user to review the files they want to rename.
+    Users have the opportunity to refresh the UCS info after making adjustments to the description
     """
 
     def __init__(self, *args: object, parent=None, **kwargs: object) -> None:
@@ -98,7 +98,7 @@ class UIFileConfirmation(QDialog, Ui_Dialog):
         self.listWidget_WavFileSelect.clear()
         self.set_wav_objects(file_list)
 
-        if utilities.is_list(file_list):
+        if isinstance(file_list, list):
             for file in file_list:
                 if wavfile.is_file_valid(file):
                     item = QListWidgetItem(file)
@@ -136,7 +136,7 @@ class UIFileConfirmation(QDialog, Ui_Dialog):
 
         print(self.selected_wav_items)
 
-    def set_selected_wave_file_info(self):
+    def set_selected_wave_file_info(self) -> None:
         """
         .
         """
@@ -145,13 +145,13 @@ class UIFileConfirmation(QDialog, Ui_Dialog):
             for item in self.listWidget_WavFileSelect.selectedItems():
                 wav_obj = self.wav_obj_dict[item.text()]
 
-                if wav_obj.sample_rate is not None and utilities.is_type(wav_obj, wavfile.Wav):
+                if wav_obj.sample_rate is not None and isinstance(wav_obj, wavfile.Wav):
                     set_wav_info_label(self.label_SampleRate, wav_obj.sample_rate)
                     set_wav_info_label(self.label_Channels, wav_obj.channels)
                     set_wav_info_label(self.label_BitDepth, wav_obj.bit_depth)
                     set_wav_info_label(self.label_Length, wav_obj.length)
 
-    def clear_audio_info_labels(self):
+    def clear_audio_info_labels(self) -> None:
         """
         Clear all audio text in labels
         """
@@ -166,7 +166,7 @@ class UIFileConfirmation(QDialog, Ui_Dialog):
         """
         super().reject()
 
-    def closeEvent(self, event):
+    def closeEvent(self, event) -> None:
         """
         Override to ensure proper closure of window
         :param event:

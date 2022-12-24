@@ -26,8 +26,6 @@ Last Modified: July 10, 2022
 import os
 import pathlib
 
-from src.engine.utilities import is_str
-
 
 def is_file_valid(file: str) -> bool:
     """
@@ -35,7 +33,7 @@ def is_file_valid(file: str) -> bool:
     :param file:
     :return:
     """
-    if not is_str(file) \
+    if not isinstance(file, str) \
             or not os.path.isfile(file) \
             or pathlib.Path(file).suffix != '.wav':
         return False

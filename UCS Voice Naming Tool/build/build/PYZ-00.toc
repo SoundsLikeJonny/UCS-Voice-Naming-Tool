@@ -1114,9 +1114,6 @@
   ('stringprep',
    'C:\\Users\\jonny\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
    'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\jonny\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
-   'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\jonny\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
    'PYMODULE'),
@@ -1134,6 +1131,9 @@
    'PYMODULE'),
   ('http.cookiejar',
    'C:\\Users\\jonny\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\jonny\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE'),
   ('project_info',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
@@ -1159,17 +1159,37 @@
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
    'Tool\\src\\ui\\systray.py',
    'PYMODULE'),
-  ('src.ui.ui_file_confirmation_window',
+  ('src.ui.ui_progress_window',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
-   'Tool\\src\\ui\\ui_file_confirmation_window.py',
+   'Tool\\src\\ui\\ui_progress_window.py',
    'PYMODULE'),
-  ('src.ui.gui.UIFileConfirmation',
+  ('src.ui.gui.Progress',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
-   'Tool\\src\\ui\\gui\\UIFileConfirmation.py',
+   'Tool\\src\\ui\\gui\\Progress.py',
    'PYMODULE'),
   ('src.ui.gui',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
    'Tool\\src\\ui\\gui\\__init__.py',
+   'PYMODULE'),
+  ('src.ui.gui.ReviewFileInfo',
+   'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
+   'Tool\\src\\ui\\gui\\ReviewFileInfo.py',
+   'PYMODULE'),
+  ('src.ui.ui_file_naming_review_window',
+   'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
+   'Tool\\src\\ui\\ui_file_naming_review_window.py',
+   'PYMODULE'),
+  ('src.ui.gui.FileNamingReview',
+   'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
+   'Tool\\src\\ui\\gui\\FileNamingReview.py',
+   'PYMODULE'),
+  ('src.ui.ui_file_confirmation_window',
+   'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
+   'Tool\\src\\ui\\ui_file_confirmation_window.py',
+   'PYMODULE'),
+  ('src.ui.gui.FileConfirmation',
+   'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '
+   'Tool\\src\\ui\\gui\\FileConfirmation.py',
    'PYMODULE'),
   ('src.engine.audio.wavfile',
    'C:\\Users\\jonny\\PycharmProjects\\UCS-Voice-Naming-Tool\\UCS Voice Naming '

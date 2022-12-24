@@ -56,7 +56,9 @@ def set_groupbox_title_white(widget: QGroupBox):
     Set the groupbox color to white
     :param widget:
     """
-    widget.setStyleSheet("QGroupBox::title {color: white}")
+    widget.setStyleSheet("QGroupBox::title {color: white} QGroupBox {border:0}")
+
+    # widget.setStyleSheet('')
 
 
 def set_groupbox_title_grey(widget: QGroupBox):
@@ -64,7 +66,15 @@ def set_groupbox_title_grey(widget: QGroupBox):
     Set the groupbox color to grey
     :param widget:
     """
-    widget.setStyleSheet("QGroupBox::title {color: grey}")
+    widget.setStyleSheet("QGroupBox::title {color: grey} QGroupBox {border:0}")
+
+
+def set_groupbox_no_border(widget: QGroupBox):
+    """
+    Set the groupbox color to grey
+    :param widget:
+    """
+    widget.setStyleSheet('QGroupBox {border:0}')
 
 
 def toggle_groupbox_colors(widget: QGroupBox):
@@ -195,6 +205,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for parent in self.groupbox_parent_widgets:
             for self.widget in parent.children():
                 if isinstance(self.widget, QGroupBox):
+                    self.widget.setFlat(True)
                     self.widget.toggled.connect(self.toggle_all_groupboxes_colors)
 
     def ui_init_groupbox_filename_signals(self):
@@ -324,7 +335,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Reset the
         :return: 
         """
-        if not utilities.is_type(self.file_confirmation_window, QDialog):
+        if not isinstance(self.file_confirmation_window, QDialog):
             self.reset_file_confirmation_window()
 
     def save_full_cat_feather(self):

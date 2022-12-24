@@ -24,13 +24,8 @@ Last Modified: July 6, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from PySide6.QtWidgets import QApplication, QMainWindow
-from PySide6.QtUiTools import QUiLoader
 
-from src.ui.gui.MainWindow import Ui_MainWindow
-
-from qt_material import apply_stylesheet, list_themes, QtStyleTools
-
-from src.engine import utilities
+from qt_material import apply_stylesheet, list_themes
 
 
 def set_theme(app: QApplication, theme: str, extra=None):
@@ -42,7 +37,7 @@ def set_theme(app: QApplication, theme: str, extra=None):
     """
     if extra is None:
         extra = {}
-    if utilities.is_type(app, QApplication) and utilities.is_str(theme):
+    if isinstance(app, QApplication) and isinstance(theme, str):
         apply_stylesheet(app, theme=theme, extra=extra)
 
 
@@ -63,16 +58,3 @@ class Defaults:
     DEFAULT_EXTRA = {
         'density_scale': '-2',
     }
-
-# Does not work with PyQt5
-#
-# class RuntimeStylesheets(QMainWindow, QtStyleTools, Ui_MainWindow):
-#     """
-#     Used to create a custom UI style .xml
-#     """
-#
-#     def __init__(self):
-#         super().__init__()
-#         self.setupUi(self)
-#
-#         self.show_dock_theme(self)

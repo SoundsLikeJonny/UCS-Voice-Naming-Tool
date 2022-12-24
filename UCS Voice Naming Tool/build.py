@@ -24,21 +24,36 @@ Last Modified: November 13, 2022
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import subprocess
+import sys
 from datetime import datetime
 from pathlib import Path
 
-command = str(Path.joinpath(Path().absolute(), 'env/Scripts/pyinstaller.exe'))
-windowed = '--w'
-args = str(Path.joinpath(Path().absolute(), 'build.spec'))
+from PySide6.QtWidgets import QApplication
 
-current_date_time = '\n\n\nNEW BUILD\n=========\n' + str(datetime.now().strftime("%d %B, %Y %H:%M,%S")) + '\n\n\n'
 
-err = open('build_log.txt', 'a')
-err.write(current_date_time)
-err.flush()
+def main():
+    """
+    Create a new build
+    """
+    app = QApplication()
+    try:
+        command = str(Path.joinpath(Path().absolute(), 'env/Scripts/pyinstaller.exe'))
+        windowed = '--w'
+        args = str(Path.joinpath(Path().absolute(), 'build.spec'))
+        current_date_time = '\n\n\nNEW BUILD\n=========\n' + str(
+            datetime.now().strftime("%d %B, %Y %H:%M,%S")) + '\n\n\n'
+        err = open('build_log.txt', 'a')
+        err.write(current_date_time)
+        err.flush()
+        print([command, windowed, args])
+        c = subprocess.Popen([command, args], stderr=err, shell=True, close_fds=True, universal_newlines=True)
+        print(str(c))
+        c.wait()
+    except Exception as e:
+        print(e)
 
-print([command, windowed, args])
+    sys.exit(app.exec())
 
-c = subprocess.Popen([command, args], stderr=err, shell=True, close_fds=True, universal_newlines=True)
-print(str(c))
-c.wait()
+
+if __name__ == "__main__":
+    main()

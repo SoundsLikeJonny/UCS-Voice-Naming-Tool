@@ -81,59 +81,6 @@ def get_project_ui_file(ui_file_name: str) -> str | None:
 
 """
 #######################################
-############ VALIDATION ###############
-#######################################
-"""
-
-
-def is_type(value: any, _type: any) -> bool:
-    """
-    Return True if the value is a string
-    :param _type: Builtin type to check
-    :param value: Value to check
-    :rtype: bool
-    """
-    return type(value) == _type
-
-
-def is_str(value: str) -> bool:
-    """
-    Return True if the value is a string
-    :param value: String to check
-    :rtype: bool
-    """
-    return is_type(value, str)
-
-
-def is_int(value: int) -> bool:
-    """
-    Return True if the value is an integer
-    :param value: Int to check
-    :rtype: bool
-    """
-    return is_type(value, int)
-
-
-def is_list(value: list) -> bool:
-    """
-    Return True if the value is a list
-    :param value: list to check
-    :rtype: bool
-    """
-    return is_type(value, list)
-
-
-def is_dict(value: dict) -> bool:
-    """
-    Return True if the value is a dict
-    :param value: dict to check
-    :rtype: bool
-    """
-    return is_type(value, dict)
-
-
-"""
-#######################################
 ############# DIRECTORY ###############
 #######################################
 """
