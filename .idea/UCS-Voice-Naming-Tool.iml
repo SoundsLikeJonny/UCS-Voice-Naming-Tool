@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/UCS-Voice-Naming-Tool" />
       <excludeFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/builds" />
       <excludeFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/build" />
+      <excludeFolder url="file://$MODULE_DIR$/UCS Voice Naming Tool/env" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (UCS-Voice-Naming-Tool)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
