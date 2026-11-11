@@ -1,0 +1,2 @@
+git lfs migrate import --include="*.wav"
+git add .gitattributes
