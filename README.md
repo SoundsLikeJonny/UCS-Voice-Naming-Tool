@@ -1,3 +1,8 @@
+# Archived
+
+This repo is now archived, since it was more of a proof of concept than a functioning tool.
+Please see https://github.com/SoundsLikeJonny/Slate-To-UCS for the official version of the tool.
+
 # UCS Voice Naming Tool [POC]
 A tool to name audio recordings by analyzing the slate at the start of a file, and labeling the file metadata according to the Universal Category System.
 
